@@ -1,0 +1,2405 @@
+Model,Displ,Cyl,Trans,Drive,Fuel,Sales Area,Stnd,Underhood ID,Veh Class,Air Pollution Score,City MPG,Hwy MPG,Cmb MPG,Greenhouse Gas Score,SmartWay
+ACURA TL,3.2,(6 cyl),Auto-S5,2WD,Gasoline,CA,U2,8HNXV03.5HKR,midsize car,7,18,26,21,6,yes
+ACURA TL,3.5,(6 cyl),Auto-S5,2WD,Gasoline,CA,U2,8HNXV03.5RKR,midsize car,7,17,26,20,6,yes
+ACURA TL,3.5,(6 cyl),Man-6,2WD,Gasoline,CA,U2,8HNXV03.5RKR,midsize car,7,18,27,21,6,yes
+ACURA TSX,2.4,(4 cyl),Auto-S5,2WD,Gasoline,FA,B5,8HNXV02.4FKC,small car,6,20,28,23,7,yes
+ACURA TSX,2.4,(4 cyl),Auto-S5,2WD,Gasoline,CA,L2,8HNXV02.4FKC,small car,6,20,28,23,7,yes
+AUDI A3,2,(4 cyl),Man-6,2WD,Gasoline,CA,U2,8ADXV02.0366,station wagon,7,21,29,24,7,yes
+AUDI A3,2,(4 cyl),Auto-S6,2WD,Gasoline,CA,U2,8ADXV02.0366,station wagon,7,22,29,25,7,yes
+AUDI A3,2,(4 cyl),Man-6,2WD,Gasoline,FA,B5,8ADXV02.0366,station wagon,6,21,29,24,7,yes
+AUDI A3,2,(4 cyl),Auto-S6,2WD,Gasoline,FA,B5,8ADXV02.0366,station wagon,6,22,29,25,7,yes
+AUDI A4,2,(4 cyl),Auto-AV,2WD,Gasoline,CA,U2,8ADXV02.0352,small car,7,21,30,24,7,yes
+AUDI A4,2,(4 cyl),Auto-AV,2WD,Gasoline,FA,B5,8ADXV02.0352,small car,6,21,30,24,7,yes
+AUDI TT Coupe,2,(4 cyl),Auto-S6,2WD,Gasoline,CA,U2,8ADXV02.0366,small car,7,23,31,26,8,yes
+AUDI TT Coupe,2,(4 cyl),Auto-S6,2WD,Gasoline,FA,B5,8ADXV02.0366,small car,6,23,31,26,8,yes
+AUDI TT Roadster,2,(4 cyl),Auto-S6,2WD,Gasoline,CA,U2,8ADXV02.0366,small car,7,22,29,25,7,yes
+AUDI TT Roadster,2,(4 cyl),Auto-S6,2WD,Gasoline,FA,B5,8ADXV02.0366,small car,6,22,29,25,7,yes
+BMW 328ci,3,(6 cyl),Man-6,2WD,Gasoline,CA,S2,8BMXV03.0N51,small car,9.5,20,30,24,7,yes
+BMW 328ci,3,(6 cyl),Auto-S6,2WD,Gasoline,CA,S2,8BMXV03.0N51,small car,9.5,23,31,25,7,yes
+BMW 328ci,3,(6 cyl),Man-6,2WD,Gasoline,CA,U2,8BMXB03.0N52,small car,7,20,30,24,7,yes
+BMW 328ci,3,(6 cyl),Auto-S6,2WD,Gasoline,CA,U2,8BMXB03.0N52,small car,7,23,31,25,7,yes
+BMW 328ci,3,(6 cyl),Man-6,2WD,Gasoline,FA,B5,8BMXB03.0N52,small car,6,20,30,24,7,yes
+BMW 328ci,3,(6 cyl),Man-6,2WD,Gasoline,FA,B5,8BMXV03.0N51,small car,6,20,30,24,7,yes
+BMW 328ci,3,(6 cyl),Auto-S6,2WD,Gasoline,FA,B5,8BMXB03.0N52,small car,6,23,31,25,7,yes
+BMW 328ci,3,(6 cyl),Auto-S6,2WD,Gasoline,FA,B5,8BMXV03.0N51,small car,6,23,31,25,7,yes
+BMW 328ci Convertible,3,(6 cyl),Man-6,2WD,Gasoline,CA,S2,8BMXV03.0N51,small car,9.5,19,29,22,6,yes
+BMW 328ci Convertible,3,(6 cyl),Auto-S6,2WD,Gasoline,CA,S2,8BMXV03.0N51,small car,9.5,20,30,24,7,yes
+BMW 328ci Convertible,3,(6 cyl),Man-6,2WD,Gasoline,CA,U2,8BMXB03.0N52,small car,7,19,29,22,6,yes
+BMW 328ci Convertible,3,(6 cyl),Auto-S6,2WD,Gasoline,CA,U2,8BMXB03.0N52,small car,7,20,30,24,7,yes
+BMW 328ci Convertible,3,(6 cyl),Auto-S6,2WD,Gasoline,FA,B5,8BMXB03.0N52,small car,6,20,30,24,7,yes
+BMW 328ci Convertible,3,(6 cyl),Auto-S6,2WD,Gasoline,FA,B5,8BMXV03.0N51,small car,6,20,30,24,7,yes
+BMW 328cxi,3,(6 cyl),Auto-S6,4WD,Gasoline,CA,S2,8BMXV03.0N51,small car,9.5,20,27,23,7,yes
+BMW 328cxi,3,(6 cyl),Man-6,4WD,Gasoline,CA,U2,8BMXB03.0N52,small car,7,19,28,22,6,yes
+BMW 328cxi,3,(6 cyl),Auto-S6,4WD,Gasoline,CA,U2,8BMXB03.0N52,small car,7,20,27,23,7,yes
+BMW 328cxi,3,(6 cyl),Auto-S6,4WD,Gasoline,FA,B5,8BMXB03.0N52,small car,6,20,27,23,7,yes
+BMW 328cxi,3,(6 cyl),Auto-S6,4WD,Gasoline,FA,B5,8BMXV03.0N51,small car,6,20,27,23,7,yes
+BMW 328i,3,(6 cyl),Man-6,2WD,Gasoline,CA,S2,8BMXV03.0N51,small car,9.5,20,30,24,7,yes
+BMW 328i,3,(6 cyl),Auto-S6,2WD,Gasoline,CA,S2,8BMXV03.0N51,small car,9.5,23,31,25,7,yes
+BMW 328i,3,(6 cyl),Man-6,2WD,Gasoline,CA,U2,8BMXB03.0N52,small car,7,20,30,24,7,yes
+BMW 328i,3,(6 cyl),Auto-S6,2WD,Gasoline,CA,U2,8BMXB03.0N52,small car,7,23,31,25,7,yes
+BMW 328i,3,(6 cyl),Man-6,2WD,Gasoline,FA,B5,8BMXB03.0N52,small car,6,20,30,24,7,yes
+BMW 328i,3,(6 cyl),Man-6,2WD,Gasoline,FA,B5,8BMXV03.0N51,small car,6,20,30,24,7,yes
+BMW 328i,3,(6 cyl),Auto-S6,2WD,Gasoline,FA,B5,8BMXB03.0N52,small car,6,23,31,25,7,yes
+BMW 328i,3,(6 cyl),Auto-S6,2WD,Gasoline,FA,B5,8BMXV03.0N51,small car,6,23,31,25,7,yes
+BMW 328i Sport Wagon,3,(6 cyl),Man-6,2WD,Gasoline,CA,U2,8BMXB03.0N52,station wagon,7,19,29,22,6,yes
+BMW 328xi,3,(6 cyl),Auto-S6,4WD,Gasoline,CA,S2,8BMXV03.0N51,small car,9.5,20,27,23,7,yes
+BMW 328xi,3,(6 cyl),Man-6,4WD,Gasoline,CA,U2,8BMXB03.0N52,small car,7,19,28,22,6,yes
+BMW 328xi,3,(6 cyl),Auto-S6,4WD,Gasoline,CA,U2,8BMXB03.0N52,small car,7,20,27,23,7,yes
+BMW 328xi,3,(6 cyl),Auto-S6,4WD,Gasoline,FA,B5,8BMXB03.0N52,small car,6,20,27,23,7,yes
+BMW 328xi,3,(6 cyl),Auto-S6,4WD,Gasoline,FA,B5,8BMXV03.0N51,small car,6,20,27,23,7,yes
+BMW 328xi Sport Wagon,3,(6 cyl),Man-6,4WD,Gasoline,CA,U2,8BMXB03.0N52,station wagon,7,19,28,22,6,yes
+BMW 328xi Sport Wagon,3,(6 cyl),Auto-S6,4WD,Gasoline,CA,U2,8BMXB03.0N52,station wagon,7,20,27,23,7,yes
+BMW 328xi Sport Wagon,3,(6 cyl),Auto-S6,4WD,Gasoline,FA,B5,8BMXB03.0N52,station wagon,6,20,27,23,7,yes
+BMW 335ci,3,(6 cyl),Auto-S6,2WD,Gasoline,FA,B5,8BMXV03.0N54,small car,6,20,28,23,7,yes
+BMW 335ci,3,(6 cyl),Auto-S6,2WD,Gasoline,CA,L2,8BMXV03.0N54,small car,6,20,28,23,7,yes
+BMW 335ci Convertible,3,(6 cyl),Auto-S6,2WD,Gasoline,FA,B5,8BMXV03.0N54,small car,6,20,28,23,7,yes
+BMW 335ci Convertible,3,(6 cyl),Auto-S6,2WD,Gasoline,CA,L2,8BMXV03.0N54,small car,6,20,28,23,7,yes
+BMW 335i,3,(6 cyl),Auto-S6,2WD,Gasoline,FA,B5,8BMXV03.0N54,small car,6,20,28,23,7,yes
+BMW 335i,3,(6 cyl),Auto-S6,2WD,Gasoline,CA,L2,8BMXV03.0N54,small car,6,20,28,23,7,yes
+BMW 528i,3,(6 cyl),Auto-S6,2WD,Gasoline,CA,U2,8BMXB03.0N52,midsize car,7,20,30,24,7,yes
+BMW 528i,3,(6 cyl),Man-6,2WD,Gasoline,CA,U2,8BMXB03.0N52,midsize car,7,20,30,24,7,yes
+BMW 528i,3,(6 cyl),Auto-S6,2WD,Gasoline,FA,B5,8BMXB03.0N52,midsize car,6,20,30,24,7,yes
+BMW 528i,3,(6 cyl),Man-6,2WD,Gasoline,FA,B5,8BMXB03.0N52,midsize car,6,20,30,24,7,yes
+BMW 528xi,3,(6 cyl),Man-6,4WD,Gasoline,CA,U2,8BMXB03.0N52,midsize car,7,19,28,22,6,yes
+BMW 528xi,3,(6 cyl),Auto-S6,4WD,Gasoline,CA,U2,8BMXB03.0N52,midsize car,7,20,27,23,7,yes
+BMW 528xi,3,(6 cyl),Auto-S6,4WD,Gasoline,FA,B5,8BMXB03.0N52,midsize car,6,20,27,23,7,yes
+BMW 535i,3,(6 cyl),Auto-S6,2WD,Gasoline,FA,B5,8BMXV03.0N54,midsize car,6,20,28,23,7,yes
+BMW 535i,3,(6 cyl),Auto-S6,2WD,Gasoline,CA,L2,8BMXV03.0N54,midsize car,6,20,28,23,7,yes
+BMW 550i,4.8,(8 cyl),Auto-S6,2WD,Gasoline,CA,U2,8BMXV04.8UL2,midsize car,7,17,25,20,6,yes
+BMW 650ci,4.8,(8 cyl),Auto-S6,2WD,Gasoline,CA,U2,8BMXV04.8UL2,small car,7,17,25,20,6,yes
+BMW 650ci Convertible,4.8,(8 cyl),Auto-S6,2WD,Gasoline,CA,U2,8BMXV04.8UL2,small car,7,17,25,20,6,yes
+BMW 750i,4.8,(8 cyl),Auto-S6,2WD,Gasoline,CA,U2,8BMXV04.8UL2,large car,7,17,25,20,6,yes
+BMW 750li,4.8,(8 cyl),Auto-S6,2WD,Gasoline,CA,U2,8BMXV04.8UL2,large car,7,17,25,20,6,yes
+BMW X3,3,(6 cyl),Man-6,4WD,Gasoline,CA,U2,8BMXB03.0N52,SUV,7,18,26,21,6,yes
+BMW X3,3,(6 cyl),Auto-S6,4WD,Gasoline,CA,U2,8BMXB03.0N52,SUV,7,19,26,22,6,yes
+BMW Z4,3,(6 cyl),Man-6,2WD,Gasoline,CA,U2,8BMXB03.0N52,small car,7,20,30,24,7,yes
+BMW Z4,3,(6 cyl),Auto-S6,2WD,Gasoline,CA,U2,8BMXB03.0N52,small car,7,23,31,25,7,yes
+BMW Z4,3,(6 cyl),Man-6,2WD,Gasoline,FA,B5,8BMXB03.0N52,small car,6,20,30,24,7,yes
+BMW Z4,3,(6 cyl),Auto-S6,2WD,Gasoline,FA,B5,8BMXB03.0N52,small car,6,23,31,25,7,yes
+BMW Z4 Coupe,3,(6 cyl),Man-6,2WD,Gasoline,CA,U2,8BMXB03.0N52,small car,7,20,30,24,7,yes
+BMW Z4 Coupe,3,(6 cyl),Auto-S6,2WD,Gasoline,CA,U2,8BMXB03.0N52,small car,7,23,31,25,7,yes
+BMW Z4 Coupe,3,(6 cyl),Man-6,2WD,Gasoline,FA,B5,8BMXB03.0N52,small car,6,20,30,24,7,yes
+BMW Z4 Coupe,3,(6 cyl),Auto-S6,2WD,Gasoline,FA,B5,8BMXB03.0N52,small car,6,23,31,25,7,yes
+BUICK Allure,3.8,(6 cyl),Auto-L4,2WD,Gasoline,CA,SLEV,8GMXV03.8044,midsize car,9.5,17,28,21,6,yes
+BUICK LaCrosse,3.8,(6 cyl),Auto-L4,2WD,Gasoline,CA,SLEV,8GMXV03.8044,midsize car,9.5,17,28,21,6,yes
+CHEVROLET Aveo,1.6,(4 cyl),Auto-4,2WD,Gasoline,FC,U2,8GDXV01.6D04,small car,7,23,32,26,8,yes
+CHEVROLET Aveo,1.6,(4 cyl),Man-5,2WD,Gasoline,FC,U2,8GDXV01.6D04,small car,7,24,34,27,8,yes
+CHEVROLET Aveo,1.6,(4 cyl),Auto-4,2WD,Gasoline,FC,B5,8GDXV01.6D04,small car,6,23,32,26,8,yes
+CHEVROLET Aveo,1.6,(4 cyl),Man-5,2WD,Gasoline,FC,B5,8GDXV01.6D04,small car,6,24,34,27,8,yes
+CHEVROLET Aveo 5,1.6,(4 cyl),Auto-4,2WD,Gasoline,FC,U2,8GDXV01.6D04,small car,7,23,32,26,8,yes
+CHEVROLET Aveo 5,1.6,(4 cyl),Man-5,2WD,Gasoline,FC,U2,8GDXV01.6D04,small car,7,24,34,27,8,yes
+CHEVROLET Aveo 5,1.6,(4 cyl),Auto-4,2WD,Gasoline,FC,B5,8GDXV01.6D04,small car,6,23,32,26,8,yes
+CHEVROLET Aveo 5,1.6,(4 cyl),Man-5,2WD,Gasoline,FC,B5,8GDXV01.6D04,small car,6,24,34,27,8,yes
+CHEVROLET Classic,3.5,(6 cyl),Auto-L4,2WD,Gasoline,CA,U2,8GMXV03.5043,midsize car,7,18,28,22,6,yes
+CHEVROLET Classic,2.2,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8GMXV02.2028,midsize car,6,21,31,25,7,yes
+CHEVROLET Classic,2.2,(4 cyl),Auto-L4,2WD,Gasoline,CA,L2,8GMXV02.2028,midsize car,6,21,31,25,7,yes
+CHEVROLET Cobalt,2.2,(4 cyl),Auto-L4,2WD,Gasoline,CA,SLEV,8GMXV02.2030,small car,9.5,22,31,26,8,yes
+CHEVROLET Cobalt,2.2,(4 cyl),Man-5,2WD,Gasoline,CA,SLEV,8GMXV02.2030,small car,9.5,24,33,27,8,yes
+CHEVROLET Cobalt,2.2,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8GMXV02.4025,small car,6,22,31,26,8,yes
+CHEVROLET Cobalt,2.2,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8GMXV02.4025,small car,6,24,33,27,8,yes
+CHEVROLET Cobalt,2.2,(4 cyl),Auto-L4,2WD,Gasoline,CA,L2,8GMXV02.4025,small car,6,22,31,26,8,yes
+CHEVROLET Cobalt,2.2,(4 cyl),Man-5,2WD,Gasoline,CA,L2,8GMXV02.4025,small car,6,24,33,27,8,yes
+CHEVROLET Cobalt,2.4,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8GMXV02.4025,small car,6,22,31,25,7,yes
+CHEVROLET Cobalt,2.4,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8GMXV02.4025,small car,6,22,32,26,8,yes
+CHEVROLET Cobalt,2.4,(4 cyl),Auto-L4,2WD,Gasoline,CA,L2,8GMXV02.4025,small car,6,22,31,25,7,yes
+CHEVROLET Cobalt,2.4,(4 cyl),Man-5,2WD,Gasoline,CA,L2,8GMXV02.4025,small car,6,22,32,26,8,yes
+CHEVROLET Colorado,2.9,(4 cyl),Man-5,2WD,Gasoline,FC,B4,8GMXT02.9190,pickup,7,18,24,20,6,yes
+CHEVROLET Colorado,2.9,(4 cyl),Auto-L4,2WD,Gasoline,FC,B4,8GMXT02.9190,pickup,7,18,24,20,6,yes
+CHEVROLET Colorado,2.9,(4 cyl),Auto-L4,2WD,Gasoline,FC,B4,8GMXT02.9190,pickup,7,18,24,20,6,yes
+CHEVROLET HHR,2.2,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8GMXV02.4032,SUV,7,20,30,24,7,yes
+CHEVROLET HHR,2.2,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8GMXV02.4032,SUV,7,21,30,24,7,yes
+CHEVROLET HHR,2.2,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8GMXV02.4032,SUV,7,22,30,25,7,yes
+CHEVROLET HHR,2.2,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8GMXV02.4032,SUV,7,22,30,25,7,yes
+CHEVROLET HHR,2.4,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8GMXV02.4032,SUV,7,20,28,23,7,yes
+CHEVROLET HHR,2.4,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8GMXV02.4032,SUV,7,20,29,23,7,yes
+CHEVROLET HHR,2.4,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8GMXV02.4032,SUV,7,22,28,24,7,yes
+CHEVROLET HHR,2.4,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8GMXV02.4032,SUV,7,22,28,24,7,yes
+CHEVROLET HHR,2.2,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8GMXV02.4032,SUV,6,20,30,24,7,yes
+CHEVROLET HHR,2.2,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8GMXV02.4032,SUV,6,21,30,24,7,yes
+CHEVROLET HHR,2.2,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8GMXV02.4032,SUV,6,22,30,25,7,yes
+CHEVROLET HHR,2.2,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8GMXV02.4032,SUV,6,22,30,25,7,yes
+CHEVROLET HHR,2.4,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8GMXV02.4032,SUV,6,20,28,23,7,yes
+CHEVROLET HHR,2.4,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8GMXV02.4032,SUV,6,20,29,23,7,yes
+CHEVROLET HHR,2.4,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8GMXV02.4032,SUV,6,22,28,24,7,yes
+CHEVROLET HHR,2.4,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8GMXV02.4032,SUV,6,22,28,24,7,yes
+CHEVROLET Impala,3.5,(6 cyl),Auto-L4,2WD,Gasoline,CA,SLEV,8GMXV03.8044,large car,9.5,18,29,22,6,yes
+CHEVROLET Malibu,3.5,(6 cyl),Auto-L4,2WD,Gasoline,CA,U2,8GMXV03.5043,midsize car,7,18,29,22,6,yes
+CHEVROLET Malibu,2.4,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8GMXV02.4027,midsize car,6,22,30,25,7,yes
+CHEVROLET Malibu,2.4,(4 cyl),Auto-L4,2WD,Gasoline,CA,L2,8GMXV02.4027,midsize car,6,22,30,25,7,yes
+CHEVROLET Malibu Hybrid,2.4,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8GMXV02.4040,midsize car,6,24,32,27,8,yes
+CHEVROLET Malibu Hybrid,2.4,(4 cyl),Auto-L4,2WD,Gasoline,CA,L2,8GMXV02.4040,midsize car,6,24,32,27,8,yes
+CHRYSLER 300,3.5,(6 cyl),Auto-L5,2WD,Gasoline,CA,U2,8CRXV0215M80,large car,7,17,24,20,6,yes
+CHRYSLER 300,3.5,(6 cyl),Auto-L4,2WD,Gasoline,CA,U2,8CRXV0215M80,large car,7,17,24,20,6,yes
+CHRYSLER PT Cruiser,2.4,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8CRXV0148M80,SUV,7,18,24,21,6,yes
+CHRYSLER PT Cruiser,2.4,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8CRXV0148M80,SUV,7,19,24,21,6,yes
+CHRYSLER PT Cruiser,2.4,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8CRXV0148M80,SUV,7,20,25,22,6,yes
+CHRYSLER PT Cruiser,2.4,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8CRXV02.4ME3,SUV,6,21,26,23,7,yes
+CHRYSLER PT Cruiser,2.4,(4 cyl),Man-5,2WD,Gasoline,CA,L2,8CRXV02.4ME3,SUV,6,21,26,23,7,yes
+CHRYSLER PT Cruiser Convertible,2.4,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8CRXV0148M80,small car,7,18,24,21,6,yes
+CHRYSLER PT Cruiser Convertible,2.4,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8CRXV0148M80,small car,7,19,24,21,6,yes
+CHRYSLER PT Cruiser Convertible,2.4,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8CRXV0148M80,small car,7,20,25,22,6,yes
+CHRYSLER PT Cruiser Convertible,2.4,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8CRXV02.4ME3,small car,6,21,26,23,7,yes
+CHRYSLER PT Cruiser Convertible,2.4,(4 cyl),Man-5,2WD,Gasoline,CA,L2,8CRXV02.4ME3,small car,6,21,26,23,7,yes
+CHRYSLER SRT-8,3.5,(6 cyl),Auto-L5,2WD,Gasoline,CA,U2,8CRXV0215M80,large car,7,17,24,20,6,yes
+CHRYSLER SRT-8,3.5,(6 cyl),Auto-L4,2WD,Gasoline,CA,U2,8CRXV0215M80,large car,7,17,24,20,6,yes
+CHRYSLER Sebring,2.4,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8CRXB0144M80,midsize car,7,21,30,24,7,yes
+CHRYSLER Sebring,2.4,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8CRXB02.4ME0,midsize car,6,21,30,24,7,yes
+CHRYSLER Sebring,2.4,(4 cyl),Auto-L4,2WD,Gasoline,CA,L2,8CRXB02.4ME0,midsize car,6,21,30,24,7,yes
+CHRYSLER Sebring Convertible,2.4,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8CRXB0144M80,small car,7,20,29,23,7,yes
+CHRYSLER Sebring Convertible,2.4,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8CRXB02.4ME0,small car,6,20,29,23,7,yes
+CHRYSLER Sebring Convertible,2.4,(4 cyl),Auto-L4,2WD,Gasoline,CA,L2,8CRXB02.4ME0,small car,6,20,29,23,7,yes
+DODGE Avenger,2.4,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8CRXB0144M80,midsize car,7,21,30,24,7,yes
+DODGE Avenger,2.4,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8CRXB02.4ME0,midsize car,6,21,30,24,7,yes
+DODGE Avenger,2.4,(4 cyl),Auto-L4,2WD,Gasoline,CA,L2,8CRXB02.4ME0,midsize car,6,21,30,24,7,yes
+DODGE Caliber,2.4,(4 cyl),Auto-AV,4WD,Gasoline,CA,U2,8CRXB0144M81,midsize car,7,21,24,22,6,yes
+DODGE Caliber,2.4,(4 cyl),Auto-AV,2WD,Gasoline,CA,U2,8CRXB0144M81,midsize car,7,21,25,23,7,yes
+DODGE Caliber,2,(4 cyl),Auto-AV,2WD,Gasoline,FA,B5,8CRXB02.4ME0,midsize car,6,23,27,24,7,yes
+DODGE Caliber,2,(4 cyl),Auto-AV,2WD,Gasoline,CA,L2,8CRXB02.4ME0,midsize car,6,23,27,24,7,yes
+DODGE Caliber,2.4,(4 cyl),Auto-AV,2WD,Gasoline,FA,B5,8CRXB02.4ME0,midsize car,6,21,25,23,7,yes
+DODGE Caliber,2.4,(4 cyl),Auto-AV,2WD,Gasoline,CA,L2,8CRXB02.4ME0,midsize car,6,21,25,23,7,yes
+DODGE Charger,3.5,(6 cyl),Auto-L5,2WD,Gasoline,CA,U2,8CRXV0215M80,large car,7,17,24,20,6,yes
+DODGE Charger,3.5,(6 cyl),Auto-L4,2WD,Gasoline,CA,U2,8CRXV0215M80,large car,7,17,24,20,6,yes
+DODGE Magnum,3.5,(6 cyl),Auto-L5,2WD,Gasoline,CA,U2,8CRXV0215M80,SUV,7,17,24,20,6,yes
+DODGE Magnum,3.5,(6 cyl),Auto-L4,2WD,Gasoline,CA,U2,8CRXV0215M80,SUV,7,17,24,20,6,yes
+FORD Escape,2.3,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8FMXT02.31EF,SUV,7,22,28,24,7,yes
+FORD Escape,2.3,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8FMXT02.31EF,SUV,6,22,28,24,7,yes
+FORD Escape Hybrid,2.3,(4 cyl),Auto-AV,2WD,Gasoline,CA,S2,8FMXT02.32ZE,SUV,9.5,34,30,32,9,yes
+FORD Escape Hybrid,2.3,(4 cyl),Auto-AV,4WD,Gasoline,CA,S2,8FMXT02.32ZE,SUV,9.5,29,27,28,8,yes
+FORD Escape Hybrid,2.3,(4 cyl),Auto-AV,2WD,Gasoline,FA,B3,8FMXT02.32ZE,SUV,8,34,30,32,9,yes
+FORD Escape Hybrid,2.3,(4 cyl),Auto-AV,4WD,Gasoline,FA,B3,8FMXT02.32ZE,SUV,8,29,27,28,8,yes
+FORD Focus,2,(4 cyl),Auto-L4,2WD,Gasoline,CA,S2,8FMXV02.0VZP,small car,9.5,24,33,28,8,yes
+FORD Focus,2,(4 cyl),Man-5,2WD,Gasoline,CA,S2,8FMXV02.0VZP,small car,9.5,24,35,28,8,yes
+FORD Focus,2,(4 cyl),Auto-L4,2WD,Gasoline,FA,B3,8FMXV02.0VZP,small car,8,24,33,28,8,yes
+FORD Focus,2,(4 cyl),Man-5,2WD,Gasoline,FA,B3,8FMXV02.0VZP,small car,8,24,35,28,8,yes
+FORD Focus,2,(4 cyl),Auto-L4,2WD,Gasoline,FC,B4,8FMXV02.0VD4,small car,7,24,33,28,8,yes
+FORD Focus,2,(4 cyl),Man-5,2WD,Gasoline,FC,B4,8FMXV02.0VD4,small car,7,24,35,28,8,yes
+FORD Fusion,2.3,(4 cyl),Auto-L5,2WD,Gasoline,CA,S2,8FMXV02.3VZT,midsize car,9.5,20,28,23,7,yes
+FORD Fusion,3,(6 cyl),Auto-L6,4WD,Gasoline,CA,U2,8FMXV03.0VEK,midsize car,7,17,25,20,6,yes
+FORD Fusion,3,(6 cyl),Auto-L6,2WD,Gasoline,CA,U2,8FMXV03.0VEK,midsize car,7,18,26,21,6,yes
+FORD Fusion,2.3,(4 cyl),Auto-L5,2WD,Gasoline,FA,B5,8FMXV02.3VEU,midsize car,6,20,28,23,7,yes
+FORD Fusion,2.3,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8FMXV02.3VEU,midsize car,6,20,29,23,7,yes
+FORD Mustang,4,(6 cyl),Man-5,2WD,Gasoline,CA,U2,8FMXV04.0VER,small car,7,17,26,20,6,yes
+FORD Ranger,2.3,(4 cyl),Auto-L5,2WD,Gasoline,CA,U2,8FMXT02.31BA,pickup,7,19,24,21,6,yes
+FORD Ranger,2.3,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8FMXT02.31BA,pickup,7,21,26,23,7,yes
+FORD Ranger,2.3,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8FMXT02.31EL,pickup,6,21,26,23,7,yes
+FORD Taurus,3.5,(6 cyl),Auto-L6,2WD,Gasoline,CA,S2,8FMXV03.51ZL,large car,9.5,18,28,22,6,yes
+GMC Canyon,2.9,(4 cyl),Man-5,2WD,Gasoline,FC,B4,8GMXT02.9190,pickup,7,18,24,20,6,yes
+GMC Canyon,2.9,(4 cyl),Auto-L4,2WD,Gasoline,FC,B4,8GMXT02.9190,pickup,7,18,24,20,6,yes
+GMC Canyon,2.9,(4 cyl),Auto-L4,2WD,Gasoline,FC,B4,8GMXT02.9190,pickup,7,18,24,20,6,yes
+HONDA Accord,2.4,(4 cyl),Auto-L5,2WD,Gasoline,CA,S2,8HNXV02.4EMC,large car,9.5,21,31,24,7,yes
+HONDA Accord,2.4,(4 cyl),Auto-L5,2WD,Gasoline,CA,S2,8HNXV02.4EMC,small car,9.5,21,30,24,7,yes
+HONDA Accord,3.5,(6 cyl),Auto-L5,2WD,Gasoline,CA,S2,8HNXV03.5BMC,large car,9.5,19,29,22,6,yes
+HONDA Accord,3.5,(6 cyl),Auto-L5,2WD,Gasoline,CA,S2,8HNXV03.5BMC,small car,9.5,19,28,22,6,yes
+HONDA Accord,2.4,(4 cyl),Auto-L5,2WD,Gasoline,FA,B2,8HNXV02.4EMC,large car,9,21,31,24,7,yes
+HONDA Accord,2.4,(4 cyl),Auto-L5,2WD,Gasoline,FA,B2,8HNXV02.4EMC,small car,9,21,30,24,7,yes
+HONDA Accord,3.5,(6 cyl),Auto-L5,2WD,Gasoline,FA,B2,8HNXV03.5BMC,large car,9,19,29,22,6,yes
+HONDA Accord,3.5,(6 cyl),Auto-L5,2WD,Gasoline,FA,B2,8HNXV03.5BMC,small car,9,19,28,22,6,yes
+HONDA Accord,2.4,(4 cyl),Auto-L5,2WD,Gasoline,CA,U2,8HNXV02.4TKR,large car,7,21,31,24,7,yes
+HONDA Accord,2.4,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8HNXV02.4TKR,large car,7,22,31,25,7,yes
+HONDA Accord,2.4,(4 cyl),Auto-L5,2WD,Gasoline,CA,U2,8HNXV02.4TKR,small car,7,21,30,24,7,yes
+HONDA Accord,2.4,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8HNXV02.4TKR,small car,7,22,31,25,7,yes
+HONDA Accord,3.5,(6 cyl),Auto-L5,2WD,Gasoline,CA,U2,8HNXV03.5VKR,large car,7,19,29,22,6,yes
+HONDA Accord,3.5,(6 cyl),Man-6,2WD,Gasoline,CA,U2,8HNXV03.5VKR,small car,7,17,25,20,6,yes
+HONDA Accord,3.5,(6 cyl),Auto-L5,2WD,Gasoline,CA,U2,8HNXV03.5VKR,small car,7,19,28,22,6,yes
+HONDA Accord,2.4,(4 cyl),Auto-L5,2WD,Gasoline,FA,B5,8HNXV02.4TKR,large car,6,21,31,24,7,yes
+HONDA Accord,2.4,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8HNXV02.4TKR,large car,6,22,31,25,7,yes
+HONDA Accord,2.4,(4 cyl),Auto-L5,2WD,Gasoline,FA,B5,8HNXV02.4TKR,small car,6,21,30,24,7,yes
+HONDA Accord,2.4,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8HNXV02.4TKR,small car,6,22,31,25,7,yes
+HONDA CR-V,2.4,(4 cyl),Auto-L5,2WD,Gasoline,CA,U2,8HNXT02.4KKR,SUV,7,20,27,23,7,yes
+HONDA CR-V,2.4,(4 cyl),Auto-L5,4WD,Gasoline,CA,U2,8HNXT02.4KKR,SUV,7,20,26,22,6,yes
+HONDA CR-V,2.4,(4 cyl),Auto-L5,2WD,Gasoline,FA,B5,8HNXT02.4KKR,SUV,6,20,27,23,7,yes
+HONDA Civic,1.8,(4 cyl),Auto-L5,2WD,CNG,CA,S2,8HNXV01.8XW3,small car,9.5,24,36,28,9,yes
+HONDA Civic,1.8,(4 cyl),Auto-L5,2WD,CNG,FA,B2,8HNXV01.8XW3,small car,9,24,36,28,9,yes
+HONDA Civic,1.8,(4 cyl),Auto-L5,2WD,Gasoline,CA,U2,8HNXV01.8LKR,small car,7,25,36,29,8,yes
+HONDA Civic,1.8,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8HNXV01.8LKR,small car,7,26,34,29,8,yes
+HONDA Civic,1.8,(4 cyl),Auto-L5,2WD,Gasoline,FA,B5,8HNXV01.8LKR,small car,6,25,36,29,8,yes
+HONDA Civic,1.8,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8HNXV01.8LKR,small car,6,26,34,29,8,yes
+HONDA Civic,2,(4 cyl),Man-6,2WD,Gasoline,FA,B5,8HNXV02.4FKC,small car,6,21,29,24,7,yes
+HONDA Civic,2,(4 cyl),Man-6,2WD,Gasoline,CA,L2,8HNXV02.4FKC,small car,6,21,29,24,7,yes
+HONDA Civic Hybrid,1.3,(4 cyl),Auto-AV,2WD,Gasoline,CA,S2,8HNXV01.3ZCP,small car,9.5,40,45,42,10,yes
+HONDA Civic Hybrid,1.3,(4 cyl),Auto-AV,2WD,Gasoline,FA,B2,8HNXV01.3ZCP,small car,9,40,45,42,10,yes
+HONDA Fit,1.5,(4 cyl),Auto-S5,2WD,Gasoline,FA,B5,8HNXV01.5JKC,station wagon,6,27,33,29,8,yes
+HONDA Fit,1.5,(4 cyl),Auto-L5,2WD,Gasoline,FA,B5,8HNXV01.5JKC,station wagon,6,27,34,30,8,yes
+HONDA Fit,1.5,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8HNXV01.5JKC,station wagon,6,28,34,31,9,yes
+HONDA Fit,1.5,(4 cyl),Auto-S5,2WD,Gasoline,CA,L2,8HNXV01.5JKC,station wagon,6,27,33,29,8,yes
+HONDA Fit,1.5,(4 cyl),Auto-L5,2WD,Gasoline,CA,L2,8HNXV01.5JKC,station wagon,6,27,34,30,8,yes
+HONDA Fit,1.5,(4 cyl),Man-5,2WD,Gasoline,CA,L2,8HNXV01.5JKC,station wagon,6,28,34,31,9,yes
+HYUNDAI Accent,1.6,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8HYXV01.6MW5,small car,7,24,33,28,8,yes
+HYUNDAI Accent,1.6,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8HYXV01.6MW5,small car,7,27,32,29,8,yes
+HYUNDAI Accent,1.6,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8HYXV01.6MW5,small car,6,24,33,28,8,yes
+HYUNDAI Accent,1.6,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8HYXV01.6MW5,small car,6,27,32,29,8,yes
+HYUNDAI Azera,3.3,(6 cyl),Auto-L5,2WD,Gasoline,CA,U2,8HYXV03.3TW5,large car,7,18,26,21,6,yes
+HYUNDAI Azera,3.8,(6 cyl),Auto-L5,2WD,Gasoline,CA,U2,8HYXV03.8AW5,large car,7,17,26,20,6,yes
+HYUNDAI Elantra,2,(4 cyl),Auto-L4,2WD,Gasoline,CA,S2,8HYXV02.0HPC,midsize car,9.5,25,33,28,8,yes
+HYUNDAI Elantra,2,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8HYXV02.0HW5,midsize car,7,24,33,27,8,yes
+HYUNDAI Elantra,2,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8HYXV02.0HW5,midsize car,7,25,33,28,8,yes
+HYUNDAI Elantra,2,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8HYXV02.0HW5,midsize car,6,24,33,27,8,yes
+HYUNDAI Elantra,2,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8HYXV02.0HW5,midsize car,6,25,33,28,8,yes
+HYUNDAI Santa Fe,2.7,(6 cyl),Man-5,2WD,Gasoline,CA,U2,8HYXT02.7CW5,SUV,7,17,24,20,6,yes
+HYUNDAI Santa Fe,2.7,(6 cyl),Auto-L4,2WD,Gasoline,CA,U2,8HYXT02.7CW5,SUV,7,18,24,20,6,yes
+HYUNDAI Santa Fe,3.3,(6 cyl),Auto-L5,2WD,Gasoline,CA,U2,8HYXT03.3PW5,SUV,7,17,24,20,6,yes
+HYUNDAI Sonata,2.4,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8HYXV02.4SW5,large car,7,21,30,24,7,yes
+HYUNDAI Sonata,2.4,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8HYXV02.4SW5,large car,7,21,31,25,7,yes
+HYUNDAI Sonata,3.3,(6 cyl),Auto-L5,2WD,Gasoline,CA,U2,8HYXV03.3FW5,large car,7,19,28,22,6,yes
+HYUNDAI Sonata,2.4,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8HYXV02.4SW5,large car,6,21,30,24,7,yes
+HYUNDAI Sonata,2.4,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8HYXV02.4SW5,large car,6,21,31,25,7,yes
+HYUNDAI Tiburon,2,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8HYXV02.0GW5,small car,7,20,27,22,6,yes
+HYUNDAI Tiburon,2,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8HYXV02.0GW5,small car,7,20,28,23,7,yes
+HYUNDAI Tiburon,2,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8HYXV02.0GW5,small car,6,20,28,23,7,yes
+HYUNDAI Tucson,2,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8HYXT02.0JW5,SUV,7,19,25,22,6,yes
+HYUNDAI Tucson,2,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8HYXT02.0JW5,SUV,7,20,25,22,6,yes
+HYUNDAI Tucson,2,(4 cyl),Man-5,4WD,Gasoline,CA,U2,8HYXT02.0JW5,SUV,7,19,24,21,6,yes
+INFINITI G35,3.5,(6 cyl),Auto-S5,2WD,Gasoline,CA,U2,8NSXV03.5GAB,midsize car,7,17,24,20,6,yes
+INFINITI G35,3.5,(6 cyl),Man-6,2WD,Gasoline,CA,U2,8NSXV03.5GAB,midsize car,7,17,25,20,6,yes
+INFINITI G37,3.7,(6 cyl),Man-6,2WD,Gasoline,CA,U2,8NSXV03.7GAA,small car,7,17,26,20,6,yes
+INFINITI G37,3.7,(6 cyl),Auto-S5,2WD,Gasoline,CA,U2,8NSXV03.7GAA,small car,7,18,24,20,6,yes
+ISUZU I-290,2.9,(4 cyl),Man-5,2WD,Gasoline,FC,B4,8GMXT02.9190,pickup,7,18,24,20,6,yes
+ISUZU I-290,2.9,(4 cyl),Auto-L4,2WD,Gasoline,FC,B4,8GMXT02.9190,pickup,7,18,24,20,6,yes
+JEEP Compass,2.4,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8CRXB0144M80,SUV,7,23,28,25,7,yes
+JEEP Compass,2.4,(4 cyl),Auto-AV,4WD,Gasoline,CA,U2,8CRXB0144M81,SUV,7,21,24,22,6,yes
+JEEP Compass,2.4,(4 cyl),Man-5,4WD,Gasoline,CA,U2,8CRXB0144M80,SUV,7,22,27,24,7,yes
+JEEP Compass,2,(4 cyl),Auto-AV,2WD,Gasoline,FA,B5,8CRXB02.4ME0,SUV,6,23,27,24,7,yes
+JEEP Compass,2.4,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8CRXB02.4ME0,SUV,6,23,28,25,7,yes
+JEEP Compass,2.4,(4 cyl),Man-5,4WD,Gasoline,FA,B5,8CRXB02.4ME0,SUV,6,22,27,24,7,yes
+JEEP Patriot,2.4,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8CRXB0144M80,SUV,7,23,28,25,7,yes
+JEEP Patriot,2.4,(4 cyl),Auto-AV,4WD,Gasoline,CA,U2,8CRXB0144M81,SUV,7,20,22,21,6,yes
+JEEP Patriot,2.4,(4 cyl),Auto-AV,4WD,Gasoline,CA,U2,8CRXB0144M81,SUV,7,21,24,22,6,yes
+JEEP Patriot,2.4,(4 cyl),Man-5,4WD,Gasoline,CA,U2,8CRXB0144M80,SUV,7,22,27,24,7,yes
+JEEP Patriot,2,(4 cyl),Auto-AV,2WD,Gasoline,FA,B5,8CRXB02.4ME0,SUV,6,23,27,24,7,yes
+JEEP Patriot,2.4,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8CRXB02.4ME0,SUV,6,23,28,25,7,yes
+JEEP Patriot,2.4,(4 cyl),Man-5,4WD,Gasoline,FA,B5,8CRXB02.4ME0,SUV,6,22,27,24,7,yes
+KIA Optima,2.4,(4 cyl),Auto-L5,2WD,Gasoline,CA,U2,8KMXV02.4MW5,midsize car,7,21,31,25,7,yes
+KIA Optima,2.4,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8KMXV02.4MW5,midsize car,7,21,31,25,7,yes
+KIA Optima,2.4,(4 cyl),Auto-L5,2WD,Gasoline,FA,B5,8KMXV02.4MW5,midsize car,6,21,31,25,7,yes
+KIA Optima,2.4,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8KMXV02.4MW5,midsize car,6,21,31,25,7,yes
+KIA Rio,1.6,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8KMXV01.6BW5,small car,7,25,35,29,8,yes
+KIA Rio,1.6,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8KMXV01.6BW5,small car,7,27,32,29,8,yes
+KIA Rio,1.6,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8KMXV01.6BW5,small car,6,25,35,29,8,yes
+KIA Rio,1.6,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8KMXV01.6BW5,small car,6,27,32,29,8,yes
+KIA Rondo,2.4,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8KMXV02.4UW5,station wagon,7,19,26,22,6,yes
+KIA Rondo,2.7,(6 cyl),Auto-L5,2WD,Gasoline,CA,U2,8KMXV02.7NW5,station wagon,7,18,26,21,6,yes
+KIA Spectra,2,(4 cyl),Auto-L4,2WD,Gasoline,CA,S2,8KMXV02.0LPC,midsize car,9.5,24,32,27,8,yes
+KIA Spectra,2,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8KMXV02.0LW5,midsize car,7,23,30,26,8,yes
+KIA Spectra,2,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8KMXV02.0LW5,midsize car,7,24,32,27,8,yes
+KIA Spectra,2,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8KMXV02.0LW5,midsize car,6,23,30,26,8,yes
+KIA Spectra,2,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8KMXV02.0LW5,midsize car,6,24,32,27,8,yes
+KIA Sportage,2,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8KMXT02.0KW5,SUV,7,19,25,21,6,yes
+KIA Sportage,2,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8KMXT02.0KW5,SUV,7,20,25,22,6,yes
+KIA Sportage,2,(4 cyl),Man-5,4WD,Gasoline,CA,U2,8KMXT02.0KW5,SUV,7,19,24,21,6,yes
+LEXUS ES 350,3.5,(6 cyl),Auto-S6,2WD,Gasoline,CA,U2,8TYXV03.5BEA,midsize car,7,19,27,22,6,yes
+LEXUS GS 350,3.5,(6 cyl),Auto-S6,4WD,Gasoline,CA,U2,8TYXV03.5BEB,midsize car,7,18,25,20,6,yes
+LEXUS GS 350,3.5,(6 cyl),Auto-S6,2WD,Gasoline,CA,U2,8TYXV03.5BEB,midsize car,7,19,27,22,6,yes
+LEXUS GS 450h,3.5,(6 cyl),Auto-S6,2WD,Gasoline,CA,S2,8TYXV03.5CC4,small car,9,22,25,23,7,yes
+LEXUS GS 450h,3.5,(6 cyl),Auto-S6,2WD,Gasoline,FA,B3,8TYXV03.5CC4,small car,8,22,25,23,7,yes
+LEXUS GS 460,4.6,(8 cyl),S8,2WD,Gasoline,CA,U2,8TYXV04.6BEA,midsize car,7,17,24,20,6,yes
+LEXUS IS 250,2.5,(6 cyl),Man-6,2WD,Gasoline,CA,U2,8TYXV02.5BEA,small car,7,18,26,21,6,yes
+LEXUS IS 250,2.5,(6 cyl),Auto-S6,4WD,Gasoline,CA,U2,8TYXV02.5BEA,small car,7,20,26,22,6,yes
+LEXUS IS 250,2.5,(6 cyl),Auto-S6,2WD,Gasoline,CA,U2,8TYXV02.5BEA,small car,7,21,29,24,7,yes
+LEXUS IS 250,2.5,(6 cyl),Auto-S6,2WD,Gasoline,FA,B5,8TYXV02.5BEA,small car,6,21,29,24,7,yes
+LEXUS IS 350,3.5,(6 cyl),Auto-S6,2WD,Gasoline,CA,U2,8TYXV03.5BEB,small car,7,18,25,20,6,yes
+LEXUS LS 600HL,5,(8 cyl),S8,4WD,Gasoline,CA,S2,8TYXV05.0CC4,midsize car,9,20,22,21,6,yes
+LEXUS LS 600HL,5,(8 cyl),S8,4WD,Gasoline,FA,B3,8TYXV05.0CC4,midsize car,8,20,22,21,6,yes
+LEXUS RX 350,3.5,(6 cyl),Auto-L5,2WD,Gasoline,CA,U2,8TYXT03.5BEM,SUV,7,18,23,20,6,yes
+LEXUS RX 350,3.5,(6 cyl),Auto-S5,2WD,Gasoline,CA,U2,8TYXT03.5BEM,SUV,7,18,23,20,6,yes
+LEXUS RX 400H,3.3,(6 cyl),Auto-AV,2WD,Gasoline,CA,S2,8TYXT03.3CCU,SUV,9,27,24,25,7,yes
+LEXUS RX 400H,3.3,(6 cyl),Auto-AV,4WD,Gasoline,CA,S2,8TYXT03.3CCU,SUV,9,26,24,25,7,yes
+LEXUS RX 400H,3.3,(6 cyl),Auto-AV,2WD,Gasoline,FA,B3,8TYXT03.3CCU,SUV,8,27,24,25,7,yes
+LEXUS RX 400H,3.3,(6 cyl),Auto-AV,4WD,Gasoline,FA,B3,8TYXT03.3CCU,SUV,8,26,24,25,7,yes
+LINCOLN MKZ,3.5,(6 cyl),Auto-L6,2WD,Gasoline,CA,U2,8FMXV03.5VEP,midsize car,7,18,28,22,6,yes
+MAZDA 3,2,(4 cyl),Auto-S4,2WD,Gasoline,CA,S2,8TKXV02.0NH1,small car,9.5,23,31,26,8,yes
+MAZDA 3,2,(4 cyl),Man-5,2WD,Gasoline,CA,S2,8TKXV02.0NH1,small car,9.5,24,32,27,8,yes
+MAZDA 3,2.3,(4 cyl),Auto-S5,2WD,Gasoline,CA,S2,8TKXV02.3NH1,small car,9.5,22,29,24,7,yes
+MAZDA 3,2.3,(4 cyl),Man-5,2WD,Gasoline,CA,S2,8TKXV02.3NH1,small car,9.5,22,29,25,7,yes
+MAZDA 3,2.3,(4 cyl),Man-6,2WD,Gasoline,CA,U2,8TKXV02.3NF1,midsize car,7,18,26,20,6,yes
+MAZDA 3,2,(4 cyl),Auto-S4,2WD,Gasoline,FA,B5,8TKXV02.35NM,small car,6,23,31,26,8,yes
+MAZDA 3,2,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8TKXV02.35NM,small car,6,24,32,27,8,yes
+MAZDA 3,2.3,(4 cyl),Auto-S5,2WD,Gasoline,FA,B5,8TKXV02.35NM,small car,6,22,29,24,7,yes
+MAZDA 3,2.3,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8TKXV02.35NM,small car,6,22,29,25,7,yes
+MAZDA 5,2.3,(4 cyl),Auto-S5,2WD,Gasoline,FA,B5,8TKXV02.35DA,minivan,6,21,27,23,7,yes
+MAZDA 5,2.3,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8TKXV02.35DA,minivan,6,22,28,24,7,yes
+MAZDA 5,2.3,(4 cyl),Auto-S5,2WD,Gasoline,CA,L2,8TKXV02.35DA,minivan,6,21,27,23,7,yes
+MAZDA 5,2.3,(4 cyl),Man-5,2WD,Gasoline,CA,L2,8TKXV02.35DA,minivan,6,22,28,24,7,yes
+MAZDA 6,2.3,(4 cyl),Auto-S5,2WD,Gasoline,CA,S2,8TKXV02.3NH2,midsize car,9.5,21,28,24,7,yes
+MAZDA 6,3,(6 cyl),Man-5,2WD,Gasoline,CA,U2,8TKXV03.05FA,midsize car,7,17,25,20,6,yes
+MAZDA 6,3,(6 cyl),Auto-S6,2WD,Gasoline,CA,U2,8TKXV03.05FA,midsize car,7,18,25,20,6,yes
+MAZDA 6,2.3,(4 cyl),Auto-S5,2WD,Gasoline,FA,B5,8TKXV02.35DB,midsize car,6,21,28,24,7,yes
+MAZDA 6,2.3,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8TKXV02.35DB,midsize car,6,21,29,24,7,yes
+MAZDA 6,2.3,(4 cyl),Auto-S5,2WD,Gasoline,CA,L2,8TKXV02.35DB,midsize car,6,21,28,24,7,yes
+MAZDA 6,2.3,(4 cyl),Man-5,2WD,Gasoline,CA,L2,8TKXV02.35DB,midsize car,6,21,29,24,7,yes
+MAZDA B2300,2.3,(4 cyl),Auto-L5,2WD,Gasoline,CA,U2,8FMXT02.31BA,pickup,7,19,24,21,6,yes
+MAZDA B2300,2.3,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8FMXT02.31BA,pickup,7,21,26,23,7,yes
+MAZDA B2300,2.3,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8FMXT02.31EL,pickup,6,21,26,23,7,yes
+MAZDA MX-5,2,(4 cyl),Auto-S6,2WD,Gasoline,CA,U2,8TKXV02.05FA,small car,7,20,27,23,7,yes
+MAZDA MX-5,2,(4 cyl),Man-6,2WD,Gasoline,CA,U2,8TKXV02.05FA,small car,7,21,28,24,7,yes
+MAZDA MX-5,2,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8TKXV02.05FA,small car,7,22,27,24,7,yes
+MAZDA MX-5,2,(4 cyl),Auto-S6,2WD,Gasoline,FA,B5,8TKXV02.05FA,small car,6,20,27,23,7,yes
+MAZDA MX-5,2,(4 cyl),Man-6,2WD,Gasoline,FA,B5,8TKXV02.05FA,small car,6,21,28,24,7,yes
+MAZDA MX-5,2,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8TKXV02.05FA,small car,6,22,27,24,7,yes
+MAZDA Tribute,2.3,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8FMXT02.31EF,SUV,7,22,28,24,7,yes
+MAZDA Tribute,2.3,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8FMXT02.31EF,SUV,6,22,28,24,7,yes
+MAZDA Tribute Hybrid,2.3,(4 cyl),Auto-AV,2WD,Gasoline,CA,S2,8FMXT02.32ZE,SUV,9.5,34,30,32,9,yes
+MAZDA Tribute Hybrid,2.3,(4 cyl),Auto-AV,4WD,Gasoline,CA,S2,8FMXT02.32ZE,SUV,9.5,29,27,28,8,yes
+MAZDA Tribute Hybrid,2.3,(4 cyl),Auto-AV,2WD,Gasoline,FA,B3,8FMXT02.32ZE,SUV,8,34,30,32,9,yes
+MAZDA Tribute Hybrid,2.3,(4 cyl),Auto-AV,4WD,Gasoline,FA,B3,8FMXT02.32ZE,SUV,8,29,27,28,8,yes
+MERCEDES-BENZ C300,3,(6 cyl),Man-6,2WD,Gasoline,FC,B4,8MBXV03.5BN4,small car,7,18,26,21,6,yes
+MERCEDES-BENZ C350,3.5,(6 cyl),Auto-L7,2WD,Gasoline,FC,B4,8MBXV03.5BN4,small car,7,17,25,20,6,yes
+MERCEDES-BENZ CLK350,3.5,(6 cyl),Auto-L7,2WD,Gasoline,FC,B4,8MBXV03.5BN4,small car,7,17,25,20,6,yes
+MERCEDES-BENZ CLK350 Cabriolet,3.5,(6 cyl),Auto-L7,2WD,Gasoline,FC,B4,8MBXV03.5BN4,small car,7,17,25,20,6,yes
+MERCEDES-BENZ SLK280,3,(6 cyl),Man-6,2WD,Gasoline,FC,B4,8MBXV03.5BN4,small car,7,17,25,20,6,yes
+MERCEDES-BENZ SLK280,3,(6 cyl),Auto-L7,2WD,Gasoline,FC,B4,8MBXV03.5BN4,small car,7,18,24,20,6,yes
+MERCURY Mariner Hybrid,2.3,(4 cyl),Auto-AV,2WD,Gasoline,CA,S2,8FMXT02.32ZE,SUV,9.5,34,30,32,9,yes
+MERCURY Mariner Hybrid,2.3,(4 cyl),Auto-AV,4WD,Gasoline,CA,S2,8FMXT02.32ZE,SUV,9.5,29,27,28,8,yes
+MERCURY Mariner Hybrid,2.3,(4 cyl),Auto-AV,2WD,Gasoline,FA,B3,8FMXT02.32ZE,SUV,8,34,30,32,9,yes
+MERCURY Mariner Hybrid,2.3,(4 cyl),Auto-AV,4WD,Gasoline,FA,B3,8FMXT02.32ZE,SUV,8,29,27,28,8,yes
+MERCURY Milan,2.3,(4 cyl),Auto-L5,2WD,Gasoline,CA,S2,8FMXV02.3VZT,midsize car,9.5,20,28,23,7,yes
+MERCURY Milan,3,(6 cyl),Auto-L6,4WD,Gasoline,CA,U2,8FMXV03.0VEK,midsize car,7,17,25,20,6,yes
+MERCURY Milan,3,(6 cyl),Auto-L6,2WD,Gasoline,CA,U2,8FMXV03.0VEK,midsize car,7,18,26,21,6,yes
+MERCURY Milan,2.3,(4 cyl),Auto-L5,2WD,Gasoline,FA,B5,8FMXV02.3VEU,midsize car,6,20,28,23,7,yes
+MERCURY Milan,2.3,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8FMXV02.3VEU,midsize car,6,20,29,23,7,yes
+MERCURY Sable,3.5,(6 cyl),Auto-L6,2WD,Gasoline,CA,S2,8FMXV03.51ZL,large car,9.5,18,28,22,6,yes
+MINI Mini Cooper Convertible,1.6,(4 cyl),Auto-AV,2WD,Gasoline,FA,B5,8BMXV01.6R52,small car,6,25,33,28,8,yes
+MINI Mini Cooper Convertible,1.6,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8BMXV01.6R52,small car,6,26,35,29,8,yes
+MINI Mini Cooper Convertible,1.6,(4 cyl),Auto-AV,2WD,Gasoline,CA,L2,8BMXV01.6R52,small car,6,25,33,28,8,yes
+MINI Mini Cooper Convertible,1.6,(4 cyl),Man-5,2WD,Gasoline,CA,L2,8BMXV01.6R52,small car,6,26,35,29,8,yes
+MINI Mini Cooper S Convertible,1.6,(4 cyl),Auto-S6,2WD,Gasoline,FA,B5,8BMXV01.6R52,small car,6,22,31,26,8,yes
+MINI Mini Cooper S Convertible,1.6,(4 cyl),Man-6,2WD,Gasoline,FA,B5,8BMXV01.6R52,small car,6,24,31,27,8,yes
+MINI Mini Cooper S Convertible,1.6,(4 cyl),Auto-S6,2WD,Gasoline,CA,L2,8BMXV01.6R52,small car,6,22,31,26,8,yes
+MINI Mini Cooper S Convertible,1.6,(4 cyl),Man-6,2WD,Gasoline,CA,L2,8BMXV01.6R52,small car,6,24,31,27,8,yes
+MITSUBISHI Eclipse,2.4,(4 cyl),Auto-S4,2WD,Gasoline,CA,U2,8DSXV02.4G4H,small car,7,20,26,22,6,yes
+MITSUBISHI Eclipse,2.4,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8DSXV02.4G4H,small car,7,20,28,23,7,yes
+MITSUBISHI Eclipse,2.4,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8DSXV02.4GRH,small car,6,20,28,23,7,yes
+MITSUBISHI Eclipse Spyder,2.4,(4 cyl),Auto-S4,2WD,Gasoline,CA,U2,8DSXV02.4G4H,small car,7,19,26,22,6,yes
+MITSUBISHI Eclipse Spyder,2.4,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8DSXV02.4G4H,small car,7,19,26,22,6,yes
+MITSUBISHI Galant,2.4,(4 cyl),Auto-S4,2WD,Gasoline,CA,S2,8DSXV02.4G6G,midsize car,9.5,20,27,23,7,yes
+MITSUBISHI Galant,2.4,(4 cyl),Auto-S4,2WD,Gasoline,FA,B5,8DSXV02.4GRG,midsize car,6,20,27,23,7,yes
+MITSUBISHI Lancer,2,(4 cyl),Man-5,2WD,Gasoline,CA,S2,8MTXV02.0G6G,small car,9.5,21,29,24,7,yes
+MITSUBISHI Lancer,2,(4 cyl),Auto-AV,2WD,Gasoline,CA,S2,8MTXV02.0G6G,small car,9.5,22,29,24,7,yes
+MITSUBISHI Lancer,2,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8MTXV02.0GRG,small car,6,21,29,24,7,yes
+MITSUBISHI Lancer,2,(4 cyl),Auto-AV,2WD,Gasoline,FA,B5,8MTXV02.0GRG,small car,6,22,29,24,7,yes
+MITSUBISHI Outlander,3,(6 cyl),Auto-S6,2WD,Gasoline,CA,S2,8MTXT03.0G6G,SUV,9.5,17,25,20,6,yes
+MITSUBISHI Outlander,3,(6 cyl),Auto-S6,4WD,Gasoline,CA,S2,8MTXT03.0G6G,SUV,9.5,17,24,20,6,yes
+NISSAN 350Z,3.5,(6 cyl),Auto-S5,2WD,Gasoline,CA,U2,8NSXV03.5GAB,small car,7,17,24,20,6,yes
+NISSAN 350Z,3.5,(6 cyl),Man-6,2WD,Gasoline,CA,U2,8NSXV03.5GAB,small car,7,18,25,20,6,yes
+NISSAN 350Z Roadster,3.5,(6 cyl),Man-6,2WD,Gasoline,CA,U2,8NSXV03.5GAB,small car,7,17,24,20,6,yes
+NISSAN Altima,2.5,(4 cyl),Auto-AV,2WD,Gasoline,CA,S2,8NSXV02.585A,midsize car,9.5,23,31,26,8,yes
+NISSAN Altima,2.5,(4 cyl),Man-6,2WD,Gasoline,CA,S2,8NSXV02.585A,midsize car,9.5,23,32,26,8,yes
+NISSAN Altima,2.5,(4 cyl),Auto-AV,2WD,Gasoline,CA,S2,8NSXV02.585A,small car,9.5,23,31,26,8,yes
+NISSAN Altima,2.5,(4 cyl),Man-6,2WD,Gasoline,CA,S2,8NSXV02.585A,small car,9.5,23,32,26,8,yes
+NISSAN Altima,3.5,(6 cyl),Auto-AV,2WD,Gasoline,CA,U2,8NSXV03.5G7B,midsize car,7,19,26,22,6,yes
+NISSAN Altima,3.5,(6 cyl),Man-6,2WD,Gasoline,CA,U2,8NSXV03.5G7B,midsize car,7,19,27,22,6,yes
+NISSAN Altima,3.5,(6 cyl),Auto-AV,2WD,Gasoline,CA,U2,8NSXV03.5G7B,small car,7,19,26,22,6,yes
+NISSAN Altima,3.5,(6 cyl),Man-6,2WD,Gasoline,CA,U2,8NSXV03.5G7B,small car,7,19,27,22,6,yes
+NISSAN Altima,2.5,(4 cyl),Auto-AV,2WD,Gasoline,FA,B5,8NSXV02.5G5A,midsize car,6,23,31,26,8,yes
+NISSAN Altima,2.5,(4 cyl),Man-6,2WD,Gasoline,FA,B5,8NSXV02.5G5A,midsize car,6,23,32,26,8,yes
+NISSAN Altima,2.5,(4 cyl),Auto-AV,2WD,Gasoline,FA,B5,8NSXV02.5G5A,small car,6,23,31,26,8,yes
+NISSAN Altima,2.5,(4 cyl),Man-6,2WD,Gasoline,FA,B5,8NSXV02.5G5A,small car,6,23,32,26,8,yes
+NISSAN Altima,2.5,(4 cyl),Auto-AV,2WD,Gasoline,CA,L2,8NSXV02.5G5A,midsize car,6,23,31,26,8,yes
+NISSAN Altima,2.5,(4 cyl),Man-6,2WD,Gasoline,CA,L2,8NSXV02.5G5A,midsize car,6,23,32,26,8,yes
+NISSAN Altima,2.5,(4 cyl),Auto-AV,2WD,Gasoline,CA,L2,8NSXV02.5G5A,small car,6,23,31,26,8,yes
+NISSAN Altima,2.5,(4 cyl),Man-6,2WD,Gasoline,CA,L2,8NSXV02.5G5A,small car,6,23,32,26,8,yes
+NISSAN Altima Hybrid,2.5,(4 cyl),Auto-AV,2WD,Gasoline,CA,S2,8NSXV02.5G3A,midsize car,9.5,35,33,34,9,yes
+NISSAN Frontier,2.5,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8NSXT02.5G5A,pickup,7,19,23,21,6,yes
+NISSAN Maxima,3.5,(6 cyl),Auto-AV,2WD,Gasoline,CA,U2,8NSXV03.5G7A,midsize car,7,19,25,21,6,yes
+NISSAN Rogue,2.5,(4 cyl),Auto-AV,2WD,Gasoline,CA,S2,8NSXT02.585A,SUV,9,22,27,24,7,yes
+NISSAN Rogue,2.5,(4 cyl),Auto-AV,4WD,Gasoline,CA,S2,8NSXT02.585A,SUV,9,21,26,23,7,yes
+NISSAN Rogue,2.5,(4 cyl),Auto-AV,2WD,Gasoline,FA,B5,8NSXT02.5G5B,SUV,6,22,27,24,7,yes
+NISSAN Rogue,2.5,(4 cyl),Auto-AV,4WD,Gasoline,FA,B5,8NSXT02.5G5B,SUV,6,21,26,23,7,yes
+NISSAN Rogue,2.5,(4 cyl),Auto-AV,2WD,Gasoline,CA,L2,8NSXT02.5G5B,SUV,6,22,27,24,7,yes
+NISSAN Rogue,2.5,(4 cyl),Auto-AV,4WD,Gasoline,CA,L2,8NSXT02.5G5B,SUV,6,21,26,23,7,yes
+NISSAN Sentra,2,(4 cyl),Man-6,2WD,Gasoline,CA,U2,8NSXV02.0G2A,midsize car,7,24,31,27,8,yes
+NISSAN Sentra,2,(4 cyl),Auto-AV,2WD,Gasoline,CA,U2,8NSXV02.0G2A,midsize car,7,25,33,28,8,yes
+NISSAN Sentra,2,(4 cyl),Man-6,2WD,Gasoline,FA,B5,8NSXV02.0G2A,midsize car,6,24,31,27,8,yes
+NISSAN Sentra,2,(4 cyl),Auto-AV,2WD,Gasoline,FA,B5,8NSXV02.0G2A,midsize car,6,25,33,28,8,yes
+NISSAN Sentra,2.5,(4 cyl),Man-6,2WD,Gasoline,FA,B5,8NSXV02.5G5B,midsize car,6,21,29,24,7,yes
+NISSAN Sentra,2.5,(4 cyl),Auto-AV,2WD,Gasoline,FA,B5,8NSXV02.5G5B,midsize car,6,24,30,26,8,yes
+NISSAN Sentra,2.5,(4 cyl),Man-6,2WD,Gasoline,CA,L2,8NSXV02.5G5B,midsize car,6,21,29,24,7,yes
+NISSAN Sentra,2.5,(4 cyl),Auto-AV,2WD,Gasoline,CA,L2,8NSXV02.5G5B,midsize car,6,24,30,26,8,yes
+NISSAN Versa,1.8,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8NSXV01.8G1A,midsize car,7,24,32,27,8,yes
+NISSAN Versa,1.8,(4 cyl),Man-6,2WD,Gasoline,CA,U2,8NSXV01.8G1A,midsize car,7,26,31,28,8,yes
+NISSAN Versa,1.8,(4 cyl),Auto-AV,2WD,Gasoline,CA,U2,8NSXV01.8G1A,midsize car,7,27,33,29,8,yes
+NISSAN Versa,1.8,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8NSXV01.8G1A,midsize car,6,24,32,27,8,yes
+NISSAN Versa,1.8,(4 cyl),Man-6,2WD,Gasoline,FA,B5,8NSXV01.8G1A,midsize car,6,26,31,28,8,yes
+NISSAN Versa,1.8,(4 cyl),Auto-AV,2WD,Gasoline,FA,B5,8NSXV01.8G1A,midsize car,6,27,33,29,8,yes
+PONTIAC G5,2.2,(4 cyl),Auto-L4,2WD,Gasoline,CA,SLEV,8GMXV02.2030,small car,9.5,22,31,26,8,yes
+PONTIAC G5,2.2,(4 cyl),Man-5,2WD,Gasoline,CA,SLEV,8GMXV02.2030,small car,9.5,24,33,27,8,yes
+PONTIAC G5,2.2,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8GMXV02.4025,small car,6,22,31,26,8,yes
+PONTIAC G5,2.2,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8GMXV02.4025,small car,6,24,33,27,8,yes
+PONTIAC G5,2.2,(4 cyl),Auto-L4,2WD,Gasoline,CA,L2,8GMXV02.4025,small car,6,22,31,26,8,yes
+PONTIAC G5,2.2,(4 cyl),Man-5,2WD,Gasoline,CA,L2,8GMXV02.4025,small car,6,24,33,27,8,yes
+PONTIAC G5,2.4,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8GMXV02.4025,small car,6,22,31,25,7,yes
+PONTIAC G5,2.4,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8GMXV02.4025,small car,6,22,32,26,8,yes
+PONTIAC G5,2.4,(4 cyl),Auto-L4,2WD,Gasoline,CA,L2,8GMXV02.4025,small car,6,22,31,25,7,yes
+PONTIAC G5,2.4,(4 cyl),Man-5,2WD,Gasoline,CA,L2,8GMXV02.4025,small car,6,22,32,26,8,yes
+PONTIAC G6,3.5,(6 cyl),Auto-S4,2WD,Gasoline,CA,U2,8GMXV03.5043,small car,7,17,26,20,6,yes
+PONTIAC G6,3.5,(6 cyl),Auto-L4,2WD,Gasoline,CA,U2,8GMXV03.5043,small car,7,18,29,22,6,yes
+PONTIAC G6,2.4,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8GMXV02.4027,small car,6,22,30,25,7,yes
+PONTIAC G6,2.4,(4 cyl),Auto-L4,2WD,Gasoline,CA,L2,8GMXV02.4027,small car,6,22,30,25,7,yes
+PONTIAC Grand Prix,3.8,(6 cyl),Auto-L4,2WD,Gasoline,CA,SLEV,8GMXV03.8044,midsize car,9.5,18,28,21,6,yes
+PONTIAC Pursuit,2.2,(4 cyl),Auto-L4,2WD,Gasoline,CA,SLEV,8GMXV02.2030,small car,9.5,22,31,26,8,yes
+PONTIAC Pursuit,2.2,(4 cyl),Man-5,2WD,Gasoline,CA,SLEV,8GMXV02.2030,small car,9.5,24,33,27,8,yes
+PONTIAC Pursuit,2.2,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8GMXV02.4025,small car,6,22,31,26,8,yes
+PONTIAC Pursuit,2.2,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8GMXV02.4025,small car,6,24,33,27,8,yes
+PONTIAC Pursuit,2.2,(4 cyl),Auto-L4,2WD,Gasoline,CA,L2,8GMXV02.4025,small car,6,22,31,26,8,yes
+PONTIAC Pursuit,2.2,(4 cyl),Man-5,2WD,Gasoline,CA,L2,8GMXV02.4025,small car,6,24,33,27,8,yes
+PONTIAC Pursuit,2.4,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8GMXV02.4025,small car,6,22,31,25,7,yes
+PONTIAC Pursuit,2.4,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8GMXV02.4025,small car,6,22,32,26,8,yes
+PONTIAC Pursuit,2.4,(4 cyl),Auto-L4,2WD,Gasoline,CA,L2,8GMXV02.4025,small car,6,22,31,25,7,yes
+PONTIAC Pursuit,2.4,(4 cyl),Man-5,2WD,Gasoline,CA,L2,8GMXV02.4025,small car,6,22,32,26,8,yes
+PONTIAC Vibe,1.8,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8NTXV01.8BEA,station wagon,7,25,31,27,8,yes
+PONTIAC Vibe,1.8,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8NTXV01.8BEA,station wagon,7,26,33,29,8,yes
+PONTIAC Vibe,1.8,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8NTXV01.8BEA,station wagon,6,25,31,27,8,yes
+PONTIAC Vibe,1.8,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8NTXV01.8BEA,station wagon,6,26,33,29,8,yes
+PORSCHE Boxster,2.7,(6 cyl),Auto-L5,2WD,Gasoline,CA,U2,8PRXV03.4C87,small car,7,19,26,21,6,yes
+PORSCHE Boxster,2.7,(6 cyl),Man-6,2WD,Gasoline,CA,U2,8PRXV03.4C87,small car,7,19,28,22,6,yes
+PORSCHE Boxster,2.7,(6 cyl),Man-5,2WD,Gasoline,CA,U2,8PRXV03.4C87,small car,7,20,29,23,7,yes
+PORSCHE Boxster,2.7,(6 cyl),Man-5,2WD,Gasoline,FA,B5,8PRXV03.4C87,small car,6,20,29,23,7,yes
+PORSCHE Boxster S,3.4,(6 cyl),Auto-L5,2WD,Gasoline,CA,U2,8PRXV03.4C87,small car,7,18,25,21,6,yes
+PORSCHE Boxster S,3.4,(6 cyl),Man-6,2WD,Gasoline,CA,U2,8PRXV03.4C87,small car,7,18,26,21,6,yes
+PORSCHE Cayman,2.7,(6 cyl),Auto-L5,2WD,Gasoline,CA,U2,8PRXV03.4C87,small car,7,19,26,21,6,yes
+PORSCHE Cayman,2.7,(6 cyl),Man-6,2WD,Gasoline,CA,U2,8PRXV03.4C87,small car,7,19,28,22,6,yes
+PORSCHE Cayman,2.7,(6 cyl),Man-5,2WD,Gasoline,CA,U2,8PRXV03.4C87,small car,7,20,29,23,7,yes
+PORSCHE Cayman,2.7,(6 cyl),Man-5,2WD,Gasoline,FA,B5,8PRXV03.4C87,small car,6,20,29,23,7,yes
+PORSCHE Cayman S,3.4,(6 cyl),Auto-L5,2WD,Gasoline,CA,U2,8PRXV03.4C87,small car,7,18,25,21,6,yes
+PORSCHE Cayman S,3.4,(6 cyl),Man-6,2WD,Gasoline,CA,U2,8PRXV03.4C87,small car,7,18,26,21,6,yes
+SAAB 9-3 Sport Sedan,2,(4 cyl),Man-6,2WD,Gasoline,FA,B5,8GMXV02.3001,small car,6,19,29,23,7,yes
+SAAB 9-3 Sport Sedan,2,(4 cyl),Man-6,2WD,Gasoline,CA,L2,8GMXV02.3001,small car,6,19,29,23,7,yes
+SAAB 9-3 Sportcombi,2,(4 cyl),Man-6,2WD,Gasoline,FA,B5,8GMXV02.3001,station wagon,6,19,29,23,7,yes
+SAAB 9-3 Sportcombi,2,(4 cyl),Man-6,2WD,Gasoline,CA,L2,8GMXV02.3001,station wagon,6,19,29,23,7,yes
+SATURN Aura,3.5,(6 cyl),Auto-L4,2WD,Gasoline,CA,U2,8GMXV03.5043,midsize car,7,18,29,22,6,yes
+SATURN Aura,2.4,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8GMXV02.4027,midsize car,6,22,30,25,7,yes
+SATURN Aura,2.4,(4 cyl),Auto-L4,2WD,Gasoline,CA,L2,8GMXV02.4027,midsize car,6,22,30,25,7,yes
+SATURN Aura Hybrid,2.4,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8GMXV02.4040,midsize car,6,24,32,27,8,yes
+SATURN Aura Hybrid,2.4,(4 cyl),Auto-L4,2WD,Gasoline,CA,L2,8GMXV02.4040,midsize car,6,24,32,27,8,yes
+SATURN Vue,2.4,(4 cyl),Auto-L4,2WD,Gasoline,FC,B4,8GMXT02.4124,SUV,7,19,26,22,6,yes
+SATURN Vue Hybrid,2.4,(4 cyl),Auto-L4,2WD,Gasoline,FC,B4,8GMXT02.4135,SUV,7,25,32,28,8,yes
+SUBARU Forester,2.5,(4 cyl),Auto-L4,4WD,Gasoline,CA,S2,8FJXB02.5NVD,SUV,9.5,20,26,22,6,yes
+SUBARU Forester,2.5,(4 cyl),Man-5,4WD,Gasoline,CA,S2,8FJXB02.5NVD,SUV,9.5,20,27,22,6,yes
+SUBARU Legacy,2.5,(4 cyl),Man-5,4WD,Gasoline,CA,S2,8FJXB02.5NVD,small car,9.5,20,27,22,6,yes
+SUBARU Legacy,2.5,(4 cyl),Auto-S4,4WD,Gasoline,CA,S2,8FJXB02.5NVD,small car,9.5,20,27,22,6,yes
+SUBARU Outback Wagon,2.5,(4 cyl),Man-5,4WD,Gasoline,CA,S2,8FJXB02.5NVD,SUV,9.5,19,26,22,6,yes
+SUBARU Outback Wagon,2.5,(4 cyl),Auto-S4,4WD,Gasoline,CA,S2,8FJXB02.5NVD,SUV,9.5,20,26,22,6,yes
+SUZUKI Forenza,2,(4 cyl),Auto-4,2WD,Gasoline,FC,U2,8GDXV02.0D04,small car,7,19,28,22,6,yes
+SUZUKI Forenza,2,(4 cyl),Man-5,2WD,Gasoline,FC,U2,8GDXV02.0D04,small car,7,20,28,23,7,yes
+SUZUKI Forenza,2,(4 cyl),Man-5,2WD,Gasoline,FC,B5,8GDXV02.0D04,small car,6,20,28,23,7,yes
+SUZUKI Forenza Wagon,2,(4 cyl),Auto-4,2WD,Gasoline,FC,U2,8GDXV02.0D04,station wagon,7,19,27,22,6,yes
+SUZUKI Forenza Wagon,2,(4 cyl),Man-5,2WD,Gasoline,FC,U2,8GDXV02.0D04,station wagon,7,19,27,22,6,yes
+SUZUKI Reno,2,(4 cyl),Auto-4,2WD,Gasoline,FC,U2,8GDXV02.0D04,small car,7,19,28,22,6,yes
+SUZUKI Reno,2,(4 cyl),Man-5,2WD,Gasoline,FC,U2,8GDXV02.0D04,small car,7,20,28,23,7,yes
+SUZUKI Reno,2,(4 cyl),Man-5,2WD,Gasoline,FC,B5,8GDXV02.0D04,small car,6,20,28,23,7,yes
+SUZUKI SX4,2,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8SKXV1.995D1,small car,6,22,30,25,7,yes
+SUZUKI SX4,2,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8SKXV1.995D1,small car,6,23,31,26,8,yes
+SUZUKI SX4,2,(4 cyl),Man-5,4WD,Gasoline,FA,B5,8SKXV1.995D1,station wagon,6,21,28,24,7,yes
+SUZUKI SX4,2,(4 cyl),Auto-L4,4WD,Gasoline,FA,B5,8SKXV1.995D1,station wagon,6,21,28,24,7,yes
+SUZUKI SX4,2,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8SKXV1.995D1,station wagon,6,22,30,25,7,yes
+SUZUKI SX4,2,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8SKXV1.995D1,station wagon,6,22,30,25,7,yes
+SUZUKI SX4,2,(4 cyl),Man-5,2WD,Gasoline,CA,L2,8SKXV1.995D1,small car,6,22,30,25,7,yes
+SUZUKI SX4,2,(4 cyl),Auto-L4,2WD,Gasoline,CA,L2,8SKXV1.995D1,small car,6,23,31,26,8,yes
+SUZUKI SX4,2,(4 cyl),Man-5,4WD,Gasoline,CA,L2,8SKXV1.995D1,station wagon,6,21,28,24,7,yes
+SUZUKI SX4,2,(4 cyl),Auto-L4,4WD,Gasoline,CA,L2,8SKXV1.995D1,station wagon,6,21,28,24,7,yes
+SUZUKI SX4,2,(4 cyl),Man-5,2WD,Gasoline,CA,L2,8SKXV1.995D1,station wagon,6,22,30,25,7,yes
+SUZUKI SX4,2,(4 cyl),Auto-L4,2WD,Gasoline,CA,L2,8SKXV1.995D1,station wagon,6,22,30,25,7,yes
+TOYOTA Avalon,3.5,(6 cyl),Auto-S6,2WD,Gasoline,CA,U2,8TYXV03.5BEA,large car,7,19,28,22,6,yes
+TOYOTA Camry,2.4,(4 cyl),Auto-L5,2WD,Gasoline,CA,S2,8TYXV02.4HX2,midsize car,9.5,21,31,25,7,yes
+TOYOTA Camry,2.4,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8TYXV02.4BEA,midsize car,7,21,31,25,7,yes
+TOYOTA Camry,2.4,(4 cyl),Auto-L5,2WD,Gasoline,CA,U2,8TYXV02.4BEA,midsize car,7,21,31,25,7,yes
+TOYOTA Camry,3.5,(6 cyl),Auto-S6,2WD,Gasoline,CA,U2,8TYXV03.5BEA,midsize car,7,19,28,22,6,yes
+TOYOTA Camry,2.4,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8TYXV02.4BEA,midsize car,6,21,31,25,7,yes
+TOYOTA Camry,2.4,(4 cyl),Auto-L5,2WD,Gasoline,FA,B5,8TYXV02.4BEA,midsize car,6,21,31,25,7,yes
+TOYOTA Camry Hybrid,2.4,(4 cyl),Auto-AV,2WD,Gasoline,CA,S2,8TYXV02.4HC3,midsize car,9.5,33,34,34,9,yes
+TOYOTA Camry Hybrid,2.4,(4 cyl),Auto-AV,2WD,Gasoline,FA,B3,8TYXV02.4HC3,midsize car,8,33,34,34,9,yes
+TOYOTA Corolla,1.8,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8TYXV01.8BEA,small car,7,26,35,29,8,yes
+TOYOTA Corolla,1.8,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8TYXV01.8BEA,small car,7,28,37,31,9,yes
+TOYOTA Corolla,1.8,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8TYXV01.8BEA,small car,6,26,35,29,8,yes
+TOYOTA Corolla,1.8,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8TYXV01.8BEA,small car,6,28,37,31,9,yes
+TOYOTA Highlander,3.5,(6 cyl),Auto-S5,2WD,Gasoline,CA,U2,8TYXT03.5BEM,SUV,7,18,24,20,6,yes
+TOYOTA Highlander Hybrid,3.3,(6 cyl),Auto-AV,4WD,Gasoline,CA,S2,8TYXT03.3CC4,SUV,9,27,25,26,8,yes
+TOYOTA Highlander Hybrid,3.3,(6 cyl),Auto-AV,4WD,Gasoline,FA,B3,8TYXT03.3CC4,SUV,8,27,25,26,8,yes
+TOYOTA Matrix,1.8,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8TYXV01.8BEA,station wagon,7,25,31,27,8,yes
+TOYOTA Matrix,1.8,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8TYXV01.8BEA,station wagon,7,26,33,29,8,yes
+TOYOTA Matrix,1.8,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8TYXV01.8BEA,station wagon,6,25,31,27,8,yes
+TOYOTA Matrix,1.8,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8TYXV01.8BEA,station wagon,6,26,33,29,8,yes
+TOYOTA Prius,1.5,(4 cyl),Auto-AV,2WD,Gasoline,CA,S2,8TYXV01.5HC3,midsize car,9.5,48,45,46,10,yes
+TOYOTA Prius,1.5,(4 cyl),Auto-AV,2WD,Gasoline,FA,B3,8TYXV01.5HC3,midsize car,8,48,45,46,10,yes
+TOYOTA RAV4,2.4,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8TYXT02.4BEH,SUV,7,21,27,24,7,yes
+TOYOTA RAV4,2.4,(4 cyl),Auto-L4,4WD,Gasoline,CA,U2,8TYXT02.4BEM,SUV,7,20,25,22,6,yes
+TOYOTA RAV4,3.5,(6 cyl),Auto-L5,2WD,Gasoline,CA,U2,8TYXT03.5BEM,SUV,7,19,27,22,6,yes
+TOYOTA RAV4,3.5,(6 cyl),Auto-L5,4WD,Gasoline,CA,U2,8TYXT03.5BEM,SUV,7,19,26,21,6,yes
+TOYOTA RAV4,2.4,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8TYXT02.4BEH,SUV,6,21,27,24,7,yes
+TOYOTA Scion TC,2.4,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8TYXV02.4BEB,small car,7,20,27,23,7,yes
+TOYOTA Scion TC,2.4,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8TYXV02.4BEB,small car,7,21,29,24,7,yes
+TOYOTA Scion TC,2.4,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8TYXV02.4BEB,small car,6,20,27,23,7,yes
+TOYOTA Scion TC,2.4,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8TYXV02.4BEB,small car,6,21,29,24,7,yes
+TOYOTA Scion XB,2.4,(4 cyl),Auto-S4,2WD,Gasoline,CA,U2,8TYXV02.4BEB,station wagon,7,22,28,24,7,yes
+TOYOTA Scion XB,2.4,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8TYXV02.4BEB,station wagon,7,22,28,24,7,yes
+TOYOTA Scion XB,2.4,(4 cyl),Auto-S4,2WD,Gasoline,FA,B5,8TYXV02.4BEB,station wagon,6,22,28,24,7,yes
+TOYOTA Scion XB,2.4,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8TYXV02.4BEB,station wagon,6,22,28,24,7,yes
+TOYOTA Scion XD,1.8,(4 cyl),Auto-L4,2WD,Gasoline,CA,L2,8TYXV01.8AJA,small car,6,26,32,28,8,yes
+TOYOTA Scion XD,1.8,(4 cyl),Man-5,2WD,Gasoline,CA,L2,8TYXV01.8AJA,small car,6,27,33,29,8,yes
+TOYOTA Solara,2.4,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8TYXV02.4BEA,small car,7,21,31,25,7,yes
+TOYOTA Solara,2.4,(4 cyl),Auto-S5,2WD,Gasoline,CA,U2,8TYXV02.4BEA,small car,7,22,31,25,7,yes
+TOYOTA Solara,3.3,(6 cyl),Auto-S5,2WD,Gasoline,CA,U2,8TYXV03.3BEA,small car,7,18,27,21,6,yes
+TOYOTA Solara,2.4,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8TYXV02.4BEA,small car,6,21,31,25,7,yes
+TOYOTA Solara,2.4,(4 cyl),Auto-S5,2WD,Gasoline,FA,B5,8TYXV02.4BEA,small car,6,22,31,25,7,yes
+TOYOTA Solara Convertible,3.3,(6 cyl),Auto-S5,2WD,Gasoline,CA,U2,8TYXV03.3BEA,small car,7,18,26,21,6,yes
+TOYOTA Yaris,1.5,(4 cyl),Auto-L4,2WD,Gasoline,CA,U2,8TYXV01.5BEA,small car,7,29,35,31,9,yes
+TOYOTA Yaris,1.5,(4 cyl),Man-5,2WD,Gasoline,CA,U2,8TYXV01.5BEA,small car,7,29,36,32,9,yes
+TOYOTA Yaris,1.5,(4 cyl),Auto-L4,2WD,Gasoline,FA,B5,8TYXV01.5BEA,small car,6,29,35,31,9,yes
+TOYOTA Yaris,1.5,(4 cyl),Man-5,2WD,Gasoline,FA,B5,8TYXV01.5BEA,small car,6,29,36,32,9,yes
+VOLKSWAGEN Eos,2,(4 cyl),Man-6,2WD,Gasoline,CA,U2,8ADXV02.0366,small car,7,21,29,24,7,yes
+VOLKSWAGEN Eos,2,(4 cyl),Auto-S6,2WD,Gasoline,CA,U2,8ADXV02.0366,small car,7,21,30,24,7,yes
+VOLKSWAGEN Eos,2,(4 cyl),Man-6,2WD,Gasoline,FA,B5,8ADXV02.0366,small car,6,21,29,24,7,yes
+VOLKSWAGEN Eos,2,(4 cyl),Auto-S6,2WD,Gasoline,FA,B5,8ADXV02.0366,small car,6,21,30,24,7,yes
+VOLKSWAGEN GTI,2,(4 cyl),Man-6,2WD,Gasoline,CA,U2,8ADXV02.0366,small car,7,21,29,24,7,yes
+VOLKSWAGEN GTI,2,(4 cyl),Auto-S6,2WD,Gasoline,CA,U2,8ADXV02.0366,small car,7,22,29,25,7,yes
+VOLKSWAGEN GTI,2,(4 cyl),Man-6,2WD,Gasoline,FA,B5,8ADXV02.0366,small car,6,21,29,24,7,yes
+VOLKSWAGEN GTI,2,(4 cyl),Auto-S6,2WD,Gasoline,FA,B5,8ADXV02.0366,small car,6,22,29,25,7,yes
+VOLKSWAGEN Jetta,2.5,(5 cyl),Man-5,2WD,Gasoline,CA,S2,8VWXV02.5257,small car,9.5,21,29,24,7,yes
+VOLKSWAGEN Jetta,2.5,(5 cyl),Auto-S6,2WD,Gasoline,CA,S2,8VWXV02.5257,small car,9.5,21,29,24,7,yes
+VOLKSWAGEN Jetta,2.5,(5 cyl),Man-5,2WD,Gasoline,FA,B2,8VWXV02.5257,small car,9,21,29,24,7,yes
+VOLKSWAGEN Jetta,2.5,(5 cyl),Auto-S6,2WD,Gasoline,FA,B2,8VWXV02.5257,small car,9,21,29,24,7,yes
+VOLKSWAGEN Jetta,2,(4 cyl),Man-6,2WD,Gasoline,CA,U2,8ADXV02.0366,small car,7,21,29,24,7,yes
+VOLKSWAGEN Jetta,2,(4 cyl),Auto-S6,2WD,Gasoline,CA,U2,8ADXV02.0366,small car,7,22,29,25,7,yes
+VOLKSWAGEN Jetta,2.5,(5 cyl),Man-5,2WD,Gasoline,CA,U2,8VWXV02.5253,small car,7,21,29,24,7,yes
+VOLKSWAGEN Jetta,2.5,(5 cyl),Auto-S6,2WD,Gasoline,CA,U2,8VWXV02.5253,small car,7,21,29,24,7,yes
+VOLKSWAGEN Jetta,2,(4 cyl),Man-6,2WD,Gasoline,FA,B5,8ADXV02.0366,small car,6,21,29,24,7,yes
+VOLKSWAGEN Jetta,2,(4 cyl),Auto-S6,2WD,Gasoline,FA,B5,8ADXV02.0366,small car,6,22,29,25,7,yes
+VOLKSWAGEN Jetta,2.5,(5 cyl),Man-5,2WD,Gasoline,FA,B5,8VWXV02.5253,small car,6,21,29,24,7,yes
+VOLKSWAGEN Jetta,2.5,(5 cyl),Auto-S6,2WD,Gasoline,FA,B5,8VWXV02.5253,small car,6,21,29,24,7,yes
+VOLKSWAGEN Jetta Wagon,2.5,(5 cyl),Man-5,2WD,Gasoline,CA,S2,8VWXV02.5257,station wagon,9.5,21,29,24,7,yes
+VOLKSWAGEN Jetta Wagon,2.5,(5 cyl),Auto-S6,2WD,Gasoline,CA,S2,8VWXV02.5257,station wagon,9.5,21,29,24,7,yes
+VOLKSWAGEN Jetta Wagon,2.5,(5 cyl),Man-5,2WD,Gasoline,FA,B2,8VWXV02.5257,station wagon,9,21,29,24,7,yes
+VOLKSWAGEN Jetta Wagon,2.5,(5 cyl),Auto-S6,2WD,Gasoline,FA,B2,8VWXV02.5257,station wagon,9,21,29,24,7,yes
+VOLKSWAGEN Jetta Wagon,2.5,(5 cyl),Man-5,2WD,Gasoline,CA,U2,8VWXV02.5253,station wagon,7,21,29,24,7,yes
+VOLKSWAGEN Jetta Wagon,2.5,(5 cyl),Auto-S6,2WD,Gasoline,CA,U2,8VWXV02.5253,station wagon,7,21,29,24,7,yes
+VOLKSWAGEN Jetta Wagon,2.5,(5 cyl),Man-5,2WD,Gasoline,FA,B5,8VWXV02.5253,station wagon,6,21,29,24,7,yes
+VOLKSWAGEN Jetta Wagon,2.5,(5 cyl),Auto-S6,2WD,Gasoline,FA,B5,8VWXV02.5253,station wagon,6,21,29,24,7,yes
+VOLKSWAGEN New Beetle,2.5,(5 cyl),Man-5,2WD,Gasoline,CA,S2,8VWXV02.5257,small car,9.5,20,28,23,7,yes
+VOLKSWAGEN New Beetle,2.5,(5 cyl),Auto-S6,2WD,Gasoline,CA,S2,8VWXV02.5257,small car,9.5,20,29,23,7,yes
+VOLKSWAGEN New Beetle,2.5,(5 cyl),Man-5,2WD,Gasoline,FA,B2,8VWXV02.5257,small car,9,20,28,23,7,yes
+VOLKSWAGEN New Beetle,2.5,(5 cyl),Auto-S6,2WD,Gasoline,FA,B2,8VWXV02.5257,small car,9,20,29,23,7,yes
+VOLKSWAGEN New Beetle,2.5,(5 cyl),Man-5,2WD,Gasoline,CA,U2,8VWXV02.5253,small car,7,20,28,23,7,yes
+VOLKSWAGEN New Beetle,2.5,(5 cyl),Auto-S6,2WD,Gasoline,CA,U2,8VWXV02.5253,small car,7,20,29,23,7,yes
+VOLKSWAGEN New Beetle,2.5,(5 cyl),Man-5,2WD,Gasoline,FA,B5,8VWXV02.5253,small car,6,20,28,23,7,yes
+VOLKSWAGEN New Beetle,2.5,(5 cyl),Auto-S6,2WD,Gasoline,FA,B5,8VWXV02.5253,small car,6,20,29,23,7,yes
+VOLKSWAGEN New Beetle Convertible,2.5,(5 cyl),Auto-S6,2WD,Gasoline,CA,S2,8VWXV02.5257,small car,9.5,20,28,23,7,yes
+VOLKSWAGEN New Beetle Convertible,2.5,(5 cyl),Man-5,2WD,Gasoline,CA,S2,8VWXV02.5257,small car,9.5,20,28,23,7,yes
+VOLKSWAGEN New Beetle Convertible,2.5,(5 cyl),Auto-S6,2WD,Gasoline,FA,B2,8VWXV02.5257,small car,9,20,28,23,7,yes
+VOLKSWAGEN New Beetle Convertible,2.5,(5 cyl),Man-5,2WD,Gasoline,FA,B2,8VWXV02.5257,small car,9,20,28,23,7,yes
+VOLKSWAGEN New Beetle Convertible,2.5,(5 cyl),Auto-S6,2WD,Gasoline,CA,U2,8VWXV02.5253,small car,7,20,28,23,7,yes
+VOLKSWAGEN New Beetle Convertible,2.5,(5 cyl),Man-5,2WD,Gasoline,CA,U2,8VWXV02.5253,small car,7,20,28,23,7,yes
+VOLKSWAGEN New Beetle Convertible,2.5,(5 cyl),Auto-S6,2WD,Gasoline,FA,B5,8VWXV02.5253,small car,6,20,28,23,7,yes
+VOLKSWAGEN New Beetle Convertible,2.5,(5 cyl),Man-5,2WD,Gasoline,FA,B5,8VWXV02.5253,small car,6,20,28,23,7,yes
+VOLKSWAGEN Passat,2,(4 cyl),Auto-S6,2WD,Gasoline,CA,U2,8ADXV02.0366,midsize car,7,19,28,22,6,yes
+VOLKSWAGEN Passat,2,(4 cyl),Man-6,2WD,Gasoline,CA,U2,8ADXV02.0366,midsize car,7,21,29,24,7,yes
+VOLKSWAGEN Passat,2,(4 cyl),Man-6,2WD,Gasoline,FA,B5,8ADXV02.0366,midsize car,6,21,29,24,7,yes
+VOLKSWAGEN Passat Wagon,2,(4 cyl),Auto-S6,2WD,Gasoline,CA,U2,8ADXV02.0366,station wagon,7,20,28,23,7,yes
+VOLKSWAGEN Passat Wagon,2,(4 cyl),Man-6,2WD,Gasoline,CA,U2,8ADXV02.0366,station wagon,7,21,29,24,7,yes
+VOLKSWAGEN Passat Wagon,2,(4 cyl),Auto-S6,2WD,Gasoline,FA,B5,8ADXV02.0366,station wagon,6,20,28,23,7,yes
+VOLKSWAGEN Passat Wagon,2,(4 cyl),Man-6,2WD,Gasoline,FA,B5,8ADXV02.0366,station wagon,6,21,29,24,7,yes
+VOLKSWAGEN Rabbit,2.5,(5 cyl),Auto-S6,2WD,Gasoline,CA,S2,8VWXV02.5257,small car,9.5,21,29,24,7,yes
+VOLKSWAGEN Rabbit,2.5,(5 cyl),Man-5,2WD,Gasoline,CA,S2,8VWXV02.5257,small car,9.5,22,29,24,7,yes
+VOLKSWAGEN Rabbit,2.5,(5 cyl),Auto-S6,2WD,Gasoline,FA,B2,8VWXV02.5257,small car,9,21,29,24,7,yes
+VOLKSWAGEN Rabbit,2.5,(5 cyl),Man-5,2WD,Gasoline,FA,B2,8VWXV02.5257,small car,9,22,29,24,7,yes
+VOLKSWAGEN Rabbit,2.5,(5 cyl),Auto-S6,2WD,Gasoline,CA,U2,8VWXV02.5253,small car,7,21,29,24,7,yes
+VOLKSWAGEN Rabbit,2.5,(5 cyl),Man-5,2WD,Gasoline,CA,U2,8VWXV02.5253,small car,7,22,29,24,7,yes
+VOLKSWAGEN Rabbit,2.5,(5 cyl),Auto-S6,2WD,Gasoline,FA,B5,8VWXV02.5253,small car,6,21,29,24,7,yes
+VOLKSWAGEN Rabbit,2.5,(5 cyl),Man-5,2WD,Gasoline,FA,B5,8VWXV02.5253,small car,6,22,29,24,7,yes
+VOLVO C30,2.4,(5 cyl),Auto-S5,2WD,Gasoline,CA,U2,8VVXV02.4U2N,small car,7,20,28,23,7,yes
+VOLVO C30,2.4,(5 cyl),Man-5,2WD,Gasoline,CA,U2,8VVXV02.4U2N,small car,7,20,28,23,7,yes
+VOLVO C30,2.5,(5 cyl),Auto-S5,2WD,Gasoline,CA,U2,8VVXV02.5U2T,small car,7,19,27,22,6,yes
+VOLVO C30,2.5,(5 cyl),Man-6,2WD,Gasoline,CA,U2,8VVXV02.5U2T,small car,7,19,28,23,7,yes
+VOLVO C30,2.4,(5 cyl),Auto-S5,2WD,Gasoline,FA,B5,8VVXV02.4U2N,small car,6,20,28,23,7,yes
+VOLVO C30,2.4,(5 cyl),Man-5,2WD,Gasoline,FA,B5,8VVXV02.4U2N,small car,6,20,28,23,7,yes
+VOLVO C30,2.5,(5 cyl),Man-6,2WD,Gasoline,FA,B5,8VVXV02.5U2T,small car,6,19,28,23,7,yes
+VOLVO C70 Convertible,2.5,(5 cyl),Auto-S5,2WD,Gasoline,CA,U2,8VVXV02.5U2T,small car,7,18,26,21,6,yes
+VOLVO C70 Convertible,2.5,(5 cyl),Man-6,2WD,Gasoline,CA,U2,8VVXV02.5U2T,small car,7,18,27,21,6,yes
+VOLVO S40,2.4,(5 cyl),Auto-S5,2WD,Gasoline,CA,S2,8VVXV02.4S2N,small car,9.5,20,28,23,7,yes
+VOLVO S40,2.4,(5 cyl),Auto-S5,2WD,Gasoline,CA,U2,8VVXV02.4U2N,small car,7,20,28,23,7,yes
+VOLVO S40,2.4,(5 cyl),Man-5,2WD,Gasoline,CA,U2,8VVXV02.4U2N,small car,7,20,28,23,7,yes
+VOLVO S40,2.5,(5 cyl),Man-6,4WD,Gasoline,CA,U2,8VVXV02.5U2T,small car,7,17,25,20,6,yes
+VOLVO S40,2.5,(5 cyl),Auto-S5,4WD,Gasoline,CA,U2,8VVXV02.5U2T,small car,7,18,26,21,6,yes
+VOLVO S40,2.5,(5 cyl),Auto-S5,2WD,Gasoline,CA,U2,8VVXV02.5U2T,small car,7,19,27,22,6,yes
+VOLVO S40,2.5,(5 cyl),Man-6,2WD,Gasoline,CA,U2,8VVXV02.5U2T,small car,7,19,28,23,7,yes
+VOLVO S40,2.4,(5 cyl),Auto-S5,2WD,Gasoline,FA,B5,8VVXV02.4U2N,small car,6,20,28,23,7,yes
+VOLVO S40,2.4,(5 cyl),Man-5,2WD,Gasoline,FA,B5,8VVXV02.4U2N,small car,6,20,28,23,7,yes
+VOLVO S40,2.5,(5 cyl),Man-6,2WD,Gasoline,FA,B5,8VVXV02.5U2T,small car,6,19,28,23,7,yes
+VOLVO S60,2.5,(5 cyl),Auto-L5,4WD,Gasoline,CA,U2,8VVXV02.5U2T,small car,7,17,26,21,6,yes
+VOLVO S60,2.5,(5 cyl),Auto-S5,4WD,Gasoline,CA,U2,8VVXV02.5U2T,small car,7,18,26,21,6,yes
+VOLVO S60,2.5,(5 cyl),Auto-L5,2WD,Gasoline,CA,U2,8VVXV02.5U2T,small car,7,19,27,22,6,yes
+VOLVO S60,2.5,(5 cyl),Auto-S5,2WD,Gasoline,CA,U2,8VVXV02.5U2T,small car,7,19,27,22,6,yes
+VOLVO V50,2.4,(5 cyl),Auto-S5,2WD,Gasoline,CA,S2,8VVXV02.4S2N,station wagon,9.5,20,28,23,7,yes
+VOLVO V50,2.4,(5 cyl),Auto-S5,2WD,Gasoline,CA,U2,8VVXV02.4U2N,station wagon,7,20,28,23,7,yes
+VOLVO V50,2.4,(5 cyl),Man-5,2WD,Gasoline,CA,U2,8VVXV02.4U2N,station wagon,7,20,28,23,7,yes
+VOLVO V50,2.5,(5 cyl),Man-6,4WD,Gasoline,CA,U2,8VVXV02.5U2T,station wagon,7,17,25,20,6,yes
+VOLVO V50,2.5,(5 cyl),Auto-S5,4WD,Gasoline,CA,U2,8VVXV02.5U2T,station wagon,7,18,26,21,6,yes
+VOLVO V50,2.5,(5 cyl),Auto-S5,2WD,Gasoline,CA,U2,8VVXV02.5U2T,station wagon,7,19,27,22,6,yes
+VOLVO V50,2.5,(5 cyl),Man-6,2WD,Gasoline,CA,U2,8VVXV02.5U2T,station wagon,7,19,28,23,7,yes
+VOLVO V50,2.4,(5 cyl),Auto-S5,2WD,Gasoline,FA,B5,8VVXV02.4U2N,station wagon,6,20,28,23,7,yes
+VOLVO V50,2.4,(5 cyl),Man-5,2WD,Gasoline,FA,B5,8VVXV02.4U2N,station wagon,6,20,28,23,7,yes
+VOLVO V50,2.5,(5 cyl),Man-6,2WD,Gasoline,FA,B5,8VVXV02.5U2T,station wagon,6,19,28,23,7,yes
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,

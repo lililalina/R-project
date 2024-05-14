@@ -1,0 +1,264 @@
+---
+title: "RNA-seq workflow gene EDA and Diff Expression"
+author: "Lina"
+date: "2024-03-20"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+source : "https://bioconductor.org/help/course-materials/2017/CSAMA/labs/2-tuesday/lab-03-rnaseq/rnaseqGene_CSAMA2017.html#pca-plot"
+
+"https://bioconductor.org/help/course-materials/2017/CSAMA/"
+
+## INTRODUCTION
+
+We will perform exploratory data analysis (EDA) for quality assessment and to explore the relationship between samples, perform differential gene expression analysis and visually explore the results.
+
+from RNA-seq or another high-throughput sequencing experiment, in the form of a matrix of integer values.
+
+The value in the i-th row and the j-th column of the matrix tells how many reads (or fragments, for paired-end RNA-seq) have been assigned to gene i in sample j. Analogously, for other types of assays, the rows of the matrix might correspond e.g., to binding regions (with ChIP-Seq), species of bacteria (with metagenomic datasets), or peptide sequences (with quantitative mass spectrometry)
+
+
+```{r}
+library(airway)
+indir<- system.file("extdata", package = "airway", mustWork = TRUE)
+list.files(indir)
+```
+Read sample csv untuk mendapatkan sample table
+```{r}
+csvfile <- file.path(indir, "sample_table.csv")
+sampleTable <- read.csv(csvfile, row.names=1)
+sampleTable
+```
+
+## DESeq2 import functions
+Berfungsi untuk menghasilkan perhitungan matriks. Ada 4 tools, salah satu yaitu summarizeOverlaps --> diketahui merupakan BAM file menggunakan BamFileList dalam Rsamtools sebagai interface file BAM.
+
+```{r}
+filenames <- file.path(indir, paste0(sampleTable$Run,"_subset.bam"))
+file.exists(filenames)
+```
+```{r}
+library(Rsamtools)
+bamfiles <- BamFileList(filenames, yieldSize = 2000000)
+```
+
+Melakukan pengecekan pada nama chromosome supaya pembacaan sesuai, for example style of 1 or chr1
+
+```{r}
+seqinfo(bamfiles[1])
+```
+
+### Defining gene model
+
+Ensembl GTF File, TxDb is a database that can be used to generate exons, transcript, and gene. Loading the GTF file :
+
+```{r}
+library("GenomicFeatures")
+library("GenomicAlignments")
+library("BiocParallel")
+```
+```{r}
+gtffile <- file.path(indir, "Homo_sapiens.GRCh37.75_subset.gtf")
+txdb <- makeTxDbFromGFF(gtffile, format = "gtf", circ_seqs = character())
+txdb
+```
+
+Produces GRangesList of all the exons grouped by gene. 
+
+```{r}
+ebg <- exonsBy(txdb, by = "gene")
+ebg
+```
+```{r}
+register(SerialParam())
+se <- summarizeOverlaps(features = ebg, reads = bamfiles,
+                        mode = "Union",
+                        singleEnd = FALSE,
+                        ignore.strand = TRUE,
+                        fragments = TRUE)
+```
+
+
+
+## SummarizedExperiment
+SummarizedExperiment are accessed with an R function of the same name: assay (or assays), rowRanges and colData. SummarizedExperiment by looking at the counts in the assay slot, the phenotypic data about the samples in colData slot (in this case an empty DataFrame) and the data about the genes in the rowRanges slot.
+
+```{r}
+se
+```
+```{r}
+dim(se)
+```
+```{r}
+assayNames(se)
+```
+```{r}
+head(assay(se),3)
+```
+```{r}
+colSums(assay(se))
+```
+```{r}
+rowRanges(se)
+```
+```{r}
+str(metadata(rowRanges(se)))
+```
+```{r}
+colData(se)
+```
+Memindahkan baris 1 pada sampleTable menjadi kolom pada se --> karena kolom pada se masih kosong
+
+```{r}
+colData(se) <- DataFrame(sampleTable)
+colData(se)
+```
+
+SummarizedExperiment object is all we need to start our analysis. In the following section we will show how to use it to create the data object used by DESeq2.
+
+## DESeqDataSet object
+
+```{r}
+se$cell
+```
+
+```{r}
+se$dex
+```
+It is prefered in R that the first level of a factor be the reference level (e.g. control, or untreated samples), so we can relevel the dex factor like so:
+
+```{r}
+# Convert the 'dex' variable to a factor
+se$dex <- factor(se$dex)
+
+# Set the reference level for the 'dex' variable
+se$dex <- relevel(se$dex, ref = "untrt")
+
+se$dex
+```
+
+## Starting from SummarizedExperiment
+
+```{r}
+data("airway")
+se <- airway
+```
+
+untrt is the reference level for the dex variable:
+
+```{r}
+library(magrittr)
+se$dex %<>% relevel ("untrt")
+se$dex
+```
+
+Pembulatan angka
+
+```{r}
+round(colSums(assay(se))/1e6, 1)
+```
+
+```{r}
+colData(se)
+```
+
+```{r}
+library("DESeq2")
+```
+
+```{r}
+dds <- DESeqDataSet(se, design = ~cell + dex)
+colData(dds)
+```
+
+SummarizedExperiment object can be accessed with accessor functions. For example, to see the actual data, i.e., here, the fragment counts, we use the assay function. (The head function restricts the output to the first few lines.)
+
+```{r}
+countdata <- assay(se)
+head(countdata,3)
+```
+
+each row represents an Ensembl gene, each column a sequenced RNA library, and the values give the raw numbers of fragments that were uniquely assigned to the respective gene in each library. 
+
+```{r}
+coldata <- colData(se)
+coldata
+```
+countdata : a table with the fragment counts
+coldata: a table with information about the samples
+
+```{r}
+ddsMat <- DESeqDataSetFromMatrix(countData = countdata,
+                                 colData = coldata,
+                                 design = ~cell + dex)
+```
+```{r}
+head(ddsMat,3)
+```
+
+## Creating DGEList for use with edgeR
+
+```{r}
+library("edgeR")
+genetable <- data.frame(gene.id = rownames(se))
+dge <- DGEList(counts = countdata,
+               samples = coldata,
+               genes = genetable)
+names(dge)
+```
+
+SummarizedExperiment and the DESeqDataSet the DGEList contains all the information we need: the count matrix, information about the samples (columns of the count matrix), and information about the genes (rows of the count matrix).
+
+# EXPLORATORY DATA ANALYSIS
+1. transformation of the counts --> exploring the sample relationship
+2. Statistical testing using the original raw count
+
+## Prefiltering the Dataset
+
+to reduce the size of the object, and to increase the speed of our functions, we can remove the rows that have no or nearly no information about the amount of gene expression.
+```{r}
+nrow(dds)
+```
+```{r}
+dds <- dds[rowSums(counts(dds))>1,]
+nrow(dds)
+```
+```{r}
+dge <- dge[rowSums(dge$counts)>1,]
+all(rownames(dge) == rownames(dds))
+```
+```{r}
+nrow(dge)
+```
+
+Principal Component Analysis or PCA work best for data with similar range of variance (homoskedastic). However, for RNA-seq counts, the expected variance grows with the mean.
+To avoid homoskedastic :
+1. Use logarithm of the normalized count plus 1 as pseudocount --> cause noise to genes with low counts
+
+DESeq2 offers two transformations for count data that stabilize the variance across the mean: 
+1. the regularized-logarithm transformation or rlog (M. I. Love, Huber, and Anders 2014), and --> work well on small datasets
+2. the variance stabilizing transformation (VST) for negative binomial data with a dispersion-mean trend (Anders and Huber 2010), implemented in the vst function. --> faster to compute and less sensitive to high count outliers, for large datasets/hundreds of sample
+-> transformations to avoid homoskedascity and noise after logarithm
+
+```{r}
+rld <- rlog(dds, blind = FALSE) #use dds from SummarizedExperiment class
+head(assay(rld), 3)
+```
+```{r}
+library("vsn")
+meanSdPlot(assay(rld), ranks = FALSE)
+```
+
+```{r}
+vsd <- vst(dds, blind = FALSE)
+head(assay(vsd),3)
+```
+```{r}
+meanSdPlot(assay(vsd), ranks = FALSE)
+```
+blind = FALSE, which means that differences between cell lines and treatment (the variables in the design) will not contribute to the expected variance-mean trend of the experiment. The experimental design is not used directly in the transformation, only in estimating the global amount of variability in the counts. 
+

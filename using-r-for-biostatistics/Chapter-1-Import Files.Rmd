@@ -1,0 +1,253 @@
+---
+title: "Using R for Biostat - Chapter 1"
+author: "Lina"
+date: "2024-04-29"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+############################################################## # Housekeeping Use for All Analyses #
+##############################################################
+date() # Current system time and date. 
+Sys.time() # Current system time and date (redundant).
+R.version.string # R version and version release date.
+options(digits=6) # Confirm default digits.
+options(scipen=999)# Suppress scientific notation.
+options(width=60) # Confirm output width. 
+ls() # List all objects in the working # directory.
+rm(list = ls()) # CAUTION: Remove all files in the #working directory. If this action is not desired, use rm() one-by-one to remove the objectsthat are not needed.
+ls.str() # List all objects with finite detail.
+getwd() # Identify the current working directory
+
+setwd("C:/Users/linan/Documents/GitHub/project/R-project/using-r-for-biostatistics") # Set to a new working directory. # Note the single forward slash and double # quotes. # This new directory should be the directory # where the data file is located, otherwise # the data file will not be found.
+getwd()# Confirm the working directory.
+list.files()# List files at the PC directory
+.libPaths()# Library pathname
+.Library# Library pathname.
+sessionInfo() # R version, locale, and packages.
+search()# Attached packages and objects.
+searchpaths() # Attached packages and objects.
+
+###############################################################
+```
+
+## Import csv
+
+You can also embed plots, for example:
+
+```{r}
+GenEnd.df <- utils::read.table (file = "GenderEndurance.csv",header=TRUE, dec=".", sep=",")
+```
+
+```{r STANDARD QUALITY ASSURANCE}
+getwd()
+ls()
+attach(GenEnd.df)
+str(GenEnd.df)
+head(GenEnd.df, n=3)
+summary(GenEnd.df)
+```
+```{r}
+par(ask=TRUE)
+plot(density(GenEnd.df$Endurance, na.rm=TRUE), main="Endurance of Selected Female and Male Subjects: Quality Assurance Density Plot", col="red", lwd=5)
+
+#This graphic is a quality assurance density plot of the # object variable GenEnd.df$Endurance, with arguments # resulting in a thick (lwd=5) red line.
+```
+## Import txt file
+
+```{r}
+BreedMilk.df <- utils::read.table (file = "BreedMilkLb365.txt", header=TRUE, dec=".", sep="\t")
+
+# Use the utils::read.table() function to import the # .txt file BreedMilkLb365.txt into the current R # session and place the contents into the object # BreedMilk.df, which is a dataframe that: (1) has a # header row, (2) uses a period for decimals, and (3) # uses a tab to separate one field from another.
+```
+
+```{r}
+par(ask=TRUE)
+plot(density(BreedMilk.df$MilkLb365, na.rm=TRUE), main="Annual Milk Production (Pounds) of Holstein and Jersey Cows: Quality Assurance Density Plot", col="blue", lwd=7)
+
+#This graphic is a quality assurance density plot of the # object variable GenEnd.df$Endurance, with arguments # resulting in a thick (lwd=5) red line.
+```
+
+## Import txt file, fwf
+
+```{r}
+SoilYield.df <- utils::read.fwf (file = "YearSoilTypeCropRainYieldBushelsPerAcreNoHeader.txt", header=FALSE, 
+skip=0,
+na.strings=" ",
+width=c(-1,4,
+        -1,4,
+        -1,4,
+        -1,6,
+        -1,9))
+
+names(SoilYield.df) <- c( 
+"Year",
+"Soil",
+"Crop",
+"Rain",
+"BUperAcre")
+```
+
+```{r STANDARD QUALITY ASSURANCE}
+getwd()
+ls()
+attach(SoilYield.df)
+str(SoilYield.df)
+head(SoilYield.df, n=3)
+summary(SoilYield.df)
+```
+```{r}
+par(ask=TRUE)
+plot(density(SoilYield.df$BUperAcre, na.rm=TRUE), main="Corn Yield (Bushels per Acre) for Different Soils from 1997 to 2016 at a Selected Midwestern
+Region: Quality Assurance Density Plot", col="red", lwd=5)
+```
+
+## Import .xlsx spreadsheet
+
+```{r}
+Sorghum.df<- readxl::read_excel("Sorghum2012to2016.xlsx", 1)
+
+# The number 1 that shows after the .xlsx filename is used # to declare that only the 1st sheet in the spreadsheet # should be read into the intended object, Sorghum.df in # this example.
+```
+
+```{r STANDARD QUALITY ASSURANCE}
+getwd()
+ls()
+attach(Sorghum.df)
+head(Sorghum.df, n=3)
+summary(Sorghum.df)
+str(Sorghum.df)
+```
+
+```{r}
+str(Sorghum.df)
+head(Sorghum.df, n=5)
+```
+
+```{r}
+par(ask=TRUE)
+plot(density(Sorghum.df$BUperAcre, na.rm=TRUE), main="Sorghum Yield (Bushels per Acre) for Different Management Practices from 2012 to 2016 at a Selected Midwestern Region: Quality Assurance Density Plot", col="green", lwd=5)
+```
+
+## Import a .csv File of Comma-Separated Values from an Online Source into R
+
+```{r}
+
+ChildHealth.df <- data.table::fread('https://chronicdata.cdc.gov/api/views/vba9-s8jp/rows.csv' )
+
+```
+```{r}
+getwd()
+ls()
+```
+
+```{r}
+
+attach(ChildHealth.df) # Attach the data 
+str(ChildHealth.df)
+# Identify structure
+head(ChildHealth.df, n=3) # Show the head 
+summary(ChildHealth.df) # Summary statistics
+```
+
+```{r}
+ChildHealthFruitVegetable.df <- ChildHealth.df[ which( ChildHealth.df$Topic=="Fruits and Vegetables - Behavior"), ]
+```
+
+```{r}
+getwd()
+ls()
+# Working directory # List objects
+attach(ChildHealthFruitVegetable.df) # Attach the data
+str(ChildHealthFruitVegetable.df)
+# Identify structure
+head(ChildHealthFruitVegetable.df, n=3) # Show the head 
+summary(ChildHealthFruitVegetable.df) 
+```
+```{r}
+str(ChildHealthFruitVegetable.df)
+```
+```{r}
+#ensure the value are numeric
+ChildHealthFruitVegetable.df$Data_Value<-as.numeric(ChildHealthFruitVegetable.df$Data_Value)
+```
+
+```{r}
+length(ChildHealthFruitVegetable.df$Data_Value)
+table(is.na(ChildHealthFruitVegetable.df$Data_Value))
+```
+```{r}
+mean(ChildHealthFruitVegetable.df$Data_Value,na.rm=TRUE)
+sd(ChildHealthFruitVegetable.df$Data_Value, na.rm=TRUE)
+median(ChildHealthFruitVegetable.df$Data_Value, na.rm=TRUE)
+summary(ChildHealthFruitVegetable.df$Data_Value)
+```
+
+```{r}
+par(ask=TRUE)
+plot(density(ChildHealthFruitVegetable.df$Data_Value,na.rm=TRUE),main="Percent of Students in Grades 9-12 Who Consume Fruit Less Than 1 time Daily: Quality Assurance Density Plot", col="blue", lwd=4)
+
+```
+
+## Import Data into R
+
+```{r}
+FuelMPG2008.df <- utils::read.table(file="SmartWayVehicleListMY2008.csv", header=TRUE, dec=".", sep=",")
+```
+
+
+```{r}
+getwd()
+ls()
+attach(FuelMPG2008.df) # Attach the data
+str(FuelMPG2008.df)
+# Identify structure
+head(FuelMPG2008.df, n=5) # Show the head 
+summary(FuelMPG2008.df)
+```
+
+```{r}
+par(ask=TRUE)
+plot(density(FuelMPG2008.df$Hwy.MPG, na.rm=TRUE), main="Highway Miles per Gallon of 2008 Vehicles: Quality Assurance Density Plot", col="red", lwd=5)
+```
+
+```{r}
+X <- utils::read.csv(base::file.choose())
+# Use the mouse/keypad to select the file # RabbitWeightKg.csv, which is in the # working directory established at the # start of this session. Notice how there # is no record of this action, using syntax. # Only visual selections are involved
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
+```{r}
+```
+
