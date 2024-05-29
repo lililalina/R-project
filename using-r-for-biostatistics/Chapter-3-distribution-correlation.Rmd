@@ -1,0 +1,529 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+date() # Current system time and date. 
+Sys.time() # Current system time and date (redundant).
+R.version.string # R version and version release date.
+options(digits=6) # Confirm default digits.
+options(scipen=999)# Suppress scientific notation.
+options(width=60) # Confirm output width. 
+ls() # List all objects in the working # directory.
+rm(list = ls()) # CAUTION: Remove all files in the #working directory. If this action is not desired, use rm() one-by-one to remove the objectsthat are not needed.
+ls.str() # List all objects with finite detail.
+getwd() # Identify the current working directory
+setwd("C:/Users/linan/Documents/GitHub/project/R-project/using-r-for-biostatistics") # Set to a new working directory. # Note the single forward slash and double # quotes. # This new directory should be the directory # where the data file is located, otherwise # the data file will not be found.
+getwd()# Confirm the working directory.
+list.files()# List files at the PC directory
+.libPaths()# Library pathname
+.Library# Library pathname.
+sessionInfo() # R version, locale, and packages.
+search()# Attached packages and objects.
+searchpaths() # Attached packages and objects.
+
+###############################################################
+```
+
+```{r}
+setwd("C:/Users/linan/Documents/GitHub/project/R-project/using-r-for-biostatistics")
+```
+
+```{r}
+EmployeeBiometric.df <- read.table(file="EmpWellAge21to79.csv", header=TRUE, dec=".", sep = ",")
+```
+
+```{r}
+str(EmployeeBiometric.df)
+```
+```{r}
+dim(EmployeeBiometric.df)
+```
+```{r}
+head(EmployeeBiometric.df)
+```
+Check for duplicate in individual level = no duplicate ID
+```{r}
+table(duplicated(EmployeeBiometric.df$EmployeeID))
+```
+```{r}
+summary(EmployeeBiometric.df)
+```
+Change EmployeeID,Gender, Ethnic, and BMIStatus from int to factor
+```{r}
+EmployeeBiometric.df$EmployeeID <- as.factor(EmployeeBiometric.df$EmployeeID)
+```
+
+```{r}
+EmployeeBiometric.df$Gender <- factor(EmployeeBiometric.df$Gender,
+                                      labels=c("Female","Male"))
+levels(EmployeeBiometric.df$Gender)
+```
+```{r}
+EmployeeBiometric.df$BMIStatus<-factor(EmployeeBiometric.df$BMIStatus,
+                                       labels = c("Underweight","Normal Weight", "Overweight","Obese"))
+levels(EmployeeBiometric.df$BMIStatus)
+```
+
+
+```{r}
+EmployeeBiometric.df$RaceEthnicity <-
+  factor(EmployeeBiometric.df$RaceEthnicity,
+         labels=c("Asian","Black","Hispanic","Other","White"))
+levels(EmployeeBiometric.df$RaceEthnicity)
+```
+```{r}
+EmployeeBiometric.df$Obesity <-
+  factor(EmployeeBiometric.df$Obesity,
+         labels=c("Not Obese","Obese"))
+levels(EmployeeBiometric.df$Obesity)
+```
+
+Change AgeYears, SBPmmHg, DBPmmHg from int to numeric
+```{r}
+EmployeeBiometric.df$AgeYears <- as.numeric(EmployeeBiometric.df$AgeYears)
+EmployeeBiometric.df$SBPmmHg <- as.numeric(EmployeeBiometric.df$SBPmmHg)
+EmployeeBiometric.df$DBPmmHg <- as.numeric(EmployeeBiometric.df$DBPmmHg)
+```
+
+Check data structure
+```{r}
+str(EmployeeBiometric.df)
+```
+```{r}
+getwd()
+ls()
+attach(EmployeeBiometric.df)
+dim(EmployeeBiometric.df)
+names(EmployeeBiometric.df)
+colnames(EmployeeBiometric.df)
+head(EmployeeBiometric.df)
+tail(EmployeeBiometric.df)
+```
+```{r}
+summary(EmployeeBiometric.df)
+```
+Conduct a Visual Data Check Using Graphics using epiDisplay
+
+The epiDisplay::tab0.85() function provides syntax that generates an attractive barplot with frequency counts placed over each bar and a frequency distribution table printed to the screen. Also, for factor-type object variables with missing data, the epiDisplay::tab0.85() function incorporates the presentation of these missing data into the barplot and the frequency distribution table, providing a complete sense of the data
+
+Create bar plots for factor variables : Gender, RaceEthnicity, BMIStatus, Obesity
+```{r}
+par(ask=TRUE)
+par(mfrow=c(2,2))
+epiDisplay::tab1(EmployeeBiometric.df$Gender,
+                 main = "Frequency of Gender",
+                 ylab = "Frequency",
+                 graph = TRUE,
+                 missing=TRUE,
+                 bar.values = c("frequency"),
+                 horiz = TRUE,
+                 cex = 0.8,
+                 cex.names = 0.8,
+                 cex.lab=0.8,
+                 cex.axis=0.8,
+                 col = c("black","red"))
+epiDisplay::tab1(EmployeeBiometric.df$RaceEthnicity,
+                 main = "Frequency of RaceEthnicity",
+                 ylab = "Frequency",
+                 graph = TRUE,
+                 missing=TRUE,
+                 bar.values = c("frequency"),
+                 horiz = TRUE,
+                 cex = 0.8,
+                 cex.names = 0.8,
+                 cex.lab=0.8,
+                 cex.axis=0.8,
+                 col = c("black","red","blue","green","cyan"))
+epiDisplay::tab1(EmployeeBiometric.df$BMIStatus,
+                 main = "Frequency of BMIStatus",
+                 ylab = "Frequency",
+                 graph = TRUE,
+                 missing=TRUE,
+                 bar.values = c("frequency"),
+                 horiz = TRUE,
+                 cex = 0.85,
+                 cex.names = 0.85,
+                 cex.lab=0.85,
+                 cex.axis=0.85,
+                 col = c("black","red","blue","green","cyan"))
+epiDisplay::tab1(EmployeeBiometric.df$Obesity,
+                 main = "Frequency of Obesity",
+                 ylab = "Frequency",
+                 graph = TRUE,
+                 missing=TRUE,
+                 bar.values = c("frequency"),
+                 horiz = TRUE,
+                 cex = 0.85,
+                 cex.names = 0.85,
+                 cex.lab=0.85,
+                 cex.axis=0.85,
+                 col = c("blue","green","red"))
+```
+
+Create bar plots for numeric variables : AgeYears, TotalCholesterolmgdL, SBPmmHg, DBPmmHg, and the calculated value for BMIMetric
+
+Figures for the EmployeeBiometric.df object variables with numeric values (e.g., often called interval values or scale values) will be displayed in a 2 by 2 graphical grid. Each square in the grid uses a different R-based function to display data distribution:
+• Histogram — Use the hist() function.
+• Density Curve — The plot() function is wrapped around the density() function.
+• Beanplot —Use the beanplot::beanplot() function, by loading the external package beanplot into the active R session.
+• Quantile-Quantile Curve — Use the qqnorm() function.
+
+Variable AgeYears
+```{r}
+par(ask=TRUE)
+par(mfrow=c(2,2))
+
+hist(EmployeeBiometric.df$AgeYears, main="Age",col="red", breaks=100)
+
+plot(density(EmployeeBiometric.df$AgeYears, na.rm=TRUE),
+     main="Age", col="red")
+
+beanplot::beanplot(EmployeeBiometric.df$AgeYears, main="Age", col="red", what=c(0.85,0.85,0.85,0), overallline="mean", boxwex=0.75, horizontal=FALSE)
+
+qqnorm(EmployeeBiometric.df$AgeYears,main="Age",col="red")
+```
+
+Variable TotalCholesterolmgl
+```{r}
+par(ask=TRUE)
+par(mfrow=c(2,2))
+
+hist(EmployeeBiometric.df$TotalCholesterolmgdL, main="Total Cholesterol mg/dL",col="blue", breaks=100)
+
+plot(density(EmployeeBiometric.df$TotalCholesterolmgdL, na.rm=TRUE),
+     main="Total Cholesterol mg/dL", col="blue")
+
+beanplot::beanplot(EmployeeBiometric.df$TotalCholesterolmgdL, main="Total Cholesterol mg/dL", col="blue", what=c(0.85,0.85,0.85,0), overallline="mean", boxwex=0.75, horizontal=FALSE)
+
+qqnorm(EmployeeBiometric.df$TotalCholesterolmgdL,main="Total Cholesterol mg/dL",col="blue")
+```
+
+Variable SBPmmHg
+```{r}
+par(ask=TRUE)
+par(mfrow=c(2,2))
+
+hist(EmployeeBiometric.df$SBPmmHg, main="Systolic Blood Pressure",col="orange", breaks=100)
+
+plot(density(EmployeeBiometric.df$SBPmmHg, na.rm=TRUE),
+     main="Systolic Blood PressureL", col="orange")
+
+beanplot::beanplot(EmployeeBiometric.df$SBPmmHg, main="Systolic Blood Pressure", col="orange", what=c(0.85,0.85,0.85,0), overallline="mean", boxwex=0.75, horizontal=FALSE)
+
+qqnorm(EmployeeBiometric.df$SBPmmHg,main="Systolic Blood Pressure",col="orange")
+```
+Variable DBPmmHg
+```{r}
+par(ask=TRUE)
+par(mfrow=c(2,2))
+
+hist(EmployeeBiometric.df$DBPmmHg, main="Diastolic Blood Pressure",col="green", breaks=100)
+
+plot(density(EmployeeBiometric.df$DBPmmHg, na.rm=TRUE),
+     main="Diastolic Blood Pressure", col="green")
+
+beanplot::beanplot(EmployeeBiometric.df$DBPmmHg, main="Diastolic Blood Pressure", col="green", 
+                   what=c(0.85,0.85,0.85,0), overallline="mean", boxwex=0.75, horizontal=FALSE)
+qqnorm(EmployeeBiometric.df$DBPmmHg,main="Diastolic Blood Pressure",col="green")
+```
+
+Variable BMIMetric
+```{r}
+par(ask=TRUE)
+par(mfrow=c(2,2))
+
+hist(EmployeeBiometric.df$BMIMetric, main="Body Mass Index: BMI Metric = kg/m^2",col="purple", breaks=200)
+
+plot(density(EmployeeBiometric.df$BMIMetric, na.rm=TRUE),
+     main="Body Mass Index: BMI Metric = kg/m^2", col="purple")
+
+beanplot::beanplot(EmployeeBiometric.df$BMIMetric, main="Body Mass Index: BMI Metric = kg/m^2", col="purple", what=c(0.85,0.85,0.85,0), overallline="mean", boxwex=0.75, horizontal=FALSE)
+
+qqnorm(EmployeeBiometric.df$BMIMetric,main="Body Mass Index: BMI Metric = kg/m^2",col="purple")
+```
+Summary for variable factors
+```{r}
+summary(EmployeeBiometric.df[,c(2,4,9,10)])
+```
+
+Summary for numeric variable
+```{r}
+summary(EmployeeBiometric.df[,c(3,5,7,8)])
+```
+Provide percentage of factor variable
+```{r}
+epiDisplay::tab1(EmployeeBiometric.df$Gender, graph=FALSE)
+```
+```{r}
+epiDisplay::tab1(EmployeeBiometric.df$RaceEthnicity, graph = FALSE)
+```
+```{r}
+epiDisplay::tab1(EmployeeBiometric.df$BMIStatus, graph=FALSE)
+```
+```{r}
+epiDisplay::tab1(EmployeeBiometric.df$Obesity, graph = FALSE)
+```
+
+Measures of Central Tendency for Numeric-Type Object Variables
+To address this concern and the need for attention to Standard Deviation as a vital descriptive statistic, consider use of the RcmdrMisc::numSummary() function, which by default provides Mean, Standard Deviation, IQR (Interquartile Range, or Q3 minus Q1) Quartiles (0% (Minimum), 25%, 50% (Median), 75%, 100% (Maximum)) N, and NAs (the number of missing values, if any).
+
+```{r}
+RcmdrMisc::numSummary(EmployeeBiometric.df$AgeYears)
+```
+```{r}
+RcmdrMisc::numSummary(EmployeeBiometric.df$TotalCholesterolmgdL)
+```
+```{r}
+RcmdrMisc::numSummary(EmployeeBiometric.df$SBPmmHg)
+```
+```{r}
+RcmdrMisc::numSummary(EmployeeBiometric.df$DBPmmHg)
+```
+
+```{r}
+RcmdrMisc::numSummary(EmployeeBiometric.df$BMIMetric)
+```
+Summary, group by gender
+```{r}
+RcmdrMisc::numSummary(EmployeeBiometric.df[,c("AgeYears","TotalCholesterolmgdL","SBPmmHg","DBPmmHg","BMIMetric")],groups = Gender)
+```
+Summary, group by RaceEthnicity
+```{r}
+RcmdrMisc::numSummary(EmployeeBiometric.df[,c("AgeYears","TotalCholesterolmgdL","SBPmmHg","DBPmmHg","BMIMetric")],groups = RaceEthnicity)
+```
+
+Summary, group by BMIstatus
+```{r}
+RcmdrMisc::numSummary(EmployeeBiometric.df[,c("AgeYears","TotalCholesterolmgdL","SBPmmHg","DBPmmHg","BMIMetric")],groups = BMIStatus)
+```
+
+Summary, group by Obesity
+```{r}
+RcmdrMisc::numSummary(EmployeeBiometric.df[,c("AgeYears","TotalCholesterolmgdL","SBPmmHg","DBPmmHg","BMIMetric")],groups = Obesity)
+```
+To give another view of the descriptive statistics gained from use of the summary() function and the RcmdrMisc::numSummary() function, notice below how these outcomes are presented in graphical format, applying a beeswarm plot over a boxplot.
+
+
+1. Distribution of age based on categorical variables :
+
+```{r}
+par(ask=TRUE)
+par(mfrow=c(2,2))
+
+boxplot(AgeYears ~ Gender, data=EmployeeBiometric.df,
+        main="Age (Years) by Gender", ylab="Age (Years)",
+        cex.axis=1.15, cex.lab=1.15)
+beeswarm(AgeYears~Gender, data=EmployeeBiometric.df,
+        col=c("red","blue"),add=TRUE,spacing=0.10)
+
+boxplot(AgeYears~RaceEthnicity, data=EmployeeBiometric.df,
+        main="Age (Years) by Race Ethnicity", ylab="Age (Years)",
+        cex.axis=1.15, cex.lab=1.15)
+beeswarm(AgeYears~RaceEthnicity, data=EmployeeBiometric.df,
+        col=c("red","blue","green","cyan","orange"),add=TRUE,spacing=0.10)
+
+boxplot(AgeYears~BMIStatus, data=EmployeeBiometric.df,
+        main="Age (Years) by BMI Status", ylab="Age (Years)",
+        cex.axis=1.15, cex.lab=1.15)
+beeswarm(AgeYears~BMIStatus, data=EmployeeBiometric.df,
+        col=c("red","blue","green","black"),add=TRUE,spacing=0.10)
+
+boxplot(AgeYears~Obesity, data=EmployeeBiometric.df,
+        main="Age (Years) by Obesity", ylab="Age (Years)",
+        cex.axis=1.15, cex.lab=1.15)
+beeswarm(AgeYears~Obesity, data= EmployeeBiometric.df,
+         col=c("red","blue"), add=TRUE, spacing=0.1)
+```
+2. Distribution of Total Cholesterol based on categorical variables :
+
+```{r}
+par(ask=TRUE)
+par(mfrow=c(2,2))
+
+boxplot(TotalCholesterolmgdL ~ Gender, data=EmployeeBiometric.df,
+        main="Total Cholesterol by Gender", ylab="Total Cholesterol",
+        cex.axis=1.15, cex.lab=1.15)
+beeswarm(TotalCholesterolmgdL~Gender, data=EmployeeBiometric.df,
+        col=c("red","blue"),add=TRUE,spacing=0.10)
+
+boxplot(TotalCholesterolmgdL~RaceEthnicity, data=EmployeeBiometric.df,
+        main="Total Cholesterol by Race Ethnicity", ylab="Total Cholesterol",
+        cex.axis=1.15, cex.lab=1.15)
+beeswarm(TotalCholesterolmgdL~RaceEthnicity, data=EmployeeBiometric.df,
+        col=c("red","blue","green","cyan","orange"),add=TRUE,spacing=0.10)
+
+boxplot(TotalCholesterolmgdL~BMIStatus, data=EmployeeBiometric.df,
+        main="Total Cholesterol by BMI Status", ylab="Total Cholesterol",
+        cex.axis=1.15, cex.lab=1.15)
+beeswarm(TotalCholesterolmgdL~BMIStatus, data=EmployeeBiometric.df,
+        col=c("red","blue","green","black"),add=TRUE,spacing=0.10)
+
+boxplot(TotalCholesterolmgdL~Obesity, data=EmployeeBiometric.df,
+        main="Total Cholesterol by Obesity", ylab="Total Cholesterol",
+        cex.axis=1.15, cex.lab=1.15)
+beeswarm(TotalCholesterolmgdL~Obesity, data= EmployeeBiometric.df,
+         col=c("red","blue"), add=TRUE, spacing=0.1)
+```
+
+3. Distribution of SBP based on categorical variables :
+```{r}
+
+par(ask=TRUE)
+par(mfrow=c(2,2))
+boxplot(SBPmmHg ~ Gender, data=EmployeeBiometric.df,
+        main="Systolic Blood Pressure by Gender", ylab="Systolic Blood Pressure",
+        cex.axis=1.15, cex.lab=1.15)
+beeswarm(SBPmmHg~Gender, data=EmployeeBiometric.df,
+        col=c("red","blue"),add=TRUE,spacing=0.10)
+
+boxplot(SBPmmHg~RaceEthnicity, data=EmployeeBiometric.df,
+        main="Systolic Blood Pressure by Race Ethnicity", ylab="Systolic Blood Pressure",
+        cex.axis=1.15, cex.lab=1.15)
+beeswarm(SBPmmHg~RaceEthnicity, data=EmployeeBiometric.df,
+        col=c("red","blue","green","cyan","orange"),add=TRUE,spacing=0.10)
+
+boxplot(SBPmmHg~BMIStatus, data=EmployeeBiometric.df,
+        main="Systolic Blood Pressure by BMI Status", ylab="Systolic Blood Pressure",
+        cex.axis=1.15, cex.lab=1.15)
+beeswarm(SBPmmHg~BMIStatus, data=EmployeeBiometric.df,
+        col=c("red","blue","green","black"),add=TRUE,spacing=0.10)
+
+boxplot(SBPmmHg~Obesity, data=EmployeeBiometric.df,
+        main="Systolic Blood Pressure by Obesity", ylab="Systolic Blood Pressure",
+        cex.axis=1.15, cex.lab=1.15)
+beeswarm(SBPmmHg~Obesity, data= EmployeeBiometric.df,
+         col=c("red","blue"), add=TRUE, spacing=0.1)
+```
+
+4. Distribution of DBP based on categorical variables :
+```{r}
+par(ask=TRUE)
+par(mfrow=c(2,2))
+boxplot(DBPmmHg ~ Gender, data=EmployeeBiometric.df,
+        main="Diastolic Blood Pressure by Gender", ylab="Diastolic Blood Pressure",
+        cex.axis=1.15, cex.lab=1.15)
+beeswarm(DBPmmHg~Gender, data=EmployeeBiometric.df,
+        col=c("red","blue"),add=TRUE,spacing=0.10)
+
+boxplot(DBPmmHg~RaceEthnicity, data=EmployeeBiometric.df,
+        main="Diastolic Blood Pressure by Race Ethnicity", ylab="Diastolic Blood Pressure",
+        cex.axis=1.15, cex.lab=1.15)
+beeswarm(DBPmmHg~RaceEthnicity, data=EmployeeBiometric.df,
+        col=c("red","blue","green","cyan","orange"),add=TRUE,spacing=0.10)
+
+boxplot(DBPmmHg~BMIStatus, data=EmployeeBiometric.df,
+        main="Diastolic Blood Pressure by BMI Status", ylab="Diastolic Blood Pressuree",
+        cex.axis=1.15, cex.lab=1.15)
+beeswarm(DBPmmHg~BMIStatus, data=EmployeeBiometric.df,
+        col=c("red","blue","green","black"),add=TRUE,spacing=0.10)
+
+boxplot(DBPmmHg~Obesity, data=EmployeeBiometric.df,
+        main="Diastolic Blood Pressure by Obesity", ylab="Diastolic Blood Pressure",
+        cex.axis=1.15, cex.lab=1.15)
+beeswarm(DBPmmHg~Obesity, data= EmployeeBiometric.df,
+         col=c("red","blue"), add=TRUE, spacing=0.1)
+```
+5. Distribution of BMIMetric by categorical variables
+
+```{r}
+par(ask=TRUE)
+par(mfrow=c(2,2))
+
+boxplot(BMIMetric~Gender, data=EmployeeBiometric.df,
+        main = "BMIMetric by Gender",
+        ylab = "BMI Metric", cex.axis=1.15, cex.lab=1.15)
+beeswarm(BMIMetric~Gender, data=EmployeeBiometric.df,
+         col = c("red","blue"), add = TRUE, spacing=0.10)
+
+boxplot(BMIMetric~RaceEthnicity, data=EmployeeBiometric.df,
+        main = "BMIMetric by RaceEthnicity",
+        ylab = "BMI Metric", cex.axis=1.15, cex.lab=1.15)
+beeswarm(BMIMetric~RaceEthnicity, data=EmployeeBiometric.df,
+         col = c("red","blue","green","yellow","cyan"), add = TRUE, spacing=0.10)
+
+boxplot(BMIMetric~BMIStatus, data=EmployeeBiometric.df,
+        main = "BMIMetric by BMI Status",
+        ylab = "BMI Metric", cex.axis=1.15, cex.lab=1.15)
+beeswarm(BMIMetric~Gender, data=EmployeeBiometric.df,
+         col = c("red","blue","green","yellow"), add = TRUE, spacing=0.10)
+
+boxplot(BMIMetric~Obesity, data=EmployeeBiometric.df,
+        main = "BMIStatus by BMI Status",
+        ylab = "BMI Metric", cex.axis=1.15, cex.lab=1.15)
+beeswarm(BMIMetric~Obesity, data=EmployeeBiometric.df,
+         col = c("red","blue"), add = TRUE, spacing=0.10)
+
+```
+
+Quality Assurance check using Saphiro-test to obtain normal/non normal distribution
+
+```{r}
+shapiro.test((EmployeeBiometric.df$AgeYears))
+```
+```{r}
+shapiro.test(EmployeeBiometric.df$TotalCholesterolmgdL)
+```
+
+
+```{r}
+shapiro.test((EmployeeBiometric.df$SBPmmHg))
+```
+```{r}
+shapiro.test(EmployeeBiometric.df$DBPmmHg)
+```
+```{r}
+shapiro.test(EmployeeBiometric.df$BMIMetric)
+```
+Result of Shapiro test distribution :
+1. Age = not normal
+2. Total cholesterol = not normal
+3. SBP = not normal
+4. DBP = not normal
+5. BMIMetrics = not normal
+
+
+Distribution analysis using Q-Q Plot
+
+```{r}
+par(ask=TRUE)
+par(mfrow=c(2,3))
+qqnorm(EmployeeBiometric.df$AgeYears, col="red",
+       main = "Normality of AgeYears-Overall")
+qqline(EmployeeBiometric.df$AgeYears, col="blue")
+
+qqnorm(EmployeeBiometric.df$TotalCholesterolmgdL, col="red",
+       main="Normality of Total Cholesterol - Overal")
+qqline(EmployeeBiometric.df$TotalCholesterolmgdL, col="blue")
+
+qqnorm(EmployeeBiometric.df$SBPmmHg, col="red",
+       main="Normality of SBPmmHg - Overal")
+qqline(EmployeeBiometric.df$SBPmmHg, col="blue")
+
+qqnorm(EmployeeBiometric.df$DBPmmHg, col="red",
+       main="Normality of DBPmmHg - Overal")
+qqline(EmployeeBiometric.df$DBPmmHg, col="blue")
+
+qqnorm(EmployeeBiometric.df$BMIMetric, col="red",
+       main="Normality of BMI Metric - Overal")
+qqline(EmployeeBiometric.df$BMIMetric, col="blue")
+
+```
+As seen in the Q-Q plots provide ample evidence that the numeric object variables AgeYears, TotalCholesterolmgdL, SBPmmHg, DBPmmHg, and BMIMetric do not follow a normal distribution pattern.
+
+The RVAideMemoire::byf.shapiro() function is an excellent choice to examine these questions on normality by breakouts. Observe below how the RVAideMemoire::byf.shapiro() function provides a simple and convenient summary of normality p-values by individual breakouts of the factor-type object variable.
+
+
+
+
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.

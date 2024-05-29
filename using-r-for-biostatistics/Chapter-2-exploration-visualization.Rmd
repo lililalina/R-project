@@ -1,0 +1,39 @@
+---
+title: "exploration"
+author: "Lina"
+date: "2024-05-17"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+getwd() # Identify the current working directory
+setwd("C:/Users/linan/Documents/GitHub/project/R-project/using-r-for-biostatistics")
+```
+
+```{r}
+nhanes1516.df <- utils::read.table (file = "nhanes_2015_2016.csv",header=TRUE, dec=".", sep=",")
+```
+
+```{r}
+par(ask=TRUE)
+par(mfrow=c(2,2)) # Pause # 4 figures - 2 rows by 2 column grid graphics::
+hist(nhanes1516.df$RIDAGEYR)
+graphics::plot(stats::density(nhanes1516.df$RIDAGEYR, na.rm=TRUE))
+graphics::boxplot(nhanes1516.df$RIDAGEYR)
+stats::qqnorm(nhanes1516.df$RIDAGEYR);
+stats::qqline(nhanes1516.df$RIDAGEYR)
+```
+
+
+```{r}
+```

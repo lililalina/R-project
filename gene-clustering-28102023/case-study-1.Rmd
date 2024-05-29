@@ -1,0 +1,118 @@
+---
+title: "Studi Kasus 1"
+author: "Lina"
+date: "2024-03-10"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+#import library
+library(readr)
+library(dplyr)
+library(ggplot2)
+library(magrittr)
+library(SummarizedExperiment)
+library(DESeq2)
+library(airway)
+```
+
+## Import Data
+
+```{r working dir}
+#Find working directory
+getwd()
+
+#Set working directory path
+setwd("C:\\Users\\linan\\Documents\\GitHub\\project\\R-project\\data-exploration-28102023")
+
+#Check working directory again
+getwd()
+```
+## Task 1: Cari dan load data microarray
+Cari dan unduh satu data microarray yang tersedia secara public. Petunjuk: Pada dataset GEO, series microarray memiliki nomor GSExxxxx, dan sampel memiliki nomor GSMxxxxxx. 
+Untuk mengamati distribusinya, Anda hanya perlu download untuk salah satu sampel saja, tidak perlu untuk keseluruhan eksperimennya.
+
+Coba impor data yang telah diunduh tersebut ke dalam R!
+
+```{r}
+#User read_csv() function to import airway_scaledcounts.csv and airway_metadata.csv files into R
+scaledcounts <- read_csv("airway_scaledcounts.csv",show_col_types = FALSE )
+metadata <-  read_csv("airway_metadata.csv", show_col_types = FALSE)
+
+```
+
+```{r}
+#Use base functions to gain an initial view of the data
+
+#Look at scaledcounts variable
+dim(scaledcounts)
+
+head(scaledcounts)
+
+tail(scaledcounts)
+
+str(scaledcounts)
+```
+
+
+```{r}
+#Look at metadata variable
+dim(metadata)
+
+head(metadata)
+
+tail(metadata)
+
+str(metadata)
+```
+
+
+
+```{r }
+#call airway data using data() and print airway data to save to workspace
+
+data("airway")
+airway
+
+```
+
+```{r}
+#remove scaledcounts and metadata variable
+rm(scaledcounts)
+
+rm(metadata)
+```
+
+```{r}
+#Check mode of colData(airway) and make change the structure to a data frame.
+
+mode(colData(airway))
+
+dat_airway <- as.data.frame(colData(airway))
+
+dat_airway
+```
+
+```{r}
+#Sum the expression of each column, divide by 1e6
+#Use summary function to see the range of values between each sample
+
+ head(assay(airway))
+
+ summary(colSums(assay(airway))/1e6)
+```
+
+## Reference :
+1. https://sbc.shef.ac.uk/geo_tutorial/tutorial.nb.html
+2. https://programming-workshops.readthedocs.io/en/stable/workshops/04_R/Workshop_R_Solution.html
+3. https://gtk-teaching.github.io/Microarrays-R/02-GEODataImport/index.html

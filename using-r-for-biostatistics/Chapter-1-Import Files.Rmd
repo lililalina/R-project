@@ -43,7 +43,6 @@ searchpaths() # Attached packages and objects.
 
 ## Import csv
 
-You can also embed plots, for example:
 
 ```{r}
 GenEnd.df <- utils::read.table (file = "GenderEndurance.csv",header=TRUE, dec=".", sep=",")
@@ -227,27 +226,49 @@ X <- utils::read.csv(base::file.choose())
 ```
 
 ```{r}
+SBPAdultMale.df <- read.table(textConnection(" Subject SBP
+SBPAM01 106
+SBPAM02 104
+SBPAM03 114
+SBPAM04 114
+SBPAM05 118
+SBPAM06 102   
+SBPAM07 112 
+SBPAM08 100 
+SBPAM09 108
+SBPAM10 116
+SBPAM11 108   
+SBPAM12 112
+SBPAM13 106
+SBPAM14 114 
+SBPAM15 116 
+SBPAM16 108 
+SBPAM17 118 
+SBPAM18 100 
+SBPAM19 102
+SBPAM20 120"), header=TRUE)
 ```
 
 ```{r}
+attach(SBPAdultMale.df)
 ```
 
 ```{r}
-```
-
-
-```{r}
+str(SBPAdultMale.df)
 ```
 
 ```{r}
+head(SBPAdultMale.df, n=5)
 ```
 
 ```{r}
+summary(SBPAdultMale.df)
 ```
 
 ```{r}
+par(ask=TRUE)
+plot(density(SBPAdultMale.df$SBP, na.rm=TRUE), main="Systolic Blood Pressure of Selected Adult Males: Quality Assurance Density Plot", col="red", lwd=5)
 ```
 
-```{r}
-```
+End
 
