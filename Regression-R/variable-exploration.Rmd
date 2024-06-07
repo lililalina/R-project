@@ -1,0 +1,308 @@
+---
+title: "Analysis-COPD"
+author: "Lina"
+date: "2024-05-29"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+############################################################## 
+# Housekeeping Use for All Analyses #
+##############################################################
+date() # Current system time and date. 
+Sys.time() # Current system time and date (redundant).
+R.version.string # R version and version release date.
+options(digits=6) # Confirm default digits.
+options(scipen=999)# Suppress scientific notation.
+options(width=60) # Confirm output width. 
+ls() # List all objects in the working # directory.
+rm(list = ls()) # CAUTION: Remove all files in the #working directory. If this action is not desired, use rm() one-by-one to remove the objectsthat are not needed.
+ls.str() # List all objects with finite detail.
+getwd() # Identify the current working directory
+setwd("C:/Users/linan/Documents/GitHub/project/R-project/Regression-R") # Set to a new working directory. # Note the single forward slash and double # quotes. # This new directory should be the directory # where the data file is located, otherwise # the data file will not be found.
+getwd()# Confirm the working directory.
+list.files()# List files at the PC directory
+.libPaths()# Library pathname
+.Library# Library pathname.
+sessionInfo() # R version, locale, and packages.
+search()# Attached packages and objects.
+searchpaths() # Attached packages and objects.
+
+###############################################################
+```
+```{r}
+library(dplyr)
+library(Hmisc)
+library(gmodels)
+library(ggplot2)
+library(tidyverse)
+```
+
+```{r}
+COPD.df <- read.table(file="COPD_student_dataset.csv", header=TRUE, dec=".", sep = ",")
+```
+
+```{r}
+str(COPD.df)
+```
+## Variables 
+
+Characters : Age, Gender, Pack History, Smoking
+Disease : COPDSeverity, CAT
+Walking ability : MWT1, MWT2, MWT1Best
+Lung function : FEV1, FEV1PRED, FVC, FVCPRED
+Anxiety&Depression : HAD
+QOL : SGRQ
+Comorbidities : Diabetes, Muscular, Hypertension, AtrialFib, IHD
+
+numeric : Age, PackHistory, FEV, FEV1PRED, FVC, FVCPRED, CAT, HAD, MWT1, MWT2, MWT1Best, SGRQ
+factor : Gender, COPDseverity, copd, smoking, Diabetes, Muscular, Hypertension, AtrialFib, IHD
+
+Change variable type :
+```{r}
+COPD.df$AGE <- as.numeric(COPD.df$AGE)
+COPD.df$MWT1 <- as.numeric(COPD.df$MWT1)
+COPD.df$MWT2 <- as.numeric(COPD.df$MWT2)
+```
+```{r}
+COPD.df$MWT1Best<-as.numeric(COPD.df$MWT1Best)
+COPD.df$FEV1PRED <- as.numeric(COPD.df$FEV1PRED)
+COPD.df$FVCPRED <- as.numeric(COPD.df$FVCPRED)
+COPD.df$CAT <- as.numeric(COPD.df$CAT)
+```
+
+Categorical
+
+```{r}
+COPD.df$AGEquartiles <- as.factor(COPD.df$AGEquartiles)
+COPD.df$copd <- as.factor(COPD.df$copd)
+COPD.df$gender <- as.factor(COPD.df$gender)
+COPD.df$Diabetes <- as.factor(COPD.df$Diabetes)
+COPD.df$smoking <- as.factor(COPD.df$smoking)
+COPD.df$muscular <- as.factor(COPD.df$muscular)
+COPD.df$hypertension <- as.factor(COPD.df$hypertension)
+COPD.df$AtrialFib <- as.factor(COPD.df$AtrialFib)
+COPD.df$IHD <- as.factor(COPD.df$IHD)
+```
+```{r}
+str(COPD.df)
+```
+
+
+```{r}
+describe(COPD.df)
+```
+
+Histogram for numeric data
+Age, PackHistory, FEV, FEV1PRED, FVC, FVCPRED, CAT, HAD, MWT1, MWT2, MWT1Best, SGRQ
+```{r}
+par(ask=TRUE)
+par(mfrow=c(3,4))
+par(mar = c(3, 3, 2, 1))
+hist(COPD.df$AGE)
+hist(COPD.df$PackHistory)
+hist(COPD.df$FEV1)
+hist(COPD.df$FEV1PRED)
+hist(COPD.df$FVC)
+hist(COPD.df$FVCPRED)
+hist(COPD.df$MWT1)
+hist(COPD.df$MWT2)
+hist(COPD.df$MWT1Best)
+hist(COPD.df$CAT)
+hist(COPD.df$HAD)
+hist(COPD.df$SGRQ)
+```
+NB : spotted outlier in CAT variable
+```{r}
+COPD.df$CAT[COPD.df$CAT>40]<-NA
+```
+
+
+QQ-plot
+```{r}
+par(ask=TRUE)
+par(mfrow=c(3,4))
+par(mar = c(3, 3, 2, 1))
+plot(COPD.df$AGE, main = "Age")
+plot(COPD.df$PackHistory, main = "PackHistory")
+plot(COPD.df$FEV1, main = "FEV1")
+plot(COPD.df$FEV1PRED, main = "FEV1PRED")
+plot(COPD.df$FVC, main="FVC")
+plot(COPD.df$FVCPRED, main="FVCPRED")
+plot(COPD.df$MWT1, main="MWT1")
+plot(COPD.df$MWT2, main="MWT2")
+plot(COPD.df$MWT1Best, main="MWT1Best")
+plot(COPD.df$CAT, main = "CAT")
+plot(COPD.df$HAD, main= "HAD")
+plot(COPD.df$SGRQ, main = "SGRQ")
+```
+CrossTable for Categorical data
+factor : Gender, COPDseverity, copd, smoking, Diabetes, Muscular, Hypertension, AtrialFib, IHD
+```{r}
+CrossTable(COPD.df$gender)
+```
+```{r}
+CrossTable(COPD.df$copd)
+```
+```{r}
+CrossTable(COPD.df$COPDSEVERITY)
+```
+```{r}
+CrossTable(COPD.df$AGEquartiles)
+```
+```{r}
+CrossTable(COPD.df$smoking)
+```
+```{r}
+CrossTable(COPD.df$Diabetes)
+```
+```{r}
+CrossTable(COPD.df$muscular)
+```
+```{r}
+CrossTable(COPD.df$hypertension)
+```
+```{r}
+CrossTable(COPD.df$AtrialFib)
+```
+```{r}
+CrossTable(COPD.df$IHD)
+```
+
+
+```{r}
+summary(COPD.df)
+```
+
+2. Correlation matrix for all of the variables
+Age, PackHistory, FEV, FEV1PRED, FVC, FVCPRED, CAT, HAD, MWT1, MWT2, MWT1Best, SGRQ
+
+```{r}
+my_data<-COPD.df[,c("AGE","PackHistory","FEV1","FEV1PRED","FVC","FVCPRED","MWT1","MWT2","MWT1Best","CAT","HAD","SGRQ")]
+cor_matrix <- cor(my_data, use = "complete.obs")
+```
+```{r}
+cor_matrix
+round(cor_matrix,4)
+```
+```{r}
+pairs(~AGE+PackHistory+FEV1+FEV1PRED+FVC+FVCPRED+MWT1+MWT2+MWT1Best+CAT+HAD+SGRQ, data=COPD.df, pch=16,cex=1)
+```
+
+
+
+***************************************************************************************************
+
+Using crosstable to examine categorical variables :
+```{r}
+CrossTable(COPD.df$hypertension, COPD.df$IHD)
+```
+
+Fit regression SGRQ (Quality of Life) with (FEV1)
+```{r}
+copd_sgrq<- lm(SGRQ~FEV1, data=COPD.df)
+```
+
+```{r}
+summary(copd_sgrq)
+```
+```{r}
+confint(copd_sgrq)
+```
+Check the model
+Fit the model :
+```{r}
+predictedValsgrq <- predict(copd_sgrq)
+residualValsgrq <- residuals(copd_sgrq)
+```
+
+Check using plots :
+```{r}
+plot(copd_sgrq)
+```
+
+Lung function (FEV1), age (AGE), gender (gender), COPD severity (COPDSEVERITY) and presence of any comorbidity (comorbid) as the final predictor variables for your multivariable model to predict MWT1best
+
+1. Check the normality using histogram, qqplot and shapiro-wilk (FEV, AGE to MWT1best)
+
+```{r}
+par(ask=TRUE)
+par(mfrow=c(2,2))
+
+hist(COPD.df$MWT1Best, main="Walking Distance",col="red", breaks=200)
+
+plot(density(COPD.df$MWT1Best, na.rm=TRUE),
+     main="Walking Distance", col="red")
+
+beanplot::beanplot(COPD.df$MWT1Best, main="Walking Distance", col="red", what=c(0.85,0.85,0.85,0), overallline="mean", boxwex=0.75, horizontal=FALSE)
+
+qqnorm(COPD.df$MWT1Best,main="Walking Distance",col="red")
+```
+
+```{r}
+par(ask=TRUE)
+par(mfrow=c(2,2))
+
+hist(COPD.df$AGE, main="Age",col="red", breaks=200)
+
+plot(density(COPD.df$AGE, na.rm=TRUE),
+     main="Age", col="red")
+
+beanplot::beanplot(COPD.df$AGE, main="Age", col="red", what=c(0.85,0.85,0.85,0), overallline="mean", boxwex=0.75, horizontal=FALSE)
+
+qqnorm(COPD.df$AGE,main="Age",col="red")
+```
+
+```{r}
+par(ask=TRUE)
+par(mfrow=c(2,2))
+
+hist(COPD.df$FEV1, main="FEV",col="red", breaks=200)
+
+plot(density(COPD.df$FEV1, na.rm=TRUE),
+     main="FEV", col="red")
+
+beanplot::beanplot(COPD.df$FEV1, main="FEV", col="red", what=c(0.85,0.85,0.85,0), overallline="mean", boxwex=0.75, horizontal=FALSE)
+
+qqnorm(COPD.df$FEV1,main="FEV",col="red")
+```
+
+Saphiro Test
+```{r}
+shapiro.test(COPD.df$MWT1Best)
+```
+```{r}
+shapiro.test(COPD.df$AGE)
+```
+```{r}
+shapiro.test(COPD.df$FEV1)
+```
+```{r}
+hist(COPD.df$CAT)
+```
+There's possible outlier
+```{r}
+COPD.df$CAT[COPD.df$CAT>40] <- NA
+```
+
+2. Using crosstab
+```{r}
+CrossTable(COPD.df$gender, COPD.df$IHD)
+```
+
+
+
+
+

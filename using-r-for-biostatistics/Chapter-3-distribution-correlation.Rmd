@@ -1,6 +1,8 @@
 ---
 title: "R Notebook"
-output: html_notebook
+output:
+  pdf_document: default
+  html_notebook: default
 ---
 
 This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
@@ -29,6 +31,15 @@ searchpaths() # Attached packages and objects.
 
 ###############################################################
 ```
+```{r}
+library(dplyr)
+library(Hmisc)
+library(gmodels)
+library(ggplot2)
+library(tidyverse)
+library(beeswarm)
+```
+
 
 ```{r}
 setwd("C:/Users/linan/Documents/GitHub/project/R-project/using-r-for-biostatistics")
@@ -209,14 +220,27 @@ Variable SBPmmHg
 par(ask=TRUE)
 par(mfrow=c(2,2))
 
-hist(EmployeeBiometric.df$SBPmmHg, main="Systolic Blood Pressure",col="orange", breaks=100)
+hist(EmployeeBiometric.df$SBPmmHg,
+     main="Systolic Blood Pressure",
+     col="blue", 
+     breaks=100)
 
-plot(density(EmployeeBiometric.df$SBPmmHg, na.rm=TRUE),
-     main="Systolic Blood PressureL", col="orange")
+plot(density(EmployeeBiometric.df$SBPmmHg, 
+             na.rm=TRUE),
+     main="Systolic Blood PressureL", 
+     col="blue")
 
-beanplot::beanplot(EmployeeBiometric.df$SBPmmHg, main="Systolic Blood Pressure", col="orange", what=c(0.85,0.85,0.85,0), overallline="mean", boxwex=0.75, horizontal=FALSE)
+beanplot::beanplot(EmployeeBiometric.df$SBPmmHg, 
+                   main="Systolic Blood Pressure", 
+                   col="blue", 
+                   what=c(1,1,1,0),
+                   overallline="mean", 
+                   boxwex=0.75, 
+                   horizontal=FALSE)
 
-qqnorm(EmployeeBiometric.df$SBPmmHg,main="Systolic Blood Pressure",col="orange")
+qqnorm(EmployeeBiometric.df$SBPmmHg,
+       main="Systolic Blood Pressure",
+       col="blue")
 ```
 Variable DBPmmHg
 ```{r}
@@ -518,12 +542,261 @@ As seen in the Q-Q plots provide ample evidence that the numeric object variable
 
 The RVAideMemoire::byf.shapiro() function is an excellent choice to examine these questions on normality by breakouts. Observe below how the RVAideMemoire::byf.shapiro() function provides a simple and convenient summary of normality p-values by individual breakouts of the factor-type object variable.
 
+1. Normality test of numeric object variables by Gender
+```{r}
+RVAideMemoire::byf.shapiro(AgeYears~Gender,
+                           data=EmployeeBiometric.df)
+```
+```{r}
+RVAideMemoire::byf.shapiro(TotalCholesterolmgdL~Gender,
+                           data=EmployeeBiometric.df)
+```
+```{r}
+RVAideMemoire::byf.shapiro(SBPmmHg ~ Gender, 
+                           data=EmployeeBiometric.df)
+```
 
+```{r}
+RVAideMemoire::byf.shapiro(DBPmmHg ~ Gender, 
+                           data=EmployeeBiometric.df)
+```
+```{r}
+RVAideMemoire::byf.shapiro(BMIMetric ~ Gender,
+                           data=EmployeeBiometric.df)
+```
+2. Normality test of numeric object variables by RaceEthnicity
 
+```{r}
+RVAideMemoire::byf.shapiro(AgeYears ~ RaceEthnicity, 
+                           data=EmployeeBiometric.df)
+```
+```{r}
+RVAideMemoire::byf.shapiro(TotalCholesterolmgdL~RaceEthnicity,
+                           data=EmployeeBiometric.df)
+```
+```{r}
+RVAideMemoire::byf.shapiro(SBPmmHg~RaceEthnicity,
+                           data=EmployeeBiometric.df)
+```
+```{r}
+RVAideMemoire::byf.shapiro(DBPmmHg~RaceEthnicity,
+                           data=EmployeeBiometric.df)
+```
+```{r}
+RVAideMemoire::byf.shapiro(BMIMetric~RaceEthnicity,
+                           data=EmployeeBiometric.df)
+```
+3. Normality test of numeric object variables by BMIstatus
+```{r}
+RVAideMemoire::byf.shapiro(AgeYears~BMIStatus,
+                           data=EmployeeBiometric.df)
+```
+```{r}
+RVAideMemoire::byf.shapiro(TotalCholesterolmgdL~BMIStatus,
+                           data=EmployeeBiometric.df)
+```
+```{r}
+RVAideMemoire::byf.shapiro(SBPmmHg~BMIStatus,
+                           data=EmployeeBiometric.df)
+```
+```{r}
+RVAideMemoire::byf.shapiro(DBPmmHg~BMIStatus,
+                           data=EmployeeBiometric.df)
+```
+```{r}
+RVAideMemoire::byf.shapiro(BMIMetric~BMIStatus,
+                           data=EmployeeBiometric.df)
+```
 
+4. Normality test of numeric object variables by Obesity
+```{r}
+RVAideMemoire::byf.shapiro(AgeYears~Obesity,
+                           data=EmployeeBiometric.df)
+```
+```{r}
+RVAideMemoire::byf.shapiro(TotalCholesterolmgdL~Obesity,
+                           data=EmployeeBiometric.df)
+```
+```{r}
+RVAideMemoire::byf.shapiro(SBPmmHg~Obesity,
+                           data=EmployeeBiometric.df)
+```
+```{r}
+RVAideMemoire::byf.shapiro(DBPmmHg~Obesity,
+                           data=EmployeeBiometric.df)
+```
+```{r}
+RVAideMemoire::byf.shapiro(BMIMetric~Obesity,
+                           data=EmployeeBiometric.df)
+```
+For additional confirmation, use the ggplot2::ggplot() function to produce QQ plots of the numeric object variables (e.g., AgeYears, TotalCholesterolmgdL, SBPmmHg, DBPmmHg, and BMIMetric) by breakouts of each of the four factor-type object variables (e.g., Gender, RaceEthnicity, BMIStatus, and Obesity) 
 
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+1.AgeYears
+```{r}
+QQAgeYearsbyGender<-ggplot2::ggplot(EmployeeBiometric.df,aes(sample=AgeYears))+
+                stat_qq(color="red")+
+                stat_qq_line(color="blue", linewidth=1.75)+
+                facet_grid(.~Gender)+
+                ggtitle("QQ-AgeYears")
 
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
+QQAgeYearsbyRaceEthnicity<-ggplot2::ggplot(EmployeeBiometric.df,aes(sample=AgeYears))+
+                stat_qq(color="red")+
+                stat_qq_line(color="blue", linewidth=1.75)+
+                facet_grid(.~RaceEthnicity)+
+                ggtitle("QQ-AgeYears")
 
-The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+QQAgeYearsbyBMIStatus<-ggplot2::ggplot(EmployeeBiometric.df,aes(sample=AgeYears))+
+                stat_qq(color="red")+
+                stat_qq_line(color="blue", linewidth=1.75)+
+                facet_grid(.~BMIStatus)+
+                ggtitle("QQ-AgeYears")
+
+QQAgeYearsbyObesity<-ggplot2::ggplot(EmployeeBiometric.df,aes(sample=AgeYears))+
+                stat_qq(color="red")+
+                stat_qq_line(color="blue", linewidth=1.75)+
+                facet_grid(.~Obesity)+
+                ggtitle("QQ-AgeYears")
+
+par(ask=TRUE); gridExtra::grid.arrange(
+  QQAgeYearsbyGender,
+  QQAgeYearsbyRaceEthnicity,
+  QQAgeYearsbyBMIStatus,
+  QQAgeYearsbyObesity, ncol=2)
+                
+```
+2. TotalCholesterol
+```{r}
+QQTotalCholesterolbyGender<-ggplot2::ggplot(EmployeeBiometric.df,aes(sample=TotalCholesterolmgdL))+
+                stat_qq(color="red")+
+                stat_qq_line(color="blue", linewidth=1.75)+
+                facet_grid(.~Gender)+
+                ggtitle("QQ-TotalCholesterolmgdL")
+
+QQTotalCholesterolbyRaceEthnicity<-ggplot2::ggplot(EmployeeBiometric.df,aes(sample=TotalCholesterolmgdL))+
+                stat_qq(color="red")+
+                stat_qq_line(color="blue", linewidth=1.75)+
+                facet_grid(.~RaceEthnicity)+
+                ggtitle("QQ-TotalCholesterolmgdL")
+
+QQTotalCholesterolbyBMIStatus<-ggplot2::ggplot(EmployeeBiometric.df,aes(sample=TotalCholesterolmgdL))+
+                stat_qq(color="red")+
+                stat_qq_line(color="blue", linewidth=1.75)+
+                facet_grid(.~BMIStatus)+
+                ggtitle("QQ-TotalCholesterolmgdL")
+
+QQTotalCholesterolbyObesity<-ggplot2::ggplot(EmployeeBiometric.df,aes(sample=TotalCholesterolmgdL))+
+                stat_qq(color="red")+
+                stat_qq_line(color="blue", linewidth=1.75)+
+                facet_grid(.~Obesity)+
+                ggtitle("QQ-TotalCholesterolmgdL")
+
+par(ask=TRUE); gridExtra::grid.arrange(
+  QQTotalCholesterolbyGender,
+  QQTotalCholesterolbyRaceEthnicity,
+  QQTotalCholesterolbyBMIStatus,
+  QQTotalCholesterolbyObesity, ncol=2)
+                
+```
+3. SBPmmHg
+
+```{r}
+QQSBPbyGender<-ggplot2::ggplot(EmployeeBiometric.df,aes(sample=SBPmmHg))+
+                stat_qq(color="red")+
+                stat_qq_line(color="blue", linewidth=1.75)+
+                facet_grid(.~Gender)+
+                ggtitle("QQ-SBPmmHg")
+
+QQSBPbyRaceEthnicity<-ggplot2::ggplot(EmployeeBiometric.df,aes(sample=SBPmmHg))+
+                stat_qq(color="red")+
+                stat_qq_line(color="blue", linewidth=1.75)+
+                facet_grid(.~RaceEthnicity)+
+                ggtitle("QQ-SBPmmHg")
+
+QQSBPbyBMIStatus<-ggplot2::ggplot(EmployeeBiometric.df,aes(sample=SBPmmHg))+
+                stat_qq(color="red")+
+                stat_qq_line(color="blue", linewidth=1.75)+
+                facet_grid(.~BMIStatus)+
+                ggtitle("QQ-SBPmmHg")
+
+QQSBPbyObesity<-ggplot2::ggplot(EmployeeBiometric.df,aes(sample=SBPmmHg))+
+                stat_qq(color="red")+
+                stat_qq_line(color="blue", linewidth=1.75)+
+                facet_grid(.~Obesity)+
+                ggtitle("QQ-SBPmmHg")
+
+par(ask=TRUE); gridExtra::grid.arrange(
+  QQSBPbyGender,
+  QQSBPbyRaceEthnicity,
+  QQSBPbyBMIStatus,
+  QQSBPbyObesity, ncol=2)
+                
+```
+4. DBPmmHg
+
+```{r}
+QQDBPbyGender<-ggplot2::ggplot(EmployeeBiometric.df,aes(sample=DBPmmHg))+
+                stat_qq(color="red")+
+                stat_qq_line(color="blue", linewidth=1.75)+
+                facet_grid(.~Gender)+
+                ggtitle("QQ-DBPmmHg")
+
+QQDBPbyRaceEthnicity<-ggplot2::ggplot(EmployeeBiometric.df,aes(sample=DBPmmHg))+
+                stat_qq(color="red")+
+                stat_qq_line(color="blue", linewidth=1.75)+
+                facet_grid(.~RaceEthnicity)+
+                ggtitle("QQ-DBPmmHg")
+
+QQDBPbyBMIStatus<-ggplot2::ggplot(EmployeeBiometric.df,aes(sample=DBPmmHg))+
+                stat_qq(color="red")+
+                stat_qq_line(color="blue", linewidth=1.75)+
+                facet_grid(.~BMIStatus)+
+                ggtitle("QQ-DBPmmHg")
+
+QQDBPbyObesity<-ggplot2::ggplot(EmployeeBiometric.df,aes(sample=DBPmmHg))+
+                stat_qq(color="red")+
+                stat_qq_line(color="blue", linewidth=1.75)+
+                facet_grid(.~Obesity)+
+                ggtitle("QQ-DBPmmHg")
+
+par(ask=TRUE); gridExtra::grid.arrange(
+  QQDBPbyGender,
+  QQDBPbyRaceEthnicity,
+  QQDBPbyBMIStatus,
+  QQDBPbyObesity, ncol=2)
+                
+```
+5. BMIMetric
+
+```{r}
+QQBMIMetricbyGender<-ggplot2::ggplot(EmployeeBiometric.df,aes(sample=BMIMetric))+
+                stat_qq(color="red")+
+                stat_qq_line(color="blue", linewidth=1.75)+
+                facet_grid(.~Gender)+
+                ggtitle("QQ-BMIMetric")
+
+QQBMIMetricbyRaceEthnicity<-ggplot2::ggplot(EmployeeBiometric.df,aes(sample=BMIMetric))+
+                stat_qq(color="red")+
+                stat_qq_line(color="blue", linewidth=1.75)+
+                facet_grid(.~RaceEthnicity)+
+                ggtitle("QQ-BMIMetric")
+
+QQBMIMetricbyBMIStatus<-ggplot2::ggplot(EmployeeBiometric.df,aes(sample=BMIMetric))+
+                stat_qq(color="red")+
+                stat_qq_line(color="blue", linewidth=1.75)+
+                facet_grid(.~BMIStatus)+
+                ggtitle("QQ-BMIMetric")
+
+QQBMIMetricbyObesity<-ggplot2::ggplot(EmployeeBiometric.df,aes(sample=BMIMetric))+
+                stat_qq(color="red")+
+                stat_qq_line(color="blue", linewidth=1.75)+
+                facet_grid(.~Obesity)+
+                ggtitle("QQ-BMIMetric")
+
+par(ask=TRUE); gridExtra::grid.arrange(
+  QQBMIMetricbyGender,
+  QQBMIMetricbyRaceEthnicity,
+  QQBMIMetricbyBMIStatus,
+  QQBMIMetricbyObesity, ncol=2)
+                
+```
+
