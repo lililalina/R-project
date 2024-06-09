@@ -16,7 +16,8 @@ This is an R Markdown document. Markdown is a simple formatting syntax for autho
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
 ```{r}
-############################################################## # Housekeeping Use for All Analyses #
+############################################################## 
+# Housekeeping Use for All Analyses #
 ##############################################################
 date() # Current system time and date. 
 Sys.time() # Current system time and date (redundant).
@@ -28,7 +29,6 @@ ls() # List all objects in the working # directory.
 rm(list = ls()) # CAUTION: Remove all files in the #working directory. If this action is not desired, use rm() one-by-one to remove the objectsthat are not needed.
 ls.str() # List all objects with finite detail.
 getwd() # Identify the current working directory
-
 setwd("C:/Users/linan/Documents/GitHub/project/R-project/using-r-for-biostatistics") # Set to a new working directory. # Note the single forward slash and double # quotes. # This new directory should be the directory # where the data file is located, otherwise # the data file will not be found.
 getwd()# Confirm the working directory.
 list.files()# List files at the PC directory
