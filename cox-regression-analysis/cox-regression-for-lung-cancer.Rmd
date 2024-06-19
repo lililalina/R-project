@@ -1,0 +1,92 @@
+---
+title: "Lung cancer survival analysis (female vs male)"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+library(dplyr)
+library(survival)
+library(survminer)
+```
+
+```{r}
+library(survival)
+?lung
+```
+
+```{r}
+head(lung)
+class(lung)
+dim(lung)
+View(lung)
+```
+
+```{r}
+as_tibble(lung)
+lung <- as_tibble(lung)
+lung
+```
+
+Survival Curves
+
+```{r}
+s <- Surv(lung$time, lung$status)
+class(s)
+s
+head(lung)
+```
+
+```{r}
+survfit(s~1)
+survfit(Surv(time, status)~1, data=lung)
+sfit <- survfit(Surv(time, status)~1, data=lung)
+sfit
+```
+
+```{r}
+summary(sfit)
+```
+
+```{r}
+sfit <- survfit(Surv(time, status)~sex, data=lung)
+sfit
+summary(sfit)
+```
+
+```{r}
+# ?summary.survfit
+range(lung$time)
+seq(0, 1100, 100)
+```
+
+```{r}
+summary(sfit, times=seq(0, 1000, 100))
+```
+
+Kaplan-Meier Plots
+
+```{r}
+sfit <- survfit(Surv(time, status)~sex, data=lung)
+plot(sfit)
+```
+
+```{r}
+library(survminer)
+ggsurvplot(sfit)
+```
+
+```{r}
+ggsurvplot(sfit, conf.int=TRUE, pval=TRUE, risk.table=TRUE, 
+           legend.labs=c("Male", "Female"), legend.title="Sex",  
+           palette=c("dodgerblue2", "orchid2"), 
+           title="Kaplan-Meier Curve for Lung Cancer Survival", 
+           risk.table.height=.15)
+```
+
+
+
+
