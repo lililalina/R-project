@@ -1,0 +1,138 @@
+---
+title: "anova-biospecimen"
+author: "Lina"
+date: "2024-06-19"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+############################################################## 
+# Housekeeping Use for All Analyses #
+##############################################################
+date() # Current system time and date. 
+Sys.time() # Current system time and date (redundant).
+R.version.string # R version and version release date.
+options(digits=6) # Confirm default digits.
+options(scipen=999)# Suppress scientific notation.
+options(width=60) # Confirm output width. 
+ls() # List all objects in the working # directory.
+rm(list = ls()) # CAUTION: Remove all files in the #working directory. If this action is not desired, use rm() one-by-one to remove the objectsthat are not needed.
+ls.str() # List all objects with finite detail.
+getwd() # Identify the current working directory
+setwd("C:/Users/linan/Documents/GitHub/project/R-project/R-ANOVA-Biospecimen") # Set to a new working directory. # Note the single forward slash and double # quotes. # This new directory should be the directory # where the data file is located, otherwise # the data file will not be found.
+getwd()# Confirm the working directory.
+list.files()# List files at the PC directory
+.libPaths()# Library pathname
+.Library# Library pathname.
+sessionInfo() # R version, locale, and packages.
+search()# Attached packages and objects.
+searchpaths() # Attached packages and objects.
+
+###############################################################
+```
+
+```{r}
+library(dplyr)
+library(Hmisc)
+library(gmodels)
+library(ggplot2)
+library(tidyverse)
+library(mctest)
+library(RcmdrMisc)
+library(agricolae)
+library(pastecs)
+```
+Load data
+
+```{r}
+biospec <- read.table(file="BiologicalSpecimen.csv", header=TRUE, dec=".", sep = ",")
+```
+```{r}
+attach(biospec)
+str(biospec)
+nrow(biospec)
+ncol(biospec)
+dim(biospec)
+names(biospec)
+colnames(biospec)
+rownames(biospec)
+head(biospec,5)
+tail(biospec,5)
+summary(biospec)
+```
+```{r}
+F2b <- as.factor(F2b)
+RcmdrMisc::numSummary(
+  biospec[,c("M1")], groups=F2b,
+  statistics=c("mean","sd"))
+```
+```{r}
+# Filter out non-finite values
+biospec_clean <- biospec[is.finite(biospec$M1), ]
+
+# Ensure F2b is a factor
+F2b <- as.factor(biospec_clean$F2b)
+
+# Create the histograms for each group in F2b using facetting
+ggplot(biospec_clean, aes(x = M1)) +
+  geom_histogram(binwidth = 1, fill = "purple", color = "black", alpha = 0.7) +
+  facet_wrap(~ F2b) +
+  labs(title = "Histogram of M1 by F2b Groups", x = "M1", y = "Frequency") +
+  theme_minimal()
+```
+```{r}
+# Create the QQ plots for each group in F2b using facetting
+ggplot(biospec_clean, aes(sample = M1)) +
+  stat_qq() +
+  stat_qq_line() +
+  facet_wrap(~ F2b) +
+  labs(title = "QQ Plot of M1 by F2b Groups", x = "Theoretical Quantiles", y = "Sample Quantiles") +
+  theme_minimal()
+```
+
+```{r}
+# Filter out non-finite values
+biospec_clean <- biospec[is.finite(biospec$M1), ]
+
+# Ensure F2b is a factor
+biospec_clean$F2b <- as.factor(biospec_clean$F2b)
+
+# Create the boxplots for each group in F2b
+ggplot(biospec_clean, aes(x = F2b, y = M1)) +
+  geom_boxplot(fill = "purple", color = "black", alpha = 0.7) +
+  labs(title = "Boxplot of M1 by F2b Groups", x = "F2b", y = "M1") +
+  theme_minimal()
+```
+
+```{r}
+RVAideMemoire::mshapiro.test(biospec$M1)
+RVAideMemoire::byf.shapiro(M1~as.factor(F2b),
+                           data = biospec)
+```
+all are significant --> non normal distribution
+non parametric ANOVA/kruskall-wallis
+
+```{r}
+agricolae::HSD.test(
+  aov(M1~as.factor(F2b), data = biospec),
+  trt="as.factor(F2b)",
+  group=TRUE, console = TRUE, alpha=0.05,
+  main = "M1 by F2b")
+```
+```{r}
+dunn.test::dunn.test(biospec$M1,
+                     as.factor(biospec$F2b), method="bonferroni",
+                     kw=TRUE, label=TRUE, table = TRUE, list = TRUE)
+```
+
+

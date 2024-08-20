@@ -65,7 +65,9 @@ table(duplicated(EmployeeBiometric.df$EmployeeID))
 ```{r}
 summary(EmployeeBiometric.df)
 ```
-Change EmployeeID,Gender, Ethnic, and BMIStatus from int to factor
+
+##Change EmployeeID,Gender, Ethnic, and BMIStatus from int to factor
+
 ```{r}
 EmployeeBiometric.df$EmployeeID <- as.factor(EmployeeBiometric.df$EmployeeID)
 ```
@@ -125,56 +127,10 @@ The epiDisplay::tab0.85() function provides syntax that generates an attractive 
 
 Create bar plots for factor variables : Gender, RaceEthnicity, BMIStatus, Obesity
 ```{r}
-par(ask=TRUE)
-par(mfrow=c(2,2))
-epiDisplay::tab1(EmployeeBiometric.df$Gender,
-                 main = "Frequency of Gender",
-                 ylab = "Frequency",
-                 graph = TRUE,
-                 missing=TRUE,
-                 bar.values = c("frequency"),
-                 horiz = TRUE,
-                 cex = 0.8,
-                 cex.names = 0.8,
-                 cex.lab=0.8,
-                 cex.axis=0.8,
-                 col = c("black","red"))
-epiDisplay::tab1(EmployeeBiometric.df$RaceEthnicity,
-                 main = "Frequency of RaceEthnicity",
-                 ylab = "Frequency",
-                 graph = TRUE,
-                 missing=TRUE,
-                 bar.values = c("frequency"),
-                 horiz = TRUE,
-                 cex = 0.8,
-                 cex.names = 0.8,
-                 cex.lab=0.8,
-                 cex.axis=0.8,
-                 col = c("black","red","blue","green","cyan"))
-epiDisplay::tab1(EmployeeBiometric.df$BMIStatus,
-                 main = "Frequency of BMIStatus",
-                 ylab = "Frequency",
-                 graph = TRUE,
-                 missing=TRUE,
-                 bar.values = c("frequency"),
-                 horiz = TRUE,
-                 cex = 0.85,
-                 cex.names = 0.85,
-                 cex.lab=0.85,
-                 cex.axis=0.85,
-                 col = c("black","red","blue","green","cyan"))
-epiDisplay::tab1(EmployeeBiometric.df$Obesity,
-                 main = "Frequency of Obesity",
-                 ylab = "Frequency",
-                 graph = TRUE,
-                 missing=TRUE,
-                 bar.values = c("frequency"),
-                 horiz = TRUE,
-                 cex = 0.85,
-                 cex.names = 0.85,
-                 cex.lab=0.85,
-                 cex.axis=0.85,
-                 col = c("blue","green","red"))
+epiDisplay::tab1(EmployeeBiometric.df$Gender)
+epiDisplay::tab1(EmployeeBiometric.df$RaceEthnicity)
+epiDisplay::tab1(EmployeeBiometric.df$BMIStatus)
+epiDisplay::tab1(EmployeeBiometric.df$Obesity)
 ```
 
 Create bar plots for numeric variables : AgeYears, TotalCholesterolmgdL, SBPmmHg, DBPmmHg, and the calculated value for BMIMetric
@@ -185,7 +141,8 @@ Figures for the EmployeeBiometric.df object variables with numeric values (e.g.,
 • Beanplot —Use the beanplot::beanplot() function, by loading the external package beanplot into the active R session.
 • Quantile-Quantile Curve — Use the qqnorm() function.
 
-Variable AgeYears
+## Age Distribution
+
 ```{r}
 par(ask=TRUE)
 par(mfrow=c(2,2))
@@ -243,6 +200,7 @@ qqnorm(EmployeeBiometric.df$SBPmmHg,
        col="blue")
 ```
 Variable DBPmmHg
+
 ```{r}
 par(ask=TRUE)
 par(mfrow=c(2,2))
@@ -257,7 +215,8 @@ beanplot::beanplot(EmployeeBiometric.df$DBPmmHg, main="Diastolic Blood Pressure"
 qqnorm(EmployeeBiometric.df$DBPmmHg,main="Diastolic Blood Pressure",col="green")
 ```
 
-Variable BMIMetric
+##Variable BMIMetric
+
 ```{r}
 par(ask=TRUE)
 par(mfrow=c(2,2))
@@ -271,12 +230,13 @@ beanplot::beanplot(EmployeeBiometric.df$BMIMetric, main="Body Mass Index: BMI Me
 
 qqnorm(EmployeeBiometric.df$BMIMetric,main="Body Mass Index: BMI Metric = kg/m^2",col="purple")
 ```
-Summary for variable factors
+## Summary for variable factors
+
 ```{r}
 summary(EmployeeBiometric.df[,c(2,4,9,10)])
 ```
 
-Summary for numeric variable
+## Summary for numeric variable
 ```{r}
 summary(EmployeeBiometric.df[,c(3,5,7,8)])
 ```
@@ -294,7 +254,8 @@ epiDisplay::tab1(EmployeeBiometric.df$BMIStatus, graph=FALSE)
 epiDisplay::tab1(EmployeeBiometric.df$Obesity, graph = FALSE)
 ```
 
-Measures of Central Tendency for Numeric-Type Object Variables
+# Measures of Central Tendency for Numeric-Type Object Variables
+
 To address this concern and the need for attention to Standard Deviation as a vital descriptive statistic, consider use of the RcmdrMisc::numSummary() function, which by default provides Mean, Standard Deviation, IQR (Interquartile Range, or Q3 minus Q1) Quartiles (0% (Minimum), 25%, 50% (Median), 75%, 100% (Maximum)) N, and NAs (the number of missing values, if any).
 
 ```{r}
@@ -331,10 +292,8 @@ Summary, group by Obesity
 ```{r}
 RcmdrMisc::numSummary(EmployeeBiometric.df[,c("AgeYears","TotalCholesterolmgdL","SBPmmHg","DBPmmHg","BMIMetric")],groups = Obesity)
 ```
-To give another view of the descriptive statistics gained from use of the summary() function and the RcmdrMisc::numSummary() function, notice below how these outcomes are presented in graphical format, applying a beeswarm plot over a boxplot.
 
-
-1. Distribution of age based on categorical variables :
+## 1. Distribution of age based on categorical variables :
 
 ```{r}
 par(ask=TRUE)
@@ -364,7 +323,7 @@ boxplot(AgeYears~Obesity, data=EmployeeBiometric.df,
 beeswarm(AgeYears~Obesity, data= EmployeeBiometric.df,
          col=c("red","blue"), add=TRUE, spacing=0.1)
 ```
-2. Distribution of Total Cholesterol based on categorical variables :
+## 2. Distribution of Total Cholesterol based on categorical variables :
 
 ```{r}
 par(ask=TRUE)
@@ -395,7 +354,7 @@ beeswarm(TotalCholesterolmgdL~Obesity, data= EmployeeBiometric.df,
          col=c("red","blue"), add=TRUE, spacing=0.1)
 ```
 
-3. Distribution of SBP based on categorical variables :
+## 3. Distribution of SBP based on categorical variables :
 ```{r}
 
 par(ask=TRUE)
@@ -485,7 +444,7 @@ beeswarm(BMIMetric~Obesity, data=EmployeeBiometric.df,
 
 ```
 
-Quality Assurance check using Saphiro-test to obtain normal/non normal distribution
+## Normality test
 
 ```{r}
 shapiro.test((EmployeeBiometric.df$AgeYears))
@@ -512,7 +471,7 @@ Result of Shapiro test distribution :
 5. BMIMetrics = not normal
 
 
-Distribution analysis using Q-Q Plot
+## Distribution analysis using Q-Q Plot
 
 ```{r}
 par(ask=TRUE)
@@ -801,5 +760,295 @@ par(ask=TRUE); gridExtra::grid.arrange(
 ```
 
 
+```{r}
+lbsgen <- read.table(file="CPIIISectionLbsGender.csv", header=TRUE, dec=".", sep = ",")
+library(asbio)
+library(epiDisplay)
+asbio::Mode(lbsgen$Lbs)
+```
+```{r}
+#Frequency Table
+par(ask=TRUE)
+par(mfrow=c(1,2))
+epiDisplay::tab1(lbsgen$Section,
+                 main="Fequency Distribution of Section",
+                 col=c("red","blue"), font.lab=2, font.axis=2)
+epiDisplay::tab1(lbsgen$Gender, main="Frequency Distribution of Gender", col=c("red", "blue"), font.lab=2, font.axis=2)
+```
 
+```{r}
+par(ask=TRUE)
+par(mfrow=c(1,2))
+epiDisplay::tabpct(lbsgen$Section,
+                   lbsgen$Gender, graph = TRUE, decimal=1,
+                   main="Frequency Distribution of Section by Gender",
+                   xlab="Section", ylab="Gender", cex.axis=1,
+                   percent="both", las=1, col = c("red","blue"))
+epiDisplay::tabpct(lbsgen$Gender,
+                   lbsgen$Section, graph = TRUE, decimal = 1,
+                   main="Frequency Distribution of Gender by Section",
+                   xlab="Gender", ylab="Section", cex.axis=1,
+                   percent="both", las=1, col=c("red","blue"))
+```
+
+```{r}
+par(ask=TRUE)
+par(mfrow=c(1,2))
+epiDisplay::tabpct(EmployeeBiometric.df$RaceEthnicity,
+                   EmployeeBiometric.df$Gender, graph = TRUE, decimal=1,
+                   main="Frequency Distribution of Race Ethnicity by Gender",
+                   xlab="Race Ethnicity", ylab="Gender", cex.axis=1,
+                   percent="both", las=1, col = c("cyan","green"))
+epiDisplay::tabpct(EmployeeBiometric.df$Gender,
+                   EmployeeBiometric.df$RaceEthnicity, graph = TRUE, decimal = 1,
+                   main="Frequency Distribution of Gender by Race Ethnicity",
+                   xlab="Gender", ylab="Section", cex.axis=1,
+                   percent="both", las=1, col=c("cyan","green"))
+```
+```{r}
+epiDisplay::tabpct(EmployeeBiometric.df$Gender,
+                   EmployeeBiometric.df$RaceEthnicity, graph = TRUE, decimal = 1,
+                   main="Frequency Distribution of Gender by Race Ethnicity",
+                   xlab="Gender", ylab="Section", cex.axis=1,
+                   percent="both", las=1, col=c("cyan","green","yellow","red","pink"))
+```
+
+```{r}
+par(ask=TRUE) 
+par(mfrow=c(1,3))  
+epiDisplay::summ(lbsgen$Lbs, by=NULL,
+                 graph=TRUE, box=TRUE, pch=20, ylab="auto", main="Sorted Dotplot of Weight (Lbs), Overall", 
+                cex.X.axis=1.25, 
+                cex.Y.axis=1.25,
+                font.lab=2, dot.col="auto")
+
+epiDisplay::summ(lbsgen$Lbs, by=lbsgen$Section,
+                 graph=TRUE, 
+                 pch=20, ylab="auto",
+                 main="Sorted Dotplot of Weight (Lbs) by Section", 
+                 cex.X.axis=1.25,  
+                 cex.Y.axis=1.25,
+                 font.lab=2, dot.col="auto")
+
+epiDisplay::summ(lbsgen$Lbs, by=lbsgen$Gender,
+                 graph=TRUE,
+                 pch=20, ylab="auto", main="Sorted Dotplot of Weight (Lbs)
+                 by Gender", 
+                 cex.X.axis=1.25, 
+                 cex.Y.axis=1.25, 
+                 font.lab=2, 
+                 dot.col="auto")
+
+```
+```{r}
+library(s20x)
+#Create descriptive summaryf or variable Lbs
+s20x::summaryStats(lbsgen$Lbs, na.rm=TRUE)
+```
+
+```{r}
+#Summary stat of Lbs by gender
+s20x::summaryStats(Lbs~Gender, lbsgen,
+                   na.rm=TRUE)
+```
+```{r}
+#Summary stat of Lbs by Section
+s20x::summaryStats(Lbs~Section, lbsgen,
+                   na.rm=TRUE)
+```
+```{r}
+#Creating distribution list of Lbs by Gender
+par(ask=TRUE); 
+s20x::rowdistr(crosstablist = xtabs(~Gender + Lbs, data = lbsgen), 
+               plot = TRUE,
+               suppressText = FALSE,
+               comp = 'basic')
+```
+```{r}
+#Creating distribution list of Lbs by Section
+par(ask=TRUE); s20x::rowdistr(crosstablist = xtabs(~Section + Lbs, data = lbsgen), 
+               plot = TRUE,
+               suppressText = FALSE,
+               comp = 'basic')
+```
+```{r}
+library(arsenal)
+```
+```{r}
+#Summary of descriptive statistics
+summary(arsenal::tableby(list(Section, Gender)~Lbs,
+                         data=lbsgen), text=TRUE, total=TRUE)
+
+```
+
+```{r}
+#Pivot table for Gender (rows) and Section (column)
+library(pivottabler)
+
+pivottabler::qpvt(lbsgen,"Gender","Section",
+                  c("Mean Lbs"="mean(Lbs, na.rm=TRUE)",
+                    "SD Lbs"="sd(Lbs, na.rm=TRUE)"),
+                  formats=list("%.0f","%.1f"))
+```
+
+```{r}
+pivottabler::qpvt(lbsgen,"Section","Gender",
+                  c("Mean Lbs"="mean(Lbs, na.rm=TRUE)",
+                    "SD Lbs"="sd(Lbs, na.rm=TRUE)"),
+                  formats=list("%.0f","%.1f"))
+```
+```{r}
+pivottabler::qpvt(EmployeeBiometric.df,"RaceEthnicity","Gender",
+                  c("Mean SBP"="mean(SBPmmHg, na.rm=TRUE)",
+                    "SD SBP"="sd(SBPmmHg, na.rm=TRUE)"),
+                  formats=list("%.0f","%.1f"))
+
+```
+
+```{r}
+# Set the seed
+base::set.seed(8)
+# Data with Normal Distribution Patterns
+SBPNormal <- stats::rnorm(100000, mean=120, sd=06)
+
+# Data That Do Not Exhibit Normal Distribution Patterns
+SBPNotNormal <- stats::runif(100000, min=102, max=138)
+```
+
+# Exploratory Data Analysis
+
+```{r}
+base::getwd()
+base::ls() 
+utils::str(SBPNormal)
+
+utils::head(SBPNormal, n=10) # Show the head, first 10 cases 
+utils::tail(SBPNormal, n=10) # Show the tail, last 10 cases 
+base::summary(SBPNormal)
+
+# Summary statistics 
+utils::str(SBPNotNormal) # Identify structure
+utils::head(SBPNotNormal, n=10) # Show the head, first 10 cases 
+utils::tail(SBPNotNormal, n=10) # Show the tail, last 10 cases 
+base::summary(SBPNotNormal)# Summary statistics
+```
+
+
+```{r}
+par(ask=TRUE)
+par(mfrow=c(2,2)) # Pause # 4 figures - 2 rows by 2 column grid 
+graphics::hist(SBPNormal)
+graphics::plot(stats::density(SBPNormal, na.rm=TRUE)) 
+graphics::boxplot(SBPNormal) 
+stats::qqnorm(SBPNormal); 
+stats::qqline(SBPNormal)
+```
+```{r}
+par(ask=TRUE)
+par(mfrow=c(2,2))
+graphics::hist(SBPNotNormal)
+graphics::plot(stats::density(SBPNotNormal, na.rm=TRUE))
+graphics::boxplot(SBPNotNormal)
+stats::qqnorm(SBPNotNormal); stats::qqline(SBPNotNormal)
+```
+
+Histogram check
+```{r}
+par(ask=TRUE)
+par(mfrow=c(1,2))
+graphics::hist(SBPNormal,
+               main="SBP-Normal Distribution",
+               col="red",
+               breaks=50,
+               font.lab=2,
+               xlim=c(0,200),
+               ylim=c(0,7000))
+               axis(side=1, font=2)
+               axis(side = 2, font=2)
+graphics::hist(SBPNotNormal, 
+               main="SBP - Not Normal Distribution", 
+               col="red",# Add color
+               breaks=50, 
+               font.lab=2,# Increase granularity of histogram # Bold labels
+               xlim=c(0,200), # X axis scale 
+               ylim=c(0,7000)) # Y axis scale 
+axis(side=1, font=2) # X axis bold 
+axis(side=2, font=2) # Y axis bold 
+# Notice how both histograms have the same X axis scale # and Y axis scale, allowing meaningful side-by-side # comparisons.
+```
+```{r}
+# Density Plot par(ask=TRUE)
+par(mfrow=c(1,2)) # 2 figures - 1 row by 2 column grid 
+graphics::plot(stats::density(SBPNormal, na.rm=TRUE), 
+               main="SBP - Normal Distribution", 
+               col="red", # Add color 
+               lwd=5, # Thick line
+               font.lab=2,
+               xlim=c(0,200),
+               ylim=c(0,0.08))
+               axis(side=1, font=2)
+               axis(side=2, font=2)
+graphics::plot(stats::density(SBPNotNormal, na.rm=TRUE), 
+               main="SBP - Not Normal Distribution", col="red",# Add color 
+               lwd=5, 
+               font.lab=2,
+               xlim=c(0,200), 
+               ylim=c(0,0.08))
+axis(side=1, font=2) # X axis bold 
+axis(side=2, font=2) 
+```
+
+```{r}
+# Boxplot 
+par(ask=TRUE) # Pause
+par(mfrow=c(1,2)) # 2 figures - 1 row by 2 column grid 
+graphics::boxplot(SBPNormal, 
+                  main="SBP - Normal Distribution", 
+                  xlab="Boxplot",
+                  ylab="SBP",cex.axis=1.15, 
+                  cex.lab=1.15, 
+                  col="red", 
+                  lwd=2,
+                  font.lab=2, 
+                  font=2,
+                  ylim=c(0,200))
+
+graphics::boxplot(SBPNotNormal, 
+                  main="SBP - Not Normal Distribution", 
+                  xlab="Boxplot",
+                  ylab="SBP",
+                  cex.axis=1.15, 
+                  cex.lab=1.15, 
+                  col="red", 
+                  lwd=2,
+                  font.lab=2, font=2,
+                  ylim=c(0,200))
+```
+QQ Plot
+```{r}
+# Q-Q Plot 
+par(ask=TRUE)# Pause
+par(mfrow=c(1,2)) # 2 figures - 1 row by 2 column grid 
+stats::qqnorm(SBPNormal, 
+              main="Q-Q Plot (Blue) and Q-Q Line (Red) of SBP Normal Distribution", 
+              col="blue", 
+              xlim=c(-4,4), 
+              ylim=c(0,200), 
+              font.axis=2, 
+              font.lab=2)
+stats::qqline(SBPNormal, # Add a Q-Q Line to the Q-Q Plot 
+              col="red", 
+              lwd=4, 
+              lty=2) 
+stats::qqnorm(SBPNotNormal, main="Q-Q Plot (Blue) and Q-Q Line (Red) of SBP Not Normal Distribution", 
+              col="blue", 
+              xlim=c(-4,4), 
+              ylim=c(0,200), 
+              font.axis=2, 
+              font.lab=2)
+stats::qqline(SBPNotNormal,#
+              col="red", 
+              lwd=4, 
+              lty=2) 
+```
 

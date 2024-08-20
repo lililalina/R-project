@@ -1,0 +1,174 @@
+---
+title: "Set-of-data-exploration-tools"
+author: "Lina"
+date: "2024-06-25"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+
+```
+
+
+```{r}
+# Set the seed
+base::set.seed(8)
+# Data with Normal Distribution Patterns
+SBPNormal <- stats::rnorm(100000, mean=120, sd=06)
+
+# Data That Do Not Exhibit Normal Distribution Patterns
+SBPNotNormal <- stats::runif(100000, min=102, max=138)
+```
+
+```{r}
+base::getwd()
+base::ls() 
+utils::str(SBPNormal)
+
+utils::head(SBPNormal, n=10) # Show the head, first 10 cases 
+utils::tail(SBPNormal, n=10) # Show the tail, last 10 cases 
+base::summary(SBPNormal)
+
+# Summary statistics 
+utils::str(SBPNotNormal) # Identify structure
+utils::head(SBPNotNormal, n=10) # Show the head, first 10 cases 
+utils::tail(SBPNotNormal, n=10) # Show the tail, last 10 cases 
+base::summary(SBPNotNormal)# Summary statistics
+```
+
+
+```{r}
+par(ask=TRUE)
+par(mfrow=c(2,2)) # Pause # 4 figures - 2 rows by 2 column grid 
+graphics::hist(SBPNormal)
+graphics::plot(stats::density(SBPNormal, na.rm=TRUE)) 
+graphics::boxplot(SBPNormal) 
+stats::qqnorm(SBPNormal); 
+stats::qqline(SBPNormal)
+```
+```{r}
+par(ask=TRUE)
+par(mfrow=c(2,2))
+graphics::hist(SBPNotNormal)
+graphics::plot(stats::density(SBPNotNormal, na.rm=TRUE))
+graphics::boxplot(SBPNotNormal)
+stats::qqnorm(SBPNotNormal); stats::qqline(SBPNotNormal)
+```
+
+Histogram check
+```{r}
+par(ask=TRUE)
+par(mfrow=c(1,2))
+graphics::hist(SBPNormal,
+               main="SBP-Normal Distribution",
+               col="red",
+               breaks=50,
+               font.lab=2,
+               xlim=c(0,200),
+               ylim=c(0,7000))
+               axis(side=1, font=2)
+               axis(side = 2, font=2)
+graphics::hist(SBPNotNormal, 
+               main="SBP - Not Normal Distribution", 
+               col="red",# Add color
+               breaks=50, 
+               font.lab=2,# Increase granularity of histogram # Bold labels
+               xlim=c(0,200), # X axis scale 
+               ylim=c(0,7000)) # Y axis scale 
+axis(side=1, font=2) # X axis bold 
+axis(side=2, font=2) # Y axis bold 
+# Notice how both histograms have the same X axis scale # and Y axis scale, allowing meaningful side-by-side # comparisons.
+```
+```{r}
+# Density Plot par(ask=TRUE)
+par(mfrow=c(1,2)) # 2 figures - 1 row by 2 column grid 
+graphics::plot(stats::density(SBPNormal, na.rm=TRUE), 
+               main="SBP - Normal Distribution", 
+               col="red", # Add color 
+               lwd=5, # Thick line
+               font.lab=2,
+               xlim=c(0,200),
+               ylim=c(0,0.08))
+               axis(side=1, font=2)
+               axis(side=2, font=2)
+graphics::plot(stats::density(SBPNotNormal, na.rm=TRUE), 
+               main="SBP - Not Normal Distribution", col="red",# Add color 
+               lwd=5, 
+               font.lab=2,
+               xlim=c(0,200), 
+               ylim=c(0,0.08))
+axis(side=1, font=2) # X axis bold 
+axis(side=2, font=2) 
+```
+
+```{r}
+# Boxplot 
+par(ask=TRUE) # Pause
+par(mfrow=c(1,2)) # 2 figures - 1 row by 2 column grid 
+graphics::boxplot(SBPNormal, 
+                  main="SBP - Normal Distribution", 
+                  xlab="Boxplot",
+                  ylab="SBP",cex.axis=1.15, 
+                  cex.lab=1.15, 
+                  col="red", 
+                  lwd=2,
+                  font.lab=2, 
+                  font=2,
+                  ylim=c(0,200))
+
+graphics::boxplot(SBPNotNormal, 
+                  main="SBP - Not Normal Distribution", 
+                  xlab="Boxplot",
+                  ylab="SBP",
+                  cex.axis=1.15, 
+                  cex.lab=1.15, 
+                  col="red", 
+                  lwd=2,
+                  font.lab=2, font=2,
+                  ylim=c(0,200))
+```
+QQ Plot
+```{r}
+# Q-Q Plot 
+par(ask=TRUE)# Pause
+par(mfrow=c(1,2)) # 2 figures - 1 row by 2 column grid 
+stats::qqnorm(SBPNormal, 
+              main="Q-Q Plot (Blue) and Q-Q Line (Red) of SBP Normal Distribution", 
+              col="blue", 
+              xlim=c(-4,4), 
+              ylim=c(0,200), 
+              font.axis=2, 
+              font.lab=2)
+stats::qqline(SBPNormal, # Add a Q-Q Line to the Q-Q Plot 
+              col="red", 
+              lwd=4, 
+              lty=2) 
+stats::qqnorm(SBPNotNormal, main="Q-Q Plot (Blue) and Q-Q Line (Red) of SBP Not Normal Distribution", 
+              col="blue", 
+              xlim=c(-4,4), 
+              ylim=c(0,200), 
+              font.axis=2, 
+              font.lab=2)
+stats::qqline(SBPNotNormal,#
+              col="red", 
+              lwd=4, 
+              lty=2) 
+```
+
+If exponential notation is a problem, consider using the base::format() function or the base::options() function and adjust the arguments to achieve desired output
+
+```{r}
+base::summary(SBPNormal)
+```
+```{r}
+stats::median(SBPNormal)
+```
+```{r}
+base::mean(SBPNormal)
+```
+
+

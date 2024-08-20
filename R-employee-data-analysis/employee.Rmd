@@ -1,0 +1,175 @@
+---
+title: "project-2"
+author: "Lina"
+date: "2024-06-26"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+
+```{r}
+library(dplyr)
+library(Hmisc)
+library(gmodels)
+library(ggplot2)
+library(tidyverse)
+library(readxl)
+```
+## Import data
+
+```{r}
+employee <- read_excel("C:/Users/linan/Documents/GitHub/project/R-project/R-project-Employee/Employee Data (1100 Records) f.xlsx",sheet = 1)
+```
+
+#Exploratory data analysis
+
+```{r}
+# Dimensions of the dataset
+dim(employee)
+```
+```{r}
+# Structure of the dataset
+str(employee)
+
+# First few rows of the dataset
+head(employee)
+
+# Concise summary of the dataset
+glimpse(employee)
+
+# Summary statistics
+summary(employee)
+
+```
+
+
+Questions :
+1. Does salary level affect the likelihood of an employee leaving?
+2. Is there a relationship between years of experience and attrition?
+3. Are certain departments more prone to turnover than others?
+
+### Data Cleaning and Exploratory
+
+factors = left_company, department, job_level, businee_travel, job_satisfaction, performance_rating, marital_status
+```{r}
+library(DataExplorer)
+#Change as factors
+factor_vars = c("left_company","department","job_level","business_travel","job_satisfaction","performance_rating","marital_status")
+num_vars = c("salary","weekly_hours","yrs_At_company","yrs_since_promotion","previouse_companier","miles_from_home")
+
+str(employee)
+
+```
+
+```{r}
+employee <- employee %>%
+ mutate(left_company = recode(left_company, "Yes" = 1, "No" = 0))
+```
+
+
+
+```{r}
+plot_intro(employee)
+```
+There's no missing in the data
+
+
+```{r}
+plot_bar(employee)
+```
+
+## Does salary level affect the likelihood of an employee leaving?
+
+```{r}
+library(s20x)
+
+s20x::summaryStats(salary~left_company, employee)
+```
+
+```{r}
+shapiro.test(employee$salary)
+```
+```{r}
+hist(employee$salary, main = "histogram of salary")
+```
+```{r}
+plot(employee$salary)
+```
+
+```{r}
+plot_qq(employee$salary)
+```
+```{r}
+RVAideMemoire::byf.shapiro(salary~left_company,
+                             data=employee)
+```
+```{r}
+employee <- tibble(employee)
+
+# Convert the 'left_company' variable to factor if not already
+employee$left_company <- as.factor(employee$left_company)
+
+# Perform the numeric summary
+RcmdrMisc::numSummary(employee$salary, 
+                      groups = employee$left_company)
+```
+```{r}
+library(epiDisplay)
+epiDisplay::tab1(employee$left_company, graph=FALSE)
+```
+
+```{r}
+library(onewaytests)
+#Compare the salary between two groups using Mann-Whitney test
+onewaytests::mw.test(salary ~ left_company, 
+                     data=employee, 
+                     alpha=0.05, 
+                     na.rm=TRUE, verbose=TRUE)
+```
+1. Salary variable is not normally distributed, either before and after compared between two groups. 
+2. The number of subject who left company 185(16,8%) subjects compared to 915(83,2%).
+3. Median of salary in resigned group USD 69.5k(30.5-205.3k) compared to USD 90.7k(30.6-212.2k)
+4. Using Mann-Whitney U-test, the group that left the company had lower wage than the group which stay with the company (p<0.05).
+
+## 2. Is there a relationship between years of experience and attrition?
+
+```{r}
+str(employee)
+```
+
+```{r}
+summary(employee$yrs_at_company)
+```
+```{r}
+hist(employee$yrs_at_company)
+```
+```{r}
+plot_qq(employee$yrs_at_company)
+```
+## 3. Are certain departments more prone to turnover than others?
+
+```{r}
+#Provide percentage of factor variable : department
+epiDisplay::tab1(employee$department, graph=TRUE)
+```
+```{r}
+library(descr)
+
+
+x_tab <- CrossTable(employee$department, employee$left_company,
+                    prop.c= FALSE, prop.chisq = FALSE, prop.t = FALSE)
+
+x_tab
+```
+
+
+

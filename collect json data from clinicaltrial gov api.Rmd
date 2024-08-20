@@ -1,0 +1,247 @@
+---
+title: "literature-search-phase-1"
+author: "Lina"
+date: "2024-06-26"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Website for API documentation : https://clinicaltrials.gov/data-api/api#extapi
+
+```{r}
+
+# Load necessary libraries
+library(httr)
+library(jsonlite)
+library(tidyverse)
+library(stringr)
+
+# Define API URL and parameters
+base_url <- "https://clinicaltrials.gov/api/v2/studies"
+params <- list(
+  postFilter.overallStatus="COMPLETED",
+  pageSize = "100", # Adjust the number of results as needed
+  query.intr = "intramuscular injection",
+  format = "json"
+)
+
+
+# Make the API request and check response status
+response <- GET(base_url, query = params)
+
+# Print the status code and URL for debugging
+print(status_code(response))
+print(response$url)
+
+# If the status code is not 200, print the response content for debugging
+if (status_code(response) != 200) {
+  print(content(response, "text"))
+  stop("Error: Unable to fetch data")
+}
+
+# Process the data if request is successful
+data <- content(response, "text")
+data_json <- fromJSON(data, flatten = TRUE)
+trials <- data_json$StudyFieldsResponse$StudyFields
+
+# Convert to data frame and view data
+trials_df <- as.data.frame(trials)
+View(trials_df)
+
+# Save filtered results to a CSV file
+write.csv(trials_df, "intramuscular_trials_phase1.csv", row.names = FALSE)
+```
+
+# Filter for intramuscular drugs
+intramuscular_trials <- trials_df %>%
+  filter(str_detect(InterventionName, "intramuscular", ignore.case = TRUE))
+
+# Save filtered results to a CSV file
+write.csv(intramuscular_trials, "intramuscular_trials_phase1.csv", row.names = FALSE)
+
+
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+```{r}
+# Load necessary packages
+library(readr)
+
+# Replace 'urls.csv' with your actual CSV file path
+csv_file <- ("C:/Users/linan/Documents/JOB APPLICATION/for portofolio/ctg-studies.csv")
+
+# Read URLs from CSV file
+urls_data <- read_csv(csv_file)
+
+# Assuming 'PDF_URL' is the column name containing PDF URLs
+pdf_urls <- urls_data$`Study URL`
+
+# Function to download PDFs
+download_pdfs <- function(url, dest_folder = "C:/Users/linan/Documents/JOB APPLICATION/for portofolio/search-clinicaltrial-gov") {
+  if (!dir.exists(dest_folder)) {
+    dir.create(dest_folder)
+  }
+  
+  # Extract file name from URL
+  file_name <- basename(url)
+  
+  # Download file with handling for content type
+  tryCatch({
+    response <- GET(url)
+    content_type <- httr::headers(response)$`content-type`
+    
+    if (grepl("application/pdf", content_type, ignore.case = TRUE)) {
+      # Directly download if it's a PDF
+      write_disk(response, path = paste0(dest_folder, "/", file_name), overwrite = TRUE)
+      cat("Downloaded:", file_name, "\n")
+    } else if (grepl("text/html", content_type, ignore.case = TRUE)) {
+      # If it's HTML, attempt to find a link to the PDF within the HTML content
+      html_content <- read_html(content(response, "text"))
+      pdf_link <- html_content %>%
+        html_nodes("a[href$='.pdf']") %>%
+        html_attr("href") %>%
+        .[1]  # Assuming the first PDF link found is sufficient
+      
+      if (!is.na(pdf_link)) {
+        # Download the PDF from the extracted link
+        pdf_response <- GET(pdf_link)
+        write_disk(pdf_response, path = paste0(dest_folder, "/", file_name), overwrite = TRUE)
+        cat("Downloaded:", file_name, "\n")
+      } else {
+        cat("No PDF link found in HTML content for:", file_name, "\n")
+      }
+    } else {
+      cat("Warning: Content type is not PDF. URL may not directly point to a PDF file.\n")
+    }
+  }, error = function(e) {
+    cat("Error downloading:", file_name, "\n")
+    cat("Details:", conditionMessage(e), "\n")
+  })
+}
+
+# Replace with your actual CSV file path
+csv_file <- "C:/Users/linan/Documents/JOB APPLICATION/for portofolio/ctg-studies.csv"
+
+# Read CSV file
+clinical_trials <- read_csv(csv_file)
+
+# Assuming 'Study URL' is the column name containing PDF URLs
+pdf_urls <- clinical_trials$Study.URL
+
+# Destination folder
+dest_folder <- "C:/Users/linan/Documents/JOB APPLICATION/for portofolio/search-clinicaltrial-gov"
+
+# Download PDFs for each URL
+for (url in pdf_urls) {
+  download_pdfs(url, dest_folder)
+}
+```
+
+  # Download file
+  download.file(url, paste0(dest_folder,"/", file_name), mode = "wb")
+  
+  # Print status
+  cat("Downloaded:", file_name, "\n")
+}
+
+```{r}
+# Download file with handling for redirects
+  response <- httr::GET(url, httr::write_disk(paste0(dest_folder, "/", file_name), overwrite = TRUE))
+  
+  # Check content type
+  content_type <- httr::headers(response)$`content-type`
+  if (!grepl("application/pdf", content_type, ignore.case = TRUE)) {
+    cat("Warning: Content type is not PDF. URL may not directly point to a PDF file.\n")
+  }
+  
+  # Print status
+  cat("Downloaded:", file_name, "\n")
+}
+
+# Iterate through each URL and download PDFs
+for (url in pdf_urls) {
+  download_pdfs(url)
+}
+```
+
+```{r}
+library(readr)
+library(httr)
+library(rvest)
+
+# Replace with your actual CSV file path
+csv_file <- ("https://clinicaltrials.gov/study/NCT05827874")
+
+# Read CSV file and specify column names explicitly
+clinical_trials <- read_csv(csv_file, col_types = cols(
+  `NCT Number` = col_character(),
+  `Study Title` = col_character(),
+  `Study URL` = col_character(),
+  `Study Status` = col_character(),
+  Conditions = col_character(),
+  Interventions = col_character(),
+  Sponsor = col_character(),
+  Collaborators = col_character(),
+  `Study Type` = col_character()
+))
+
+# Function to download PDFs
+download_pdfs <- function(url, dest_folder) {
+  # Ensure destination folder exists
+  if (!dir.exists(dest_folder)) {
+    dir.create(dest_folder, recursive = TRUE)
+  }
+  
+  # Extract file name from URL
+  file_name <- basename(url)
+  
+  # Download file with handling for content type
+  tryCatch({
+    response <- GET(url)
+    content_type <- httr::headers(response)$`content-type`
+    
+    if (grepl("application/pdf", content_type, ignore.case = TRUE)) {
+      # Directly download if it's a PDF
+      write_disk(response, path = paste0(dest_folder, "/", file_name), overwrite = TRUE)
+      cat("Downloaded:", file_name, "\n")
+    } else if (grepl("text/html", content_type, ignore.case = TRUE)) {
+      # If it's HTML, attempt to find a link to the PDF within the HTML content
+      html_content <- read_html(content(response, "text"))
+      pdf_link <- html_content %>%
+        html_nodes("a[href$='.pdf']") %>%
+        html_attr("href") %>%
+        .[1]  # Assuming the first PDF link found is sufficient
+      
+      if (!is.na(pdf_link)) {
+        # Download the PDF from the extracted link
+        pdf_response <- GET(pdf_link)
+        write_disk(pdf_response, path = paste0(dest_folder, "/", file_name), overwrite = TRUE)
+        cat("Downloaded:", file_name, "\n")
+      } else {
+        cat("No PDF link found in HTML content for:", file_name, "\n")
+      }
+    } else {
+      cat("Warning: Content type is not PDF. URL may not directly point to a PDF file.\n")
+    }
+  }, error = function(e) {
+    cat("Error downloading:", file_name, "\n")
+    cat("Details:", conditionMessage(e), "\n")
+  })
+}
+
+# Assuming 'Study URL' is the column name containing PDF URLs
+pdf_urls <- clinical_trials$`Study URL`
+
+# Destination folder
+dest_folder <- "C:/Users/linan/Documents/JOB APPLICATION/for portofolio/search-clinicaltrial-gov"
+
+# Download PDFs for each URL
+for (url in pdf_urls) {
+  download_pdfs(url, dest_folder)
+}
+
+```
+

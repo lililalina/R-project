@@ -1,49 +1,222 @@
 ---
-title: "Lung cancer survival analysis (female vs male)"
-output: html_notebook
+title: "cancer cancer survival analysis (female vs male)"
+output:
+  pdf_document: default
+  html_notebook: default
 ---
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+## Format
+inst:	Institution code
+time:	Survival time in days
 
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+status:	censoring status 1=censored, 2=dead
+
+age:	Age in years
+
+sex:	Male=1 Female=2
+
+ph.ecog:	ECOG performance score as rated by the physician. 0=asymptomatic, 1= symptomatic but completely ambulatory, 2= in bed <50% of the day, 3= in bed > 50% of the day but not bedbound, 4 = bedbound
+
+ph.karno:	Karnofsky performance score (bad=0-good=100) rated by physician
+
+pat.karno:	Karnofsky performance score as rated by patient
+
+meal.cal:	Calories consumed at meals
+
+wt.loss:	Weight loss in last six months (pounds)
+
+## Note
+The use of 1/2 for alive/dead instead of the usual 0/1 is a historical footnote. For data contained on punch cards, IBM 360 Fortran treated blank as a zero, which led to a policy within the section of Biostatistics to never use "0" as a data value since one could not distinguish it from a missing value. The policy became a habit, as is often the case; and the 1/2 coding endured long beyond the demise of punch cards and Fortran.
+
+## Source
+Terry Therneau
+
+## References
+Loprinzi CL. Laurie JA. Wieand HS. Krook JE. Novotny PJ. Kugler JW. Bartel J. Law M. Bateman M. Klatt NE. et al. Prospective evaluation of prognostic variables from patient-completed questionnaires. North Central Cancer Treatment Group. Journal of Clinical Oncology. 12(3):601-7, 1994.
 
 ```{r}
 library(dplyr)
+library(DataExplorer)
 library(survival)
 library(survminer)
+library(gmodels)
+library(ggplot2)
+library(tidyverse)
+library(readxl)
+library(epiDisplay)
+library(pivottabler)
+library(arsenal)
 ```
 
+
 ```{r}
+# Load the survival package
 library(survival)
-?lung
+
+# Load the cancer dataset from the survival package
+data(cancer, package = "survival")
+```
+
+
+## Exploratory Data Analysis
+
+```{r}
+# Dimensions of the dataset
+dim(cancer)
+
+# Structure of the dataset
+str(cancer)
+
+# First few rows of the dataset
+head(cancer)
+
+# Concise summary of the dataset
+glimpse(cancer)
+
+# Summary statistics
+summary(cancer)
+
+```
+Inst, status, sex and ph.ecog --> factor
+
+```{r}
+#Change numeric variable to factor
+cancer$inst <- as.factor(cancer$inst)
+cancer$status <- as.factor(cancer$status)
+cancer$sex <- as.factor(cancer$sex)
+cancer$ph.ecog <- as.factor(cancer$ph.ecog)
+summary(cancer)
+```
+NA : inst, ph.karno, pat.karno, meal.cal, wt.loss
+
+## Exploration of numeric data 
+
+```{r}
+# Grouping the numeric variables
+num <- c("time","age","ph.karno","pat.karno","meal.cal","wt.loss")
+```
+
+
+```{r}
+# Create repeated histograms for each categorical variable
+for(var in num) {
+  hist(cancer[[var]], main = paste("Histogram of", var), xlab = var)
+}
+```
+```{r}
+# Create repeated plots for each numerical variable
+for(var in num) {
+  plot(cancer[[var]], main = paste("Plot of", var), xlab = "Index", ylab = var)
+}
+```
+```{r}
+# Normality test using Saphiro and QQ-plot
+for(var in num) {
+  # Perform the Shapiro-Wilk test
+shapiro_result <- shapiro.test(cancer[[var]])
+
+# Print the result with a title
+cat("Shapiro-Wilk Test Result for", var, ":\n")
+print(shapiro_result)
+
+# Create the Q-Q plot
+qqnorm(cancer[[var]], main = paste("Plot of", var), xlab = "Index")
+qqline(cancer[[var]], col = "red")
+}
+```
+note : all numeric variables are not normally distributed
+
+
+```{r}
+#Grouping the categorical variables
+cat <- cancer[,c("inst", "status","sex", "ph.ecog")]
 ```
 
 ```{r}
-head(lung)
-class(lung)
-dim(lung)
-View(lung)
+# Describe the categorical data
+describe(cat)
+```
+```{r}
+#Provide percentage of factor variable
+epiDisplay::tab1(cancer$sex, graph=TRUE)
+
+epiDisplay::tab1(cancer$status, graph=TRUE)
+```
+60,5% parients is male
+72,4% patients dead and 27,6% censored
+
+```{r}
+#Frequency Table of Sex
+
+# Convert 'sex' variable to factor with custom labels
+cancer$sex <- factor(cancer$sex, levels = c(1, 2), labels = c("Male", "Female"))
+
+#Convert 'status' variable to factor
+cancer$status <- factor(cancer$status, levels = c(1,2), labels = c("censored","dead"))
+
+epiDisplay::tab1(cancer$sex, 
+main="Frequency Distribution of sex",
+col=c("green", "yellow"), 
+font.lab=2, 
+font.axis=2)
+
+epiDisplay::tab1(cancer$status, 
+main="Frequency Distribution of status",
+col=c("green", "yellow"), 
+font.lab=2, 
+font.axis=2)
+
+```
+```{r}
+#Pivot table for Gender (rows) and Section (column)
+library(pivottabler)
+
+pivottabler::qpvt(cancer,"sex","status",
+                  c("Mean age"="mean(age, na.rm=TRUE)",
+                    "SD age"="sd(age, na.rm=TRUE)",
+                    "Median age"="median(age, na.rm=TRUE)",
+                    "Min age"="min(age, na.rm=TRUE)",
+                    "Max age"="max(age, na.rm=TRUE)"),
+                  formats=list("%.0f","%.1f"))
+```
+Mean of age :62(9.1) or median 63(39-82)
+Mean age of female 61(8,8) and median 61(41-7)
+Mean ge of male 63(9.1) and median 64(39-82)
+
+```{r}
+library(s20x)
+#Summary stat of Lbs by Section
+s20x::summaryStats(time~status, cancer,
+                   na.rm=TRUE)
+```
+Mean time to event (dead) is 283 days SD 202.81 days
+Mean time to censored is 363,5 days SD 221,14 days
+
+
+```{r}
+#Change the dataset to tibble
+as_tibble(cancer)
+cancer <- as_tibble(cancer)
+cancer
 ```
 
 ```{r}
-as_tibble(lung)
-lung <- as_tibble(lung)
-lung
+summary(cancer)
 ```
 
-Survival Curves
+
+# Survival Curves
 
 ```{r}
-s <- Surv(lung$time, lung$status)
-class(s)
-s
-head(lung)
+# Create survival curve
+s <- Surv(cancer$time, cancer$status)
 ```
 
 ```{r}
+# Fit the survival analysis 1=censored, 2=dead
 survfit(s~1)
-survfit(Surv(time, status)~1, data=lung)
-sfit <- survfit(Surv(time, status)~1, data=lung)
+survfit(Surv(time, status)~1, data=cancer)
+sfit <- survfit(Surv(time, status)~1, data=cancer)
 sfit
 ```
 
@@ -52,14 +225,15 @@ summary(sfit)
 ```
 
 ```{r}
-sfit <- survfit(Surv(time, status)~sex, data=lung)
+# Compare the survival time between male and female
+sfit <- survfit(Surv(time, status)~sex, data=cancer)
 sfit
 summary(sfit)
 ```
 
 ```{r}
 # ?summary.survfit
-range(lung$time)
+range(cancer$time)
 seq(0, 1100, 100)
 ```
 
@@ -70,7 +244,7 @@ summary(sfit, times=seq(0, 1000, 100))
 Kaplan-Meier Plots
 
 ```{r}
-sfit <- survfit(Surv(time, status)~sex, data=lung)
+sfit <- survfit(Surv(time, status)~sex, data=cancer)
 plot(sfit)
 ```
 
@@ -83,10 +257,19 @@ ggsurvplot(sfit)
 ggsurvplot(sfit, conf.int=TRUE, pval=TRUE, risk.table=TRUE, 
            legend.labs=c("Male", "Female"), legend.title="Sex",  
            palette=c("dodgerblue2", "orchid2"), 
-           title="Kaplan-Meier Curve for Lung Cancer Survival", 
+           title="Kaplan-Meier Curve for cancer Cancer Survival", 
            risk.table.height=.15)
 ```
 
+```{r}
+# Fit a Cox proportional hazards model
+cox_fit <- coxph(Surv(time, status) ~ age + sex + ph.ecog, data=cancer)
 
-
+# Summarize the Cox model
+summary(cox_fit)
+```
+```{r}
+# Visualize the Cox proportional hazards model results
+ggforest(cox_fit, data = cancer)
+```
 
