@@ -3,11 +3,16 @@ title: "R Notebook"
 output:
   pdf_document: default
   html_notebook: default
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
-This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you
+execute code within the notebook, the results appear beneath the code.
 
-Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+Try executing this chunk by clicking the *Run* button within the chunk
+or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*.
 
 ```{r}
 date() # Current system time and date. 
@@ -31,6 +36,7 @@ searchpaths() # Attached packages and objects.
 
 ###############################################################
 ```
+
 ```{r}
 library(dplyr)
 library(Hmisc)
@@ -40,36 +46,46 @@ library(tidyverse)
 library(beeswarm)
 ```
 
-
 ```{r}
 setwd("C:/Users/linan/Documents/GitHub/project/R-project/using-r-for-biostatistics")
 ```
+
+#Load dataset
 
 ```{r}
 EmployeeBiometric.df <- read.table(file="EmpWellAge21to79.csv", header=TRUE, dec=".", sep = ",")
 ```
 
+#Explore dataset
+
 ```{r}
 str(EmployeeBiometric.df)
 ```
+
 ```{r}
 dim(EmployeeBiometric.df)
 ```
+
 ```{r}
 head(EmployeeBiometric.df)
 ```
-Check for duplicate in individual level = no duplicate ID
+
+#Check for duplicate in individual level = no duplicate ID
+
 ```{r}
 table(duplicated(EmployeeBiometric.df$EmployeeID))
 ```
+#Summary of dataset
+
 ```{r}
 summary(EmployeeBiometric.df)
 ```
+There are some NA's in the dataset 
 
 ##Change EmployeeID,Gender, Ethnic, and BMIStatus from int to factor
 
 ```{r}
-EmployeeBiometric.df$EmployeeID <- as.factor(EmployeeBiometric.df$EmployeeID)
+EmployeeBiometric.df$EmployeeID <- as.character(EmployeeBiometric.df$EmployeeID)
 ```
 
 ```{r}
@@ -77,12 +93,12 @@ EmployeeBiometric.df$Gender <- factor(EmployeeBiometric.df$Gender,
                                       labels=c("Female","Male"))
 levels(EmployeeBiometric.df$Gender)
 ```
+
 ```{r}
 EmployeeBiometric.df$BMIStatus<-factor(EmployeeBiometric.df$BMIStatus,
                                        labels = c("Underweight","Normal Weight", "Overweight","Obese"))
 levels(EmployeeBiometric.df$BMIStatus)
 ```
-
 
 ```{r}
 EmployeeBiometric.df$RaceEthnicity <-
@@ -90,6 +106,7 @@ EmployeeBiometric.df$RaceEthnicity <-
          labels=c("Asian","Black","Hispanic","Other","White"))
 levels(EmployeeBiometric.df$RaceEthnicity)
 ```
+
 ```{r}
 EmployeeBiometric.df$Obesity <-
   factor(EmployeeBiometric.df$Obesity,
@@ -97,17 +114,20 @@ EmployeeBiometric.df$Obesity <-
 levels(EmployeeBiometric.df$Obesity)
 ```
 
-Change AgeYears, SBPmmHg, DBPmmHg from int to numeric
+#Change AgeYears, SBPmmHg, DBPmmHg from int to numeric
+
 ```{r}
 EmployeeBiometric.df$AgeYears <- as.numeric(EmployeeBiometric.df$AgeYears)
 EmployeeBiometric.df$SBPmmHg <- as.numeric(EmployeeBiometric.df$SBPmmHg)
 EmployeeBiometric.df$DBPmmHg <- as.numeric(EmployeeBiometric.df$DBPmmHg)
 ```
 
-Check data structure
+#Check data structure after change
+
 ```{r}
 str(EmployeeBiometric.df)
 ```
+
 ```{r}
 getwd()
 ls()
@@ -118,14 +138,24 @@ colnames(EmployeeBiometric.df)
 head(EmployeeBiometric.df)
 tail(EmployeeBiometric.df)
 ```
+
 ```{r}
 summary(EmployeeBiometric.df)
 ```
+
 Conduct a Visual Data Check Using Graphics using epiDisplay
 
-The epiDisplay::tab0.85() function provides syntax that generates an attractive barplot with frequency counts placed over each bar and a frequency distribution table printed to the screen. Also, for factor-type object variables with missing data, the epiDisplay::tab0.85() function incorporates the presentation of these missing data into the barplot and the frequency distribution table, providing a complete sense of the data
+The epiDisplay::tab0.85() function provides syntax that generates an
+attractive barplot with frequency counts placed over each bar and a
+frequency distribution table printed to the screen. Also, for
+factor-type object variables with missing data, the
+epiDisplay::tab0.85() function incorporates the presentation of these
+missing data into the barplot and the frequency distribution table,
+providing a complete sense of the data
 
-Create bar plots for factor variables : Gender, RaceEthnicity, BMIStatus, Obesity
+Create bar plots for factor variables : Gender, RaceEthnicity,
+BMIStatus, Obesity
+
 ```{r}
 epiDisplay::tab1(EmployeeBiometric.df$Gender)
 epiDisplay::tab1(EmployeeBiometric.df$RaceEthnicity)
@@ -133,13 +163,18 @@ epiDisplay::tab1(EmployeeBiometric.df$BMIStatus)
 epiDisplay::tab1(EmployeeBiometric.df$Obesity)
 ```
 
-Create bar plots for numeric variables : AgeYears, TotalCholesterolmgdL, SBPmmHg, DBPmmHg, and the calculated value for BMIMetric
+Create bar plots for numeric variables : AgeYears, TotalCholesterolmgdL,
+SBPmmHg, DBPmmHg, and the calculated value for BMIMetric
 
-Figures for the EmployeeBiometric.df object variables with numeric values (e.g., often called interval values or scale values) will be displayed in a 2 by 2 graphical grid. Each square in the grid uses a different R-based function to display data distribution:
-• Histogram — Use the hist() function.
-• Density Curve — The plot() function is wrapped around the density() function.
-• Beanplot —Use the beanplot::beanplot() function, by loading the external package beanplot into the active R session.
-• Quantile-Quantile Curve — Use the qqnorm() function.
+Figures for the EmployeeBiometric.df object variables with numeric
+values (e.g., often called interval values or scale values) will be
+displayed in a 2 by 2 graphical grid. Each square in the grid uses a
+different R-based function to display data distribution: • Histogram —
+Use the hist() function. • Density Curve — The plot() function is
+wrapped around the density() function. • Beanplot —Use the
+beanplot::beanplot() function, by loading the external package beanplot
+into the active R session. • Quantile-Quantile Curve — Use the qqnorm()
+function.
 
 ## Age Distribution
 
@@ -158,6 +193,7 @@ qqnorm(EmployeeBiometric.df$AgeYears,main="Age",col="red")
 ```
 
 Variable TotalCholesterolmgl
+
 ```{r}
 par(ask=TRUE)
 par(mfrow=c(2,2))
@@ -173,6 +209,7 @@ qqnorm(EmployeeBiometric.df$TotalCholesterolmgdL,main="Total Cholesterol mg/dL",
 ```
 
 Variable SBPmmHg
+
 ```{r}
 par(ask=TRUE)
 par(mfrow=c(2,2))
@@ -199,6 +236,7 @@ qqnorm(EmployeeBiometric.df$SBPmmHg,
        main="Systolic Blood Pressure",
        col="blue")
 ```
+
 Variable DBPmmHg
 
 ```{r}
@@ -230,6 +268,7 @@ beanplot::beanplot(EmployeeBiometric.df$BMIMetric, main="Body Mass Index: BMI Me
 
 qqnorm(EmployeeBiometric.df$BMIMetric,main="Body Mass Index: BMI Metric = kg/m^2",col="purple")
 ```
+
 ## Summary for variable factors
 
 ```{r}
@@ -237,36 +276,50 @@ summary(EmployeeBiometric.df[,c(2,4,9,10)])
 ```
 
 ## Summary for numeric variable
+
 ```{r}
 summary(EmployeeBiometric.df[,c(3,5,7,8)])
 ```
+
 Provide percentage of factor variable
+
 ```{r}
 epiDisplay::tab1(EmployeeBiometric.df$Gender, graph=FALSE)
 ```
+
 ```{r}
 epiDisplay::tab1(EmployeeBiometric.df$RaceEthnicity, graph = FALSE)
 ```
+
 ```{r}
 epiDisplay::tab1(EmployeeBiometric.df$BMIStatus, graph=FALSE)
 ```
+
 ```{r}
 epiDisplay::tab1(EmployeeBiometric.df$Obesity, graph = FALSE)
 ```
 
 # Measures of Central Tendency for Numeric-Type Object Variables
 
-To address this concern and the need for attention to Standard Deviation as a vital descriptive statistic, consider use of the RcmdrMisc::numSummary() function, which by default provides Mean, Standard Deviation, IQR (Interquartile Range, or Q3 minus Q1) Quartiles (0% (Minimum), 25%, 50% (Median), 75%, 100% (Maximum)) N, and NAs (the number of missing values, if any).
+To address this concern and the need for attention to Standard Deviation
+as a vital descriptive statistic, consider use of the
+RcmdrMisc::numSummary() function, which by default provides Mean,
+Standard Deviation, IQR (Interquartile Range, or Q3 minus Q1) Quartiles
+(0% (Minimum), 25%, 50% (Median), 75%, 100% (Maximum)) N, and NAs (the
+number of missing values, if any).
 
 ```{r}
 RcmdrMisc::numSummary(EmployeeBiometric.df$AgeYears)
 ```
+
 ```{r}
 RcmdrMisc::numSummary(EmployeeBiometric.df$TotalCholesterolmgdL)
 ```
+
 ```{r}
 RcmdrMisc::numSummary(EmployeeBiometric.df$SBPmmHg)
 ```
+
 ```{r}
 RcmdrMisc::numSummary(EmployeeBiometric.df$DBPmmHg)
 ```
@@ -274,21 +327,27 @@ RcmdrMisc::numSummary(EmployeeBiometric.df$DBPmmHg)
 ```{r}
 RcmdrMisc::numSummary(EmployeeBiometric.df$BMIMetric)
 ```
+
 Summary, group by gender
+
 ```{r}
 RcmdrMisc::numSummary(EmployeeBiometric.df[,c("AgeYears","TotalCholesterolmgdL","SBPmmHg","DBPmmHg","BMIMetric")],groups = Gender)
 ```
+
 Summary, group by RaceEthnicity
+
 ```{r}
 RcmdrMisc::numSummary(EmployeeBiometric.df[,c("AgeYears","TotalCholesterolmgdL","SBPmmHg","DBPmmHg","BMIMetric")],groups = RaceEthnicity)
 ```
 
 Summary, group by BMIstatus
+
 ```{r}
 RcmdrMisc::numSummary(EmployeeBiometric.df[,c("AgeYears","TotalCholesterolmgdL","SBPmmHg","DBPmmHg","BMIMetric")],groups = BMIStatus)
 ```
 
 Summary, group by Obesity
+
 ```{r}
 RcmdrMisc::numSummary(EmployeeBiometric.df[,c("AgeYears","TotalCholesterolmgdL","SBPmmHg","DBPmmHg","BMIMetric")],groups = Obesity)
 ```
@@ -323,6 +382,7 @@ boxplot(AgeYears~Obesity, data=EmployeeBiometric.df,
 beeswarm(AgeYears~Obesity, data= EmployeeBiometric.df,
          col=c("red","blue"), add=TRUE, spacing=0.1)
 ```
+
 ## 2. Distribution of Total Cholesterol based on categorical variables :
 
 ```{r}
@@ -355,6 +415,7 @@ beeswarm(TotalCholesterolmgdL~Obesity, data= EmployeeBiometric.df,
 ```
 
 ## 3. Distribution of SBP based on categorical variables :
+
 ```{r}
 
 par(ask=TRUE)
@@ -384,7 +445,8 @@ beeswarm(SBPmmHg~Obesity, data= EmployeeBiometric.df,
          col=c("red","blue"), add=TRUE, spacing=0.1)
 ```
 
-4. Distribution of DBP based on categorical variables :
+4.  Distribution of DBP based on categorical variables :
+
 ```{r}
 par(ask=TRUE)
 par(mfrow=c(2,2))
@@ -412,7 +474,8 @@ boxplot(DBPmmHg~Obesity, data=EmployeeBiometric.df,
 beeswarm(DBPmmHg~Obesity, data= EmployeeBiometric.df,
          col=c("red","blue"), add=TRUE, spacing=0.1)
 ```
-5. Distribution of BMIMetric by categorical variables
+
+5.  Distribution of BMIMetric by categorical variables
 
 ```{r}
 par(ask=TRUE)
@@ -449,27 +512,26 @@ beeswarm(BMIMetric~Obesity, data=EmployeeBiometric.df,
 ```{r}
 shapiro.test((EmployeeBiometric.df$AgeYears))
 ```
+
 ```{r}
 shapiro.test(EmployeeBiometric.df$TotalCholesterolmgdL)
 ```
 
-
 ```{r}
 shapiro.test((EmployeeBiometric.df$SBPmmHg))
 ```
+
 ```{r}
 shapiro.test(EmployeeBiometric.df$DBPmmHg)
 ```
+
 ```{r}
 shapiro.test(EmployeeBiometric.df$BMIMetric)
 ```
-Result of Shapiro test distribution :
-1. Age = not normal
-2. Total cholesterol = not normal
-3. SBP = not normal
-4. DBP = not normal
-5. BMIMetrics = not normal
 
+Result of Shapiro test distribution : 1. Age = not normal 2. Total
+cholesterol = not normal 3. SBP = not normal 4. DBP = not normal 5.
+BMIMetrics = not normal
 
 ## Distribution analysis using Q-Q Plot
 
@@ -497,19 +559,29 @@ qqnorm(EmployeeBiometric.df$BMIMetric, col="red",
 qqline(EmployeeBiometric.df$BMIMetric, col="blue")
 
 ```
-As seen in the Q-Q plots provide ample evidence that the numeric object variables AgeYears, TotalCholesterolmgdL, SBPmmHg, DBPmmHg, and BMIMetric do not follow a normal distribution pattern.
 
-The RVAideMemoire::byf.shapiro() function is an excellent choice to examine these questions on normality by breakouts. Observe below how the RVAideMemoire::byf.shapiro() function provides a simple and convenient summary of normality p-values by individual breakouts of the factor-type object variable.
+As seen in the Q-Q plots provide ample evidence that the numeric object
+variables AgeYears, TotalCholesterolmgdL, SBPmmHg, DBPmmHg, and
+BMIMetric do not follow a normal distribution pattern.
 
-1. Normality test of numeric object variables by Gender
+The RVAideMemoire::byf.shapiro() function is an excellent choice to
+examine these questions on normality by breakouts. Observe below how the
+RVAideMemoire::byf.shapiro() function provides a simple and convenient
+summary of normality p-values by individual breakouts of the factor-type
+object variable.
+
+1.  Normality test of numeric object variables by Gender
+
 ```{r}
 RVAideMemoire::byf.shapiro(AgeYears~Gender,
                            data=EmployeeBiometric.df)
 ```
+
 ```{r}
 RVAideMemoire::byf.shapiro(TotalCholesterolmgdL~Gender,
                            data=EmployeeBiometric.df)
 ```
+
 ```{r}
 RVAideMemoire::byf.shapiro(SBPmmHg ~ Gender, 
                            data=EmployeeBiometric.df)
@@ -519,78 +591,101 @@ RVAideMemoire::byf.shapiro(SBPmmHg ~ Gender,
 RVAideMemoire::byf.shapiro(DBPmmHg ~ Gender, 
                            data=EmployeeBiometric.df)
 ```
+
 ```{r}
 RVAideMemoire::byf.shapiro(BMIMetric ~ Gender,
                            data=EmployeeBiometric.df)
 ```
-2. Normality test of numeric object variables by RaceEthnicity
+
+2.  Normality test of numeric object variables by RaceEthnicity
 
 ```{r}
 RVAideMemoire::byf.shapiro(AgeYears ~ RaceEthnicity, 
                            data=EmployeeBiometric.df)
 ```
+
 ```{r}
 RVAideMemoire::byf.shapiro(TotalCholesterolmgdL~RaceEthnicity,
                            data=EmployeeBiometric.df)
 ```
+
 ```{r}
 RVAideMemoire::byf.shapiro(SBPmmHg~RaceEthnicity,
                            data=EmployeeBiometric.df)
 ```
+
 ```{r}
 RVAideMemoire::byf.shapiro(DBPmmHg~RaceEthnicity,
                            data=EmployeeBiometric.df)
 ```
+
 ```{r}
 RVAideMemoire::byf.shapiro(BMIMetric~RaceEthnicity,
                            data=EmployeeBiometric.df)
 ```
-3. Normality test of numeric object variables by BMIstatus
+
+3.  Normality test of numeric object variables by BMIstatus
+
 ```{r}
 RVAideMemoire::byf.shapiro(AgeYears~BMIStatus,
                            data=EmployeeBiometric.df)
 ```
+
 ```{r}
 RVAideMemoire::byf.shapiro(TotalCholesterolmgdL~BMIStatus,
                            data=EmployeeBiometric.df)
 ```
+
 ```{r}
 RVAideMemoire::byf.shapiro(SBPmmHg~BMIStatus,
                            data=EmployeeBiometric.df)
 ```
+
 ```{r}
 RVAideMemoire::byf.shapiro(DBPmmHg~BMIStatus,
                            data=EmployeeBiometric.df)
 ```
+
 ```{r}
 RVAideMemoire::byf.shapiro(BMIMetric~BMIStatus,
                            data=EmployeeBiometric.df)
 ```
 
-4. Normality test of numeric object variables by Obesity
+4.  Normality test of numeric object variables by Obesity
+
 ```{r}
 RVAideMemoire::byf.shapiro(AgeYears~Obesity,
                            data=EmployeeBiometric.df)
 ```
+
 ```{r}
 RVAideMemoire::byf.shapiro(TotalCholesterolmgdL~Obesity,
                            data=EmployeeBiometric.df)
 ```
+
 ```{r}
 RVAideMemoire::byf.shapiro(SBPmmHg~Obesity,
                            data=EmployeeBiometric.df)
 ```
+
 ```{r}
 RVAideMemoire::byf.shapiro(DBPmmHg~Obesity,
                            data=EmployeeBiometric.df)
 ```
+
 ```{r}
 RVAideMemoire::byf.shapiro(BMIMetric~Obesity,
                            data=EmployeeBiometric.df)
 ```
-For additional confirmation, use the ggplot2::ggplot() function to produce QQ plots of the numeric object variables (e.g., AgeYears, TotalCholesterolmgdL, SBPmmHg, DBPmmHg, and BMIMetric) by breakouts of each of the four factor-type object variables (e.g., Gender, RaceEthnicity, BMIStatus, and Obesity) 
+
+For additional confirmation, use the ggplot2::ggplot() function to
+produce QQ plots of the numeric object variables (e.g., AgeYears,
+TotalCholesterolmgdL, SBPmmHg, DBPmmHg, and BMIMetric) by breakouts of
+each of the four factor-type object variables (e.g., Gender,
+RaceEthnicity, BMIStatus, and Obesity)
 
 1.AgeYears
+
 ```{r}
 QQAgeYearsbyGender<-ggplot2::ggplot(EmployeeBiometric.df,aes(sample=AgeYears))+
                 stat_qq(color="red")+
@@ -623,7 +718,9 @@ par(ask=TRUE); gridExtra::grid.arrange(
   QQAgeYearsbyObesity, ncol=2)
                 
 ```
-2. TotalCholesterol
+
+2.  TotalCholesterol
+
 ```{r}
 QQTotalCholesterolbyGender<-ggplot2::ggplot(EmployeeBiometric.df,aes(sample=TotalCholesterolmgdL))+
                 stat_qq(color="red")+
@@ -656,7 +753,8 @@ par(ask=TRUE); gridExtra::grid.arrange(
   QQTotalCholesterolbyObesity, ncol=2)
                 
 ```
-3. SBPmmHg
+
+3.  SBPmmHg
 
 ```{r}
 QQSBPbyGender<-ggplot2::ggplot(EmployeeBiometric.df,aes(sample=SBPmmHg))+
@@ -690,7 +788,8 @@ par(ask=TRUE); gridExtra::grid.arrange(
   QQSBPbyObesity, ncol=2)
                 
 ```
-4. DBPmmHg
+
+4.  DBPmmHg
 
 ```{r}
 QQDBPbyGender<-ggplot2::ggplot(EmployeeBiometric.df,aes(sample=DBPmmHg))+
@@ -724,7 +823,8 @@ par(ask=TRUE); gridExtra::grid.arrange(
   QQDBPbyObesity, ncol=2)
                 
 ```
-5. BMIMetric
+
+5.  BMIMetric
 
 ```{r}
 QQBMIMetricbyGender<-ggplot2::ggplot(EmployeeBiometric.df,aes(sample=BMIMetric))+
@@ -759,13 +859,13 @@ par(ask=TRUE); gridExtra::grid.arrange(
                 
 ```
 
-
 ```{r}
 lbsgen <- read.table(file="CPIIISectionLbsGender.csv", header=TRUE, dec=".", sep = ",")
 library(asbio)
 library(epiDisplay)
 asbio::Mode(lbsgen$Lbs)
 ```
+
 ```{r}
 #Frequency Table
 par(ask=TRUE)
@@ -805,6 +905,7 @@ epiDisplay::tabpct(EmployeeBiometric.df$Gender,
                    xlab="Gender", ylab="Section", cex.axis=1,
                    percent="both", las=1, col=c("cyan","green"))
 ```
+
 ```{r}
 epiDisplay::tabpct(EmployeeBiometric.df$Gender,
                    EmployeeBiometric.df$RaceEthnicity, graph = TRUE, decimal = 1,
@@ -840,6 +941,7 @@ epiDisplay::summ(lbsgen$Lbs, by=lbsgen$Gender,
                  dot.col="auto")
 
 ```
+
 ```{r}
 library(s20x)
 #Create descriptive summaryf or variable Lbs
@@ -851,11 +953,13 @@ s20x::summaryStats(lbsgen$Lbs, na.rm=TRUE)
 s20x::summaryStats(Lbs~Gender, lbsgen,
                    na.rm=TRUE)
 ```
+
 ```{r}
 #Summary stat of Lbs by Section
 s20x::summaryStats(Lbs~Section, lbsgen,
                    na.rm=TRUE)
 ```
+
 ```{r}
 #Creating distribution list of Lbs by Gender
 par(ask=TRUE); 
@@ -864,6 +968,7 @@ s20x::rowdistr(crosstablist = xtabs(~Gender + Lbs, data = lbsgen),
                suppressText = FALSE,
                comp = 'basic')
 ```
+
 ```{r}
 #Creating distribution list of Lbs by Section
 par(ask=TRUE); s20x::rowdistr(crosstablist = xtabs(~Section + Lbs, data = lbsgen), 
@@ -871,9 +976,11 @@ par(ask=TRUE); s20x::rowdistr(crosstablist = xtabs(~Section + Lbs, data = lbsgen
                suppressText = FALSE,
                comp = 'basic')
 ```
+
 ```{r}
 library(arsenal)
 ```
+
 ```{r}
 #Summary of descriptive statistics
 summary(arsenal::tableby(list(Section, Gender)~Lbs,
@@ -897,6 +1004,7 @@ pivottabler::qpvt(lbsgen,"Section","Gender",
                     "SD Lbs"="sd(Lbs, na.rm=TRUE)"),
                   formats=list("%.0f","%.1f"))
 ```
+
 ```{r}
 pivottabler::qpvt(EmployeeBiometric.df,"RaceEthnicity","Gender",
                   c("Mean SBP"="mean(SBPmmHg, na.rm=TRUE)",
@@ -933,7 +1041,6 @@ utils::tail(SBPNotNormal, n=10) # Show the tail, last 10 cases
 base::summary(SBPNotNormal)# Summary statistics
 ```
 
-
 ```{r}
 par(ask=TRUE)
 par(mfrow=c(2,2)) # Pause # 4 figures - 2 rows by 2 column grid 
@@ -943,6 +1050,7 @@ graphics::boxplot(SBPNormal)
 stats::qqnorm(SBPNormal); 
 stats::qqline(SBPNormal)
 ```
+
 ```{r}
 par(ask=TRUE)
 par(mfrow=c(2,2))
@@ -953,6 +1061,7 @@ stats::qqnorm(SBPNotNormal); stats::qqline(SBPNotNormal)
 ```
 
 Histogram check
+
 ```{r}
 par(ask=TRUE)
 par(mfrow=c(1,2))
@@ -976,6 +1085,7 @@ axis(side=1, font=2) # X axis bold
 axis(side=2, font=2) # Y axis bold 
 # Notice how both histograms have the same X axis scale # and Y axis scale, allowing meaningful side-by-side # comparisons.
 ```
+
 ```{r}
 # Density Plot par(ask=TRUE)
 par(mfrow=c(1,2)) # 2 figures - 1 row by 2 column grid 
@@ -1024,7 +1134,9 @@ graphics::boxplot(SBPNotNormal,
                   font.lab=2, font=2,
                   ylim=c(0,200))
 ```
+
 QQ Plot
+
 ```{r}
 # Q-Q Plot 
 par(ask=TRUE)# Pause
@@ -1051,4 +1163,3 @@ stats::qqline(SBPNotNormal,#
               lwd=4, 
               lty=2) 
 ```
-
