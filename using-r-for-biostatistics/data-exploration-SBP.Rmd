@@ -10,11 +10,6 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
-
-```
-
-
-```{r}
 # Set the seed
 base::set.seed(8)
 # Data with Normal Distribution Patterns
